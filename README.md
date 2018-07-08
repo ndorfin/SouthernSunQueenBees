@@ -1,10 +1,6 @@
-# Middleman Website Template
+# Southern Sun Queen Bees
 
-This static site generator template is written for Middleman. It contains [plenty of rich features every website should have](https://github.com/Well-FED/middleman-website-template/FEATURES.md), such as:
-
-- Performance improvements
-- Progressive Web App capabilities
-- Opengraph configuration
+Company website for Southern Sun Queen Bees
 
 ## Installation
 
@@ -52,18 +48,4 @@ If you want a STAGING specific build use the following:
     git checkout master
     git pull origin master
     APP_ENV=production middleman build
-
-## Deployment
-
-### Deployment options
-
-Try one of the following gems for deployment options:
-
-- `middleman_gh-pages` for Github Pages deployments
-- `middleman-s3_sync` for S3 deployments.
-
-Follow up your deployment tasks with the following CDN and cache invalidation options:
-
-- `middleman-cloudfront` for AWS-specific CDNs
-- `middleman-cdn` for CloudFlare CDNs
 
