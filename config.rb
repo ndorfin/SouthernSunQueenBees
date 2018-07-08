@@ -1,6 +1,9 @@
 set :env, ENV['APP_ENV'] || 'development'
 activate :dotenv, env: ".env.#{ENV['APP_ENV'] || 'development'}"
 
+require 'helpers/contentful_helpers.rb'
+include ContentfulHelpers
+
 # Configuration
 # =================================================================================
 
@@ -24,16 +27,16 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+activate :external_pipeline,
+  name: :webpack,
+  command: build? ? 'npm run webpack:build' : 'npm run webpack:server',
+  source: '.tmp/dist',
+  latency: 1
+
 # Server config (Development by default)
 # =================================================================================
 
 configure :server {
-
-  activate :external_pipeline,
-    name: :webpack,
-    command: 'npm run webpack:server',
-    source: '.tmp/dist',
-    latency: 1
 
   activate :livereload,
     no_swf: true,
@@ -50,12 +53,6 @@ configure :build {
   ignore 'templates/*'
   ignore '**/style.*.js'
   ignore '**/style.*.js.*'
-
-  activate :external_pipeline,
-    name: :webpack,
-    command: 'npm run webpack:build',
-    source: '.tmp/dist',
-    latency: 1
 
   if data.site.make_icons == true
   # activate :favicon_maker do |f|
@@ -116,6 +113,26 @@ configure :build {
     gzip.exts = %w[.js .css .html .htm .svg .xml .ico .map .json]
   end
 
+}
+
+# Contentful
+# ==============================================================================
+
+configure :contentful {
+  activate :contentful do |f|
+    f.space           = { content: ENV['CONTENTFUL_SPACE_ID'] }
+    f.access_token    = ENV['CONTENTFUL_ACCESS_TOKEN']
+    f.use_preview_api = false
+    f.cda_query       = { limit: 1000 }
+    f.content_types   = {
+      pages: 'page',
+      services: 'service',
+      products: 'product',
+      biographies: 'biography',
+      notices: 'notices',
+      testimonials: 'testimonial'
+    }
+  end
 }
 
 # configure :deploy {

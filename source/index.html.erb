@@ -1,10 +1,6 @@
----
-title: '2 x Welcome'
----
 <%
-  #content_for :page_title, "Welcome #{data.site.name}"
-  content_for :page_heading, "Nice page heading you have there"
-  content_for :page_description, "Unique page description"
+  content_for :page_title, "Welcome to #{data.site.name}"
+  content_for :page_heading, data.site.name
+  content_for :page_description, data.site.description
 %>
 
-Hello
