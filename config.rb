@@ -38,6 +38,8 @@ activate :external_pipeline,
 
 configure :server {
 
+  create_pages()
+
   activate :livereload,
     no_swf: true,
     livereload_css_target: 'css/style.main.css'
@@ -51,8 +53,11 @@ configure :build {
 
   ignore '**/.keep'
   ignore 'templates/*'
+  ignore 'partials/*'
   ignore '**/style.*.js'
   ignore '**/style.*.js.*'
+
+  create_pages()
 
   if data.site.make_icons == true
   # activate :favicon_maker do |f|

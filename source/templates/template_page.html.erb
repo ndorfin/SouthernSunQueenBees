@@ -1,0 +1,23 @@
+<%
+  content_for :page_title, page.page_heaading
+  content_for :page_heading, page.page_heaading
+  content_for :page_description, page.page_summary
+  content_for :page_image_url, page.social_image if page.social_image
+%>
+<dl>
+  <dt>url</dt>
+  <dd><%= page.url %></dd>
+  <dt>intro</dt>
+  <dd><%= page.intro %></dd>
+  <dt>body_of_content</dt>
+  <dd><%= page.body_of_content %></dd>
+</dl>
+<% if page.biographies && page.biographies.count > 0 %>
+<section id="biographies">
+  <% page.biographies.each do |bio| %>
+    <%= partial 'partials/biographies', locals: { bio: bio } %>
+  <% end %>
+</section>
+<% end %>
+
+
