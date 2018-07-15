@@ -4,12 +4,11 @@ CWD=`pwd`
 # Clone Pages repository
 cd /tmp
 git clone git@github.com:ndorfin/SouthernSunQueenBees.git build
-
-# cd build && git checkout -b YOUR_BRANCH origin/YOUR_BRANCH # If not using master
+cd build && git checkout -b gh-pages origin/gh-pages
 
 # Trigger Middleman rebuild
 cd $CWD
-bundle exec middleman contentful --rebuild
+bundle exec middleman contentful && bundle exec middleman build
 
 # Push newly built repository
 cp -r $CWD/build/* /tmp/build
