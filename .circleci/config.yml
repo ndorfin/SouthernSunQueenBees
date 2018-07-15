@@ -43,12 +43,3 @@ jobs:
           name: Run build script
           command: |
             bash ./build.sh
-
-workflows:
-  version: 2
-  build-deploy:
-    jobs:
-      - build
-          filters:
-            branches:
-              only: master
