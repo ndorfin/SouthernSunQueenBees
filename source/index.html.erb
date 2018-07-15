@@ -4,3 +4,37 @@
   content_for :page_description, data.site.description
 %>
 
+<% if data.content.include? 'notices' %>
+<section>
+  <h1>Notices (<%= data.content.notices.count %>)</h1>
+  <%= partial 'partials/notices_summary_list', locals: { notices: data.content.notices } %>
+</section>
+<% end %>
+
+<% if data.content.include? 'products' %>
+<section>
+  <h1>Products (<%= data.content.products.count %>)</h1>
+  <%= partial 'partials/product_summary_list', locals: { products: data.content.products } %>
+</section>
+<% end %>
+
+<% if data.content.include? 'services' %>
+<section>
+  <h1>Services (<%= data.content.services.count %>)</h1>
+  <%= partial 'partials/services_summary_list', locals: { services: data.content.services } %>
+</section>
+<% end %>
+
+<% if data.content.include? 'biographies' %>
+<section>
+  <h1>Biographies (<%= data.content.biographies.count %>)</h1>
+  <%= partial 'partials/biographies_summary_list', locals: { bios: data.content.biographies } %>
+</section>
+<% end %>
+
+<% if data.content.include? 'testimonials' %>
+<section>
+  <h1>Testimonials (<%= data.content.testimonials.count %>)</h1>
+  <%= partial 'partials/testimonials_summary_list', locals: { testimonials: data.content.testimonials } %>
+</section>
+<% end %>

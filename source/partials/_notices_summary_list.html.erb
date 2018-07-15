@@ -1,0 +1,7 @@
+<% if notices && notices.count > 0 %>
+<ul>
+  <% notices.each do |n| %>
+  <li><%= partial 'partials/notices_summary', locals: { notice: n[1] } %></li>
+  <% end %>
+</ul>
+<% end %>

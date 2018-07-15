@@ -1,0 +1,7 @@
+<% if services && services.count > 0 %>
+<ul>
+  <% services.each do |s| %>
+  <li><%= partial 'partials/services_summary', locals: { service: s[1] } %></li>
+  <% end %>
+</ul>
+<% end %>

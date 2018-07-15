@@ -1,0 +1,10 @@
+<dl>
+  <dt>title</dt>
+  <dd><%= service.title %></dd>
+  <dt>slug</dt>
+  <dd><%= service.slug %></dd>
+  <dt>description</dt>
+  <dd><%= service.description %></dd>
+  <dt>photo</dt>
+  <dd><%= "<img src=\"#{service.photo.url}\" alt=\"#{service.title}\">" if service.photo %></dd>
+</dl>

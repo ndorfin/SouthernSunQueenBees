@@ -1,0 +1,7 @@
+<% if testimonials && testimonials.count > 0 %>
+<ul>
+  <% testimonials.each do |t| %>
+  <li><%= partial 'partials/testimonials_summary', locals: { testimonial: t[1] } %></li>
+  <% end %>
+</ul>
+<% end %>

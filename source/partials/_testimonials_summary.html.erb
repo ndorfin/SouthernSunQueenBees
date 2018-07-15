@@ -1,0 +1,10 @@
+<dl>
+  <dt>name</dt>
+  <dd><%= testimonial.name %></dd>
+  <dt>slug</dt>
+  <dd><%= testimonial.slug %></dd>
+  <dt>quote</dt>
+  <dd><blockquote><%= testimonial.quote %></blockquote></dd>
+  <dt>photo</dt>
+  <dd><%= "<img src=\"#{testimonial.photo.url}\" alt=\"#{testimonial.name}\">" if testimonial.photo %></dd>
+</dl>
