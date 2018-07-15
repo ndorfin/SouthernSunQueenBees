@@ -36,4 +36,4 @@ jobs:
       - run:
           name: Run build script
           command: |
-            bash ~/repo/automated_build.sh
+            bash ./build.sh
