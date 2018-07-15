@@ -12,12 +12,34 @@
   <dt>body_of_content</dt>
   <dd><%= page.body_of_content %></dd>
 </dl>
-<% if page.biographies && page.biographies.count > 0 %>
-<section id="biographies">
-  <% page.biographies.each do |bio| %>
-    <%= partial 'partials/biographies', locals: { bio: bio } %>
-  <% end %>
+
+<% if page.include? 'products' %>
+<section id="products">
+  <h1>Products (<%= page.products.count %>)</h1>
+  <%= partial 'partials/product_summary_list', locals: { products: page.products } %>
 </section>
 <% end %>
+
+<% if page.include? 'services' %>
+<section id="services">
+  <h1>Services (<%= page.services.count %>)</h1>
+  <%= partial 'partials/services_summary_list', locals: { services: page.services } %>
+</section>
+<% end %>
+
+<% if page.include? 'biographies' %>
+<section id="biographies">
+  <h1>Biographies (<%= page.biographies.count %>)</h1>
+  <%= partial 'partials/biographies_summary_list', locals: { bios: page.biographies } %>
+</section>
+<% end %>
+
+<% if page.include? 'testimonials' %>
+<section id="testimonials">
+  <h1>Testimonials (<%= page.testimonials.count %>)</h1>
+  <%= partial 'partials/testimonials_summary_list', locals: { testimonials: page.testimonials } %>
+</section>
+<% end %>
+
 
 
