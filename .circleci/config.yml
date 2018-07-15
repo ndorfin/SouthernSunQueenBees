@@ -33,4 +33,7 @@ jobs:
             - ./node_modules
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
 
-      - bash ./automated_build.sh
+      - run:
+        name: Run build script
+        command: |
+          - bash ./automated_build.sh
