@@ -16,8 +16,8 @@ cp -r $CWD/build/* /tmp/build
 
 cd /tmp/build
 
-git config --global user.email "ndorfin@gmail.com"
-git config --global user.name "SOKKIEBOT"
+git config --global user.email "ndorfin+build-bot@gmail.com"
+git config --global user.name "BuildBot"
 
 git add .
 git commit -m "Automated Rebuild"
