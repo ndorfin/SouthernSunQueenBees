@@ -1,0 +1,20 @@
+.notice {
+  .heading {
+    margin: 0;
+  }
+  .n_content {
+    > :first-child {
+      margin-top: 0;
+    }
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &[data-type="info"] {
+
+  }
+  &[data-type="warning"] {
+
+  }
+}

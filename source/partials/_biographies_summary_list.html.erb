@@ -1,7 +1,7 @@
 <% if bios && bios.count > 0 %>
 <ul>
-  <% bios.each do |bio| %>
-  <li><%= partial 'partials/biographies_summary', locals: { bio: bio[1] } %></li>
+  <% bios.each do |b_id, bio| %>
+  <li><%= partial 'partials/biographies_summary', locals: { bio: bio ? bio : b_id } %></li>
   <% end %>
 </ul>
 <% end %>

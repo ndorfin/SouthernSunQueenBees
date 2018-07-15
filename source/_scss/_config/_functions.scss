@@ -1,0 +1,9 @@
+@function image_url($path) {
+  // Build up a url to the image asset
+  @return url($path_images + $path);
+}
+
+@function font_url($path) {
+  // Build up a url to the font asset
+  @return url($path_fonts + $path);
+}

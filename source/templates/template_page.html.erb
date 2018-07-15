@@ -1,44 +1,27 @@
 <%
   content_for :page_title, page.page_heaading
   content_for :page_heading, page.page_heaading
+  content_for :page_intro, page.intro
   content_for :page_description, page.page_summary
   content_for :page_image_url, page.social_image if page.social_image
 %>
-<dl>
-  <dt>url</dt>
-  <dd><%= page.url %></dd>
-  <dt>intro</dt>
-  <dd><%= page.intro %></dd>
-  <dt>body_of_content</dt>
-  <dd><%= page.body_of_content %></dd>
-</dl>
+
+<%= page.body_of_content %>
 
 <% if page.include? 'products' %>
-<section id="products">
-  <h1>Products (<%= page.products.count %>)</h1>
-  <%= partial 'partials/product_summary_list', locals: { products: page.products } %>
-</section>
+  <%= partial 'partials/product_summary_list', locals: { products: page.products.to_a } %>
 <% end %>
 
 <% if page.include? 'services' %>
-<section id="services">
-  <h1>Services (<%= page.services.count %>)</h1>
-  <%= partial 'partials/services_summary_list', locals: { services: page.services } %>
-</section>
+  <%= partial 'partials/services_summary_list', locals: { services: page.services[1] } %>
 <% end %>
 
 <% if page.include? 'biographies' %>
-<section id="biographies">
-  <h1>Biographies (<%= page.biographies.count %>)</h1>
-  <%= partial 'partials/biographies_summary_list', locals: { bios: page.biographies } %>
-</section>
+  <%= partial 'partials/biographies_summary_list', locals: { bios: page.biographies[1] } %>
 <% end %>
 
 <% if page.include? 'testimonials' %>
-<section id="testimonials">
-  <h1>Testimonials (<%= page.testimonials.count %>)</h1>
-  <%= partial 'partials/testimonials_summary_list', locals: { testimonials: page.testimonials } %>
-</section>
+  <%= partial 'partials/testimonials_summary_list', locals: { testimonials: page.testimonials[1] } %>
 <% end %>
 
 

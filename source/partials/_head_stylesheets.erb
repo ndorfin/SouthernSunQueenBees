@@ -1,5 +1,6 @@
 <% if current_page.url == '/' %>
   <%= inline_css 'css/style.home.css' %>
+  <link rel="stylesheet" href="<%= asset_path(:css, 'style.main') %>">
 <% else %>
   <link rel="stylesheet" href="<%= asset_path(:css, 'style.main') %>">
 <% end %>

@@ -1,7 +1,7 @@
 <% if testimonials && testimonials.count > 0 %>
 <ul>
-  <% testimonials.each do |t| %>
-  <li><%= partial 'partials/testimonials_summary', locals: { testimonial: t[1] } %></li>
+  <% testimonials.each do |t_id, testimonial| %>
+  <li><%= partial 'partials/testimonials_summary', locals: { testimonial: testimonial ? testimonial : t_id } %></li>
   <% end %>
 </ul>
 <% end %>

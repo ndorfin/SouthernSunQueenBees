@@ -1,0 +1,24 @@
+html {
+  font-size: 16px;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+
+nav {
+  h2 {
+    @include a11y();
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}

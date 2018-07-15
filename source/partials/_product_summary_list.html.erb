@@ -1,7 +1,7 @@
 <% if products && products.count > 0 %>
 <ul>
-  <% products.each do |prod| %>
-  <li><%= partial 'partials/product_summary', locals: { product: prod[1] } %></li>
+  <% products.each do |p_id, prod| %>
+  <li><%= partial 'partials/product_summary', locals: { product: prod ? prod : p_id } %></li>
   <% end %>
 </ul>
 <% end %>
