@@ -36,4 +36,4 @@ jobs:
       - run:
           name: Run build script
           command: |
-            bash ./automated_build.sh
+            bash automated_build.sh
