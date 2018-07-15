@@ -16,6 +16,9 @@ cp -r $CWD/build/* /tmp/build
 
 cd /tmp/build
 
+git config --global user.email "ndorfin+github@gmail.com"
+git config --global user.name "SOKKIEBOT"
+
 git add .
 git commit -m "Automated Rebuild"
 git push -f origin gh-pages
