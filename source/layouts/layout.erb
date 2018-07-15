@@ -8,19 +8,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= partial 'layouts/partials/head_title' %>
-    <%= partial 'layouts/partials/head_stylesheets' %>
-    <%= partial 'layouts/partials/head_preload' %>
-    <%= partial 'layouts/partials/head_dns_prefetch' %>
-    <%= partial 'layouts/partials/head_pwa' %>
-    <%= partial 'layouts/partials/head_opengraph', locals: {:page_title => page_title, :page_description => page_description} %>
+    <%= partial 'partials/head_title' %>
+    <%= partial 'partials/head_stylesheets' %>
+    <%= partial 'partials/head_preload' %>
+    <%= partial 'partials/head_dns_prefetch' %>
+    <%= partial 'partials/head_pwa' %>
+    <%= partial 'partials/head_opengraph', locals: {:page_title => page_title, :page_description => page_description} %>
   </head>
   <body class="<%= get_page_class() %>">
     <header>
       <h1><a href="/"><%= data.site.name %></a></h1>
     </header>
     <%= partial 'partials/main_menu' %>
-    <%= partial 'layouts/partials/body_notices' if data.content.include? 'notices' %>
+    <%= partial 'partials/body_notices' if data.content.include? 'notices' %>
     <article>
       <% if content_for? :page_heading %>
       <header>
