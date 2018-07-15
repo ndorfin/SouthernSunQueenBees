@@ -19,5 +19,5 @@ git config --global user.email "ndorfin+build-bot@gmail.com"
 git config --global user.name "BuildBot"
 
 git add .
-git commit -m "Automated Rebuild"
+git commit -m "Automated Rebuild [ci skip]"
 git push -f origin gh-pages
