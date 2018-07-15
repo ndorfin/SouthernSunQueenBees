@@ -8,5 +8,5 @@
   <dt>type</dt>
   <dd><%= notice.notice_type %></dd>
   <dt>message</dt>
-  <dd><%= notice.notice_message %></dd>
+  <dd><%= Kramdown::Document.new(notice.notice_message).to_html %></dd>
 </dl>

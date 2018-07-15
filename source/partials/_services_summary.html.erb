@@ -4,7 +4,7 @@
   <dt>slug</dt>
   <dd><%= service.slug %></dd>
   <dt>description</dt>
-  <dd><%= service.description %></dd>
+  <dd><%= Kramdown::Document.new(service.description).to_html %></dd>
   <dt>photo</dt>
   <dd><%= "<img src=\"#{service.photo.url}?w=400\" alt=\"#{service.title}\">" if service.photo %></dd>
 </dl>

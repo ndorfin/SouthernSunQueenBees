@@ -1,2 +1,10 @@
 $path_fonts: 'fonts/' !default;
 $path_images: 'img/' !default;
+
+$panel_border_style: solid;
+$panel_border_colour: #ccc;
+$panel_border_width: 1px;
+$panel_border: $panel_border_colour $panel_border_width $panel_border_style;
+
+$spacing_gutter: 1rem;
+$spacing_gutter_wide: 2rem;

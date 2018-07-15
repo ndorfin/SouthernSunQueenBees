@@ -3,7 +3,7 @@
   <% data.content.notices.each do |n_id, n| %>
   <div class="notice" data-type="<%= n.notice_type || 'info' %>" id="<%= n.slug %>">
     <h2 class="heading heading_paragraph"><%= n.notice_heading %></h2>
-    <div class="n_content"><%= n.notice_message %></div>
+    <div class="n_content"><%= Kramdown::Document.new(n.notice_message).to_html %></div>
   </div>
   <% end %>
 <% end %>

@@ -4,7 +4,7 @@
   <dt>slug</dt>
   <dd><%= testimonial.slug %></dd>
   <dt>quote</dt>
-  <dd><blockquote><%= testimonial.quote %></blockquote></dd>
+  <dd><blockquote><%= Kramdown::Document.new(testimonial.quote).to_html %></blockquote></dd>
   <dt>photo</dt>
   <dd><%= "<img src=\"#{testimonial.photo.url}?w=400\" alt=\"#{testimonial.name}\">" if testimonial.photo %></dd>
 </dl>

@@ -1,8 +1,23 @@
 .media_block {
+  text-align: center;
+  padding: $spacing_gutter;
+  border: $panel_border;
+  overflow: hidden;
+
   .mb_image {
 
   }
   .mb_content {
+    margin-top: $spacing_gutter;
+  }
 
+  @media (min-width: 640px) {
+    text-align: left;
+
+    .mb_image {
+      float: left;
+      margin-right: $spacing_gutter;
+      margin-bottom: $spacing_gutter;
+    }
   }
 }
