@@ -12,6 +12,9 @@ jobs:
     working_directory: ~/repo
 
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "SHA256:SmXDRvysrvJ6MAfuq/PqvZnBfmiuc5NyfffoRLH4ELk ndorfin+build-bot@gmail.com"
       - checkout
 
       # Download and cache dependencies
