@@ -1,7 +1,7 @@
 <% if services && services.count > 0 %>
 <ul>
   <% services.each do |s_id, service| %>
-  <li><%= partial 'partials/services_summary', locals: { service: service ? service : s_id } %></li>
+  <li><%= partial 'partials/services_summary', locals: { service: service.blank? ? s_id : service } %></li>
   <% end %>
 </ul>
 <% end %>
