@@ -8,7 +8,7 @@ cd build && git checkout -b gh-pages origin/gh-pages
 
 # Trigger Middleman rebuild
 cd $CWD
-bundle exec middleman contentful && bundle exec middleman build
+APP_ENV=production bundle exec middleman contentful && APP_ENV=production bundle exec middleman build
 
 # Push newly built repository
 cp -r $CWD/build/* /tmp/build
