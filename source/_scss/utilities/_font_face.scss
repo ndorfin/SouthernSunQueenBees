@@ -4,21 +4,24 @@ $font_list: (
     weight: 400,
     local_name: 'Open Sans Regular',
     system_name: 'Open-Sans-Regular',
-    family_name: 'Open Sans'
+    family_name: 'Open Sans',
+    fallback: "Helvetica, Arial, 'Droid Sans', sans-serif"
   ),
   emphasis: (
     slug: 'open-sans',
     weight: 700,
     local_name: 'Open Sans Bold',
     system_name: 'Open-Sans-Bold',
-    family_name: 'Open Sans'
+    family_name: 'Open Sans',
+    fallback: "Helvetica, Arial, 'Droid Sans', sans-serif"
   ),
   headings: (
     slug: 'palanquin-dark',
     weight: 500,
     local_name: 'Palanquin Dark Medium',
     system_name: 'Palanquin-Dark-Medium',
-    family_name: 'Palanquin Dark'
+    family_name: 'Palanquin Dark',
+    fallback: "Helvetica, Arial, 'Droid Sans', sans-serif"
   )
 );
 

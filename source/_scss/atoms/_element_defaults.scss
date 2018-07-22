@@ -1,13 +1,15 @@
 html {
   font-size: 16px;
-  font-family: map-get($font_body, 'family_name'), 'Helvetica', 'Arial', 'Droid Sans', 'sans-serif';
+  font-family: map-get($font_body, 'family_name'), map-get($font_body, 'fallback');
   font-style: normal;
   font-weight: map-get($font_body, 'weight');
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: greyscale;
 }
 
 b,
 strong {
-  font-family: map-get($font_emphasis, 'family_name'), 'Helvetica', 'Arial', 'Droid Sans', 'sans-serif';
+  font-family: map-get($font_emphasis, 'family_name'), map-get($font_body, 'fallback');
   font-weight: map-get($font_emphasis, 'weight');
 }
 

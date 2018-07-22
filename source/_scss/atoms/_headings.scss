@@ -1,9 +1,13 @@
 .heading {
-  font-family: map-get($font_headings, 'family_name'), 'Helvetica', 'Arial', 'Droid Sans', 'sans-serif';
+  font-family: map-get($font_headings, 'family_name'), map-get($font_headings, 'fallback');
   font-style: normal;
   font-weight: map-get($font_headings, 'weight');
 }
 
+.heading_page {
+  font-size: 2rem;
+}
+
 .heading_paragraph {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
