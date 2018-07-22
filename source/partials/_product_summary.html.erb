@@ -5,25 +5,3 @@
     <%= Kramdown::Document.new(product.summary).to_html %>
   </div>
 </a>
-<!-- dl>
-  <dt>title</dt>
-  <dd><%= product.title %></dd>
-  <dt>slug</dt>
-  <dd><%= product.slug %></dd>
-  <dt>summary</dt>
-  <dd><%= product.summary %></dd>
-  <dt>description</dt>
-  <dd><%= product.description %></dd>
-  <dt>price</dt>
-  <dd>$<%= product.price %></dd>
-  <dt>stock_level</dt>
-  <% if product.stock_level == 0 %>
-  <dd>Out of stock</dd>
-  <% else %>
-  <dd>~<%= product.stock_level %> in stock</dd>
-  <% end %>
-  <dt>body_of_content</dt>
-  <dd><%= product.body_of_content %></dd>
-  <dt>photo</dt>
-  <dd><%= "<img src=\"#{product.photo.url}?w=400\" alt=\"#{product.title}\">" if product.photo %></dd>
-</dl -->
