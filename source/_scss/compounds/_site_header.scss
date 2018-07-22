@@ -1,0 +1,16 @@
+body > header {
+  max-width: $faux_column_width;
+  margin: 0 auto;
+  background-color: mix(#666, #e47615, 25%);
+  padding: 1rem;
+  box-sizing: border-box;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}

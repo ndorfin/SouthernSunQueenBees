@@ -1,7 +1,12 @@
 .notice {
-  .heading {
-    margin: 0;
+  padding: 1rem;
+  font-size: .875rem;
+
+  h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
   }
+
   .n_content {
     > :first-child {
       margin-top: 0;
@@ -11,10 +16,10 @@
     }
   }
 
-  &[data-type="info"] {
-
+  &[data-type="Info"] {
+    background-color: mix(#c6dbf9, white, 50%);
   }
-  &[data-type="warning"] {
-
+  &[data-type="Warning"] {
+    background-color: mix(rgb(255, 204, 0), white, 50%);
   }
 }

@@ -1,6 +1,5 @@
 .product_summary {
   a {
-    display: block;
     color: inherit;
     text-decoration: none;
   }
@@ -11,6 +10,12 @@
 
   .product_content {
 
+  }
+
+  & + .product_summary {
+    margin-top: 1rem;
+    border-top: #eee solid 1px;
+    padding-top: 1rem;
   }
 
   @media (min-width: 640px) {

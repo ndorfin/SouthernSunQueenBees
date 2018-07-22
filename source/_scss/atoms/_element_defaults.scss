@@ -1,5 +1,26 @@
 html {
   font-size: 16px;
+  font-family: map-get($font_body, 'family_name'), map-get($font_body, 'fallback');
+  font-style: normal;
+  font-weight: map-get($font_body, 'weight');
+  line-height: 1.25;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: greyscale;
+}
+
+body {
+  margin: 0;
+  background-color: #334;
+
+  @media (min-width: 640px) {
+    padding: 2rem;
+  }
+}
+
+b,
+strong {
+  font-family: map-get($font_emphasis, 'family_name'), map-get($font_body, 'fallback');
+  font-weight: map-get($font_emphasis, 'weight');
 }
 
 abbr {
@@ -21,4 +42,13 @@ nav {
     margin: 0;
     padding: 0;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }

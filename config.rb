@@ -20,6 +20,12 @@ activate :directory_indexes
 activate :relative_assets
 set :relative_links, true
 
+if config[:env] == 'production'
+  set :base_url, '/SouthernSunQueenBees/'
+else
+  set :base_url, '/'
+end
+
 # Layout settings
 # =================================================================================
 

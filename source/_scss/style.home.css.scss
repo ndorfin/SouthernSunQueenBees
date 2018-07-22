@@ -1,5 +1,11 @@
 @charset "UTF-8";
-@import "./pages/_page_home.scss";
+@import "_config/variables";
+@import "_config/mixins";
+@import "_config/functions";
+@import "utilities/font_face";
+@import "compounds/site_header";
+@import "compounds/site_navigation";
+@import "pages/page_home";
 body {
   background: white;
 }
