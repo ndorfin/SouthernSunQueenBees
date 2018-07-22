@@ -1,5 +1,14 @@
 html {
   font-size: 16px;
+  font-family: map-get($font_body, 'family_name'), 'Helvetica', 'Arial', 'Droid Sans', 'sans-serif';
+  font-style: normal;
+  font-weight: map-get($font_body, 'weight');
+}
+
+b,
+strong {
+  font-family: map-get($font_emphasis, 'family_name'), 'Helvetica', 'Arial', 'Droid Sans', 'sans-serif';
+  font-weight: map-get($font_emphasis, 'weight');
 }
 
 abbr {

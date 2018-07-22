@@ -1,0 +1,43 @@
+$font_list: (
+  body: (
+    slug: 'open-sans',
+    weight: 400,
+    local_name: 'Open Sans Regular',
+    system_name: 'Open-Sans-Regular',
+    family_name: 'Open Sans'
+  ),
+  emphasis: (
+    slug: 'open-sans',
+    weight: 700,
+    local_name: 'Open Sans Bold',
+    system_name: 'Open-Sans-Bold',
+    family_name: 'Open Sans'
+  ),
+  headings: (
+    slug: 'palanquin-dark',
+    weight: 500,
+    local_name: 'Palanquin Dark Medium',
+    system_name: 'Palanquin-Dark-Medium',
+    family_name: 'Palanquin Dark'
+  )
+);
+
+$font_headings: map-get($font_list, 'headings');
+$font_body: map-get($font_list, 'body');
+$font_emphasis: map-get($font_list, 'emphasis');
+
+@function get-font-url($slug, $weight, $format) {
+  @return font_url('#{$slug}/#{$slug}-#{$weight}.#{$format}') format('#{$format}');
+}
+
+@each $name, $font in $font_list {
+  @font-face {
+    font-family: '#{map-get($font, 'family_name')}';
+    src: local('#{map-get($font, 'local_name')}'),
+      local('#{map-get($font, 'system_name')}'),
+      get-font-url(map-get($font, 'slug'), map-get($font, 'weight'), 'woff2'),
+      get-font-url(map-get($font, 'slug'), map-get($font, 'weight'), 'woff');
+    font-weight: map-get($font, 'weight');
+    font-style: normal;
+  }
+}
