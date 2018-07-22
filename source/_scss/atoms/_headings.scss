@@ -2,10 +2,15 @@
   font-family: map-get($font_headings, 'family_name'), map-get($font_headings, 'fallback');
   font-style: normal;
   font-weight: map-get($font_headings, 'weight');
+  line-height: 1;
 }
 
 .heading_page {
   font-size: 2rem;
+}
+
+.heading_subheading {
+  font-size: 1.375rem;
 }
 
 .heading_paragraph {

@@ -2,8 +2,10 @@
 @import "_config/variables";
 @import "_config/mixins";
 @import "_config/functions";
-@import "./utilities/font_face";
-@import "./pages/page_home";
+@import "utilities/font_face";
+@import "compounds/site_header";
+@import "compounds/site_navigation";
+@import "pages/page_home";
 body {
   background: white;
 }

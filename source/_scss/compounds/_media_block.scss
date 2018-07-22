@@ -1,23 +1,40 @@
 .media_block {
+  display: block;
   text-align: center;
   padding: $spacing_gutter;
-  border: $panel_border;
-  overflow: hidden;
 
   .mb_image {
 
   }
+
   .mb_content {
     margin-top: $spacing_gutter;
+
+    > * {
+      margin: 0;
+
+      & + * {
+        margin-top: 1rem;
+      }
+    }
+
   }
 
   @media (min-width: 640px) {
     text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
     .mb_image {
-      float: left;
+      flex: 1 1 auto;
       margin-right: $spacing_gutter;
-      margin-bottom: $spacing_gutter;
+    }
+
+    .mb_content {
+      flex: 1 1 auto;
+      margin-top: 0;
     }
   }
 }

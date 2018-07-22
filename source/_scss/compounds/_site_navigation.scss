@@ -1,0 +1,53 @@
+body > nav {
+  max-width: $faux_column_width;
+  margin: 0 auto;
+  background-color: mix(#666, #e47615, 25%);
+  box-sizing: border-box;
+  padding: 0 .5rem .5rem;
+
+  li {
+    & + li {
+      margin-top: .5rem;
+    }
+  }
+
+  li > * {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: .5rem;
+    font-size: .875rem;
+  }
+
+  strong {
+    background-color: mix(#fff, #e47615, 50%);
+    color: #000;
+  }
+
+  a {
+    background-color: #d6853d;
+    transition: background-color .3s ease-in;
+
+    &:hover {
+      background-color: #e47615;
+    }
+  }
+
+  @media (min-width: 640px) {
+    padding: 1rem 1rem 0;
+
+    li {
+      display: inline-block;
+
+      & + li {
+        border-top: none;
+      }
+      > * {
+        padding: .5rem 1rem;
+      }
+    }
+    strong {
+      background-color: #fff;
+    }
+  }
+}

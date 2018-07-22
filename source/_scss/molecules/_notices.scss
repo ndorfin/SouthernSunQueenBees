@@ -1,7 +1,4 @@
 #notices {
-
-}
-
-.notice + .notice {
-  margin-top: 1rem;
+  max-width: $faux_column_width;
+  margin: 0 auto;
 }

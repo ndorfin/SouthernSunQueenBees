@@ -9,11 +9,17 @@
 @import "atoms/element_defaults";
 @import "atoms/headings";
 
-@import "compounds/media_block";
+@import "compounds/site_header";
+@import "compounds/site_navigation";
 @import "compounds/notice";
+@import "molecules/notices";
+@import "compounds/site_article";
+
+@import "compounds/media_block";
+
 @import "compounds/product_summary";
 @import "compounds/service_summary";
 
-@import "molecules/notices";
+
 @import "molecules/product_summary_list";
 @import "molecules/service_summary_list";
