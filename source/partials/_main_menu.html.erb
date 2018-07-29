@@ -1,6 +1,13 @@
 <nav>
   <h2>Menu</h2>
   <ul>
+    <li id="nav_home">
+      <% if page.url == '/' %>
+        <strong>Home</strong>
+      <% else %>
+        <a href="<%= config[:base_url] %>">Home</a>
+      <% end %>
+    </li>
     <% get_top_level_menu_items().each do |page_id, page| %>
       <li>
         <% if page.url == current_page.url.parameterize %>

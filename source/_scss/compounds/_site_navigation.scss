@@ -36,18 +36,45 @@ body > nav {
   @media (min-width: 640px) {
     padding: 1rem 1rem 0;
 
-    li {
-      display: inline-block;
+    ul {
+      display: flex;
+      flex-direction: row;
 
-      & + li {
-        border-top: none;
+      li {
+        flex: 0 0 auto;
+
+        & + li {
+          margin-top: 0;
+          margin-left: .5rem;
+          border-top: none;
+        }
+
+        > * {
+          padding: .5rem 1rem;
+          border-radius: .25rem .25rem 0 0;
+        }
       }
-      > * {
-        padding: .5rem 1rem;
+
+      strong {
+        background-color: #fff;
       }
     }
-    strong {
-      background-color: #fff;
+  }
+}
+
+#nav_home {
+  a {
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      margin-right: .25rem;
+      margin-bottom: -.125rem;
+      background-image: image_url('icon_home.svg');
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 }
