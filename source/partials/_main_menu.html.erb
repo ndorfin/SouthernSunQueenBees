@@ -2,10 +2,20 @@
   <h2>Menu</h2>
   <ul>
     <li id="nav_home">
-      <% if page.url == '/' %>
-        <strong>Home</strong>
+      <% if current_page.url == '/' %>
+        <strong>
+          <svg viewBox="0 0 512 512">
+            <use xlink:href="#icon_home"/>
+          </svg>
+          <span>Home</span>
+        </strong>
       <% else %>
-        <a href="<%= config[:base_url] %>">Home</a>
+        <a href="<%= config[:base_url] %>">
+          <svg viewBox="0 0 512 512">
+            <use xlink:href="#icon_home"/>
+          </svg>
+          <span>Home</span>
+        </a>
       <% end %>
     </li>
     <% get_top_level_menu_items().each do |page_id, page| %>

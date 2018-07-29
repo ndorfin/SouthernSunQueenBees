@@ -63,18 +63,15 @@ body > nav {
 }
 
 #nav_home {
-  a {
-    &::before {
-      content: '';
-      display: inline-block;
+  & > * {
+    svg {
       width: 1rem;
       height: 1rem;
-      margin-right: .25rem;
-      margin-bottom: -.125rem;
-      background-image: image_url('icon_home.svg');
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      background-size: contain;
+      margin-bottom: -.25rem;
+      fill: currentColor;
+    }
+    span {
+      @include a11y;
     }
   }
 }

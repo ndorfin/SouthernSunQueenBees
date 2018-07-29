@@ -4,6 +4,9 @@
   <div class="notice" data-type="<%= n.notice_type || 'info' %>" id="<%= n.slug %>">
     <h2><%= n.notice_heading %></h2>
     <div class="n_content"><%= Kramdown::Document.new(n.notice_message).to_html %></div>
+    <svg viewBox="0 0 512 512">
+      <use xlink:href="#icon_<%= n.notice_type.downcase %>" />
+    </svg>
   </div>
   <% end %>
 <% end %>

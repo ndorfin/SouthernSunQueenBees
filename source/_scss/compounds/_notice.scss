@@ -1,3 +1,6 @@
+$notice_padding: 1rem;
+$notice_img_size: 1.5rem;
+
 .notice {
   padding: 1rem;
   font-size: .875rem;
@@ -5,20 +8,36 @@
 
   h2 {
     font-size: .875rem;
+    margin-bottom: .25rem;
   }
 
   .n_content {
     > :first-child {
       margin-top: 0;
     }
+
     > :last-child {
       margin-bottom: 0;
     }
   }
 
-  &[data-type="Info"] {
-    background-color: mix(#c6dbf9, white, 50%);
+  &[data-type] {
+    position: relative;
+    padding-left: $notice_padding + $notice_img_size + $notice_padding;
+
+    svg {
+      width: $notice_img_size;
+      height: $notice_img_size;
+      position: absolute;
+      top: $notice_padding;
+      left: $notice_padding;
+    }
   }
+
+  &[data-type="Info"] {
+    background-color: mix(#c6dbf9, white, 75%);
+  }
+
   &[data-type="Warning"] {
     background-color: mix(rgb(255, 204, 0), white, 50%);
   }
