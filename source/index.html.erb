@@ -4,13 +4,6 @@
   content_for :page_description, data.site.description
 %>
 
-<% if data.content.include? 'notices' %>
-<section>
-  <h1>Notices (<%= data.content.notices.count %>)</h1>
-  <%= partial 'partials/notices_summary_list', locals: { notices: data.content.notices } %>
-</section>
-<% end %>
-
 <% if data.content.include? 'products' %>
 <section>
   <h1>Products (<%= data.content.products.count %>)</h1>
