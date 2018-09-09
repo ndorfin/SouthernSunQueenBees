@@ -42,7 +42,7 @@ activate :external_pipeline,
 # Server config (Development by default)
 # =================================================================================
 
-configure :server {
+configure :server do
 
   create_pages()
 
@@ -50,12 +50,12 @@ configure :server {
     no_swf: true,
     livereload_css_target: 'css/style.main.css'
 
-}
+end
 
 # Build config (Production by default)
 # =================================================================================
 
-configure :build {
+configure :build do
 
   ignore '**/.keep'
   ignore 'templates/*'
@@ -124,28 +124,23 @@ configure :build {
     gzip.exts = %w[.js .css .html .htm .svg .xml .ico .map .json]
   end
 
-}
+end
 
 # Contentful
 # ==============================================================================
 
-configure :contentful {
-  activate :contentful do |f|
-    f.space           = { content: ENV['CONTENTFUL_SPACE_ID'] }
-    f.access_token    = ENV['CONTENTFUL_ACCESS_TOKEN']
-    f.use_preview_api = false
-    f.cda_query       = { limit: 1000 }
-    f.content_types   = {
-      pages: 'page',
-      services: 'service',
-      products: 'product',
-      biographies: 'biography',
-      notices: 'notices',
-      testimonials: 'testimonial'
-    }
-  end
-}
-
-# configure :deploy {
-
-# }
+activate :contentful do |f|
+  f.space           = { content: ENV['CONTENTFUL_SPACE_ID'] }
+  f.access_token    = ENV['CONTENTFUL_ACCESS_TOKEN']
+  f.use_preview_api = false
+  f.cda_query       = { limit: 1000 }
+  f.content_types   = {
+    pages: 'page',
+    services: 'service',
+    products: 'product',
+    biographies: 'biography',
+    notices: 'notices',
+    testimonials: 'testimonial',
+    menus: 'menu'
+  }
+end

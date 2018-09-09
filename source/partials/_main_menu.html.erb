@@ -18,7 +18,7 @@
         </a>
       <% end %>
     </li>
-    <% get_top_level_menu_items().each do |page_id, page| %>
+    <% get_top_level_menu_items().each do |page| %>
       <li>
         <% if page.url == current_page.url.parameterize %>
         <strong><%= page.page_name %></strong>
