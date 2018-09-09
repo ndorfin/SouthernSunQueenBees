@@ -3,9 +3,14 @@ body > nav {
   margin: 0 auto;
   background-color: mix(#666, #e47615, 25%);
   box-sizing: border-box;
-  padding: 0 .5rem .5rem;
+  padding-top: 0;
+  padding-right: .5rem;
+  padding-bottom: .5rem;
+  padding-left: .5rem;
 
   li {
+    text-align: center;
+
     & + li {
       margin-top: .5rem;
     }
@@ -33,8 +38,12 @@ body > nav {
     }
   }
 
-  @media (min-width: 640px) {
-    padding: 1rem 1rem 0;
+  @media (min-width: 600px) {
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0;
+    padding-left: ($logo_width * 1.6) + 32px;
+
 
     ul {
       display: flex;
