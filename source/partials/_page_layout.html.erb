@@ -1,0 +1,37 @@
+<%
+  page = locals[:page]
+  content_for :page_title, page.page_heaading
+  content_for :page_heading, page.page_heaading
+  content_for :page_intro, Kramdown::Document.new(page.intro).to_html if page.intro
+  content_for :page_description, page.page_summary
+  content_for :page_image_url, page.social_image.url if page.social_image
+  content_for :page_masthead_text, page.masthead_text if page.masthead_text
+  content_for :page_masthead_image, page.masthead_background_image.first.url if page.masthead_background_image
+%>
+
+<div class="page_content">
+  <%= Kramdown::Document.new(page.body_of_content).to_html if page.body_of_content %>
+</div>
+
+<% if page.include? 'products' %>
+  <%= partial 'partials/product_summary_list', locals: { products: page.products } %>
+<% end %>
+
+<% if page.include? 'services' %>
+  <%= partial 'partials/services_summary_list', locals: { services: page.services } %>
+<% end %>
+
+<% if page.include? 'biographies' %>
+  <%= partial 'partials/biographies_summary_list', locals: { bios: page.biographies } %>
+<% end %>
+
+<% if page.include? 'testimonials' %>
+  <% if page.testimonials.count == 1 %>
+    <%= partial 'partials/testimonials_summary', locals: { testimonial: page.testimonials.first } %>
+  <% else %>
+    <%= partial 'partials/testimonials_summary_list', locals: { testimonials: page.testimonials } %>
+  <% end %>
+<% end %>
+
+
+

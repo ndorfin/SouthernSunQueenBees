@@ -1,10 +1,17 @@
-<dl>
-  <dt>name</dt>
-  <dd><%= testimonial.name %></dd>
-  <dt>slug</dt>
-  <dd><%= testimonial.slug %></dd>
-  <dt>quote</dt>
-  <dd><blockquote><%= Kramdown::Document.new(testimonial.quote).to_html %></blockquote></dd>
-  <dt>photo</dt>
-  <dd><%= "<img src=\"#{testimonial.photo.url}?w=400\" alt=\"#{testimonial.name}\">" if testimonial.photo %></dd>
-</dl>
+<% if testimonial.background_image %>
+<aside class="testimonial" style="background-image: url(<%= testimonial.background_image.url %>);">
+<% else %>
+<aside class="testimonial">
+<% end %>
+  <figure>
+    <blockquote>
+      <%= Kramdown::Document.new(testimonial.quote).to_html %>
+    </blockquote>
+    <% if testimonial.quotee %>
+    <figcaption>
+      <img src="<%= "#{testimonial.photo.url}?w=160&fm=jpg&q=80&fl=progressive" %>" alt="<%= testimonial.quotee %>">
+      <cite><%= testimonial.quotee %></cite>
+    </figcaption>
+    <% end %>
+  </figure>
+</aside>

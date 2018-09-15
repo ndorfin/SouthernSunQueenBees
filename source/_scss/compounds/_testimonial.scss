@@ -1,0 +1,42 @@
+.testimonial {
+  background-color: $colour_header_background;
+  color: #fff;
+  text-align: center;
+
+  figure {
+    background-color: rgba(0,0,0,.5);
+    padding: $spacing_gutter;
+    margin: 0;
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    font-size: 1.25rem;
+
+    > :first-child {
+      &::before {
+        content: '“';
+      }
+    }
+
+    > :last-child {
+      &::after {
+        content: '”';
+      }
+    }
+  }
+
+  figcaption {
+    img {
+      max-width: 80px;
+      border-radius: 2rem;
+      margin: $spacing_gutter 0;
+    }
+
+    cite {
+      display: block;
+    }
+  }
+}
