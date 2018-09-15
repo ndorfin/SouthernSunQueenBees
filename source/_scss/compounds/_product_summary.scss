@@ -4,21 +4,4 @@
     text-decoration: none;
   }
 
-  .product_image {
-    max-width: 240px;
-  }
-
-  .product_content {
-
-  }
-
-  & + .product_summary {
-    margin-top: 1rem;
-    border-top: #eee solid 1px;
-    padding-top: 1rem;
-  }
-
-  @media (min-width: 640px) {
-
-  }
 }
