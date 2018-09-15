@@ -1,13 +1,12 @@
 body > header {
-  max-width: $faux_column_width;
   margin: 0 auto;
   box-sizing: border-box;
   border-radius: .25rem .25rem 0 0;
-  padding: 1rem;
+  padding: 1rem 4rem 1rem 1.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-image: linear-gradient(to top, mix(#666, #e47615, 25%) 0%, mix(#fff, #e47615, 25%) 100%);
+  background-color: $colour_header_background;
 
   &::before {
     content: '';
@@ -24,6 +23,8 @@ body > header {
 
   h1 {
     font-size: 1.5rem;
+    letter-spacing: .05em;
+    max-width: 11rem;
     flex: auto;
   }
 
@@ -42,6 +43,7 @@ body > header {
 
     h1 {
       font-size: 1.75rem;
+      max-width: 100%;
     }
 
     &::before {

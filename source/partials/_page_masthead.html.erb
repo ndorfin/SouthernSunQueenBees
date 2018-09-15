@@ -1,0 +1,3 @@
+<div class="header_masthead" style="background-image:url(<%= page.masthead_background_image.first.url %>);">
+  <div class="masthead_content"><%= Kramdown::Document.new(page.masthead_text).to_html %></div>
+</div>

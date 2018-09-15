@@ -11,10 +11,6 @@ html {
 body {
   margin: 0;
   background-color: #334;
-
-  @media (min-width: 640px) {
-    padding: 2rem;
-  }
 }
 
 b,

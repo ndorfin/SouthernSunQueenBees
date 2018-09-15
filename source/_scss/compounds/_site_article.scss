@@ -1,12 +1,5 @@
 body > article {
-  max-width: $faux_column_width;
   margin: 0 auto;
   background-color: #fff;
   box-sizing: border-box;
-  padding: 3rem 1.5rem;
-  border-radius: 0 0 .25rem .25rem;
-
-  @media (min-width: $breakpoint_medium_gutters) {
-    padding: 4rem 2rem;
-  }
 }

@@ -4,6 +4,7 @@
   background-color: #fff;
   padding: 1.5rem;
   box-sizing: border-box;
+  display: none;
 
   @media (min-width: $breakpoint_medium_gutters) {
     padding: 2rem;

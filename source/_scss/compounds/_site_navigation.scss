@@ -1,8 +1,9 @@
 body > nav {
   max-width: $faux_column_width;
   margin: 0 auto;
-  background-color: mix(#666, #e47615, 25%);
+  background-color: $colour_header_background;
   box-sizing: border-box;
+  display: none;
   padding-top: 0;
   padding-right: .5rem;
   padding-bottom: .5rem;

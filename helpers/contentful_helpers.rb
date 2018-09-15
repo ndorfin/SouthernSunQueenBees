@@ -27,4 +27,11 @@ module ContentfulHelpers
     top_level_menu = get_menu_by_slug('header-menu')
     top_level_menu.page_links
   end
+
+  def get_homepage
+    homepage = get_pages().select do |page_id, page|
+      page.url == 'home'
+    end
+    homepage.flatten[1]
+  end
 end
