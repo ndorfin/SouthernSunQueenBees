@@ -1,6 +1,5 @@
 <%
   homepage = get_homepage()
-  puts homepage
   content_for :page_title, homepage.page_heaading
   content_for :page_heading, homepage.page_heaading
   content_for :page_intro, Kramdown::Document.new(homepage.intro).to_html if homepage.intro

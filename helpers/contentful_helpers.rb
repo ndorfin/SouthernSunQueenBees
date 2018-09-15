@@ -6,9 +6,11 @@ module ContentfulHelpers
 
   def create_pages
     get_pages().each do |page_id, page|
-      proxy "#{page.url}/index.html",
-        '/templates/template_page.html',
-        locals: { page: page }
+      if page.url != 'home'
+        proxy "#{page.url}/index.html",
+          '/templates/template_page.html',
+          locals: { page: page }
+      end
     end
   end
 
