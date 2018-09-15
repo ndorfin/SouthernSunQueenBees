@@ -1,33 +1,23 @@
 $font_list: (
-  body: (
-    slug: 'open-sans',
+  regular: (
+    slug: 'roboto',
     weight: 400,
-    local_name: 'Open Sans Regular',
-    system_name: 'Open-Sans-Regular',
-    family_name: 'Open Sans',
-    fallback: "Helvetica, Arial, 'Droid Sans', sans-serif"
+    local_name: 'Roboto Regular',
+    system_name: 'Roboto-Regular',
+    family_name: 'Roboto'
   ),
-  emphasis: (
-    slug: 'open-sans',
+  bold: (
+    slug: 'roboto',
     weight: 700,
-    local_name: 'Open Sans Bold',
-    system_name: 'Open-Sans-Bold',
-    family_name: 'Open Sans',
-    fallback: "Helvetica, Arial, 'Droid Sans', sans-serif"
-  ),
-  headings: (
-    slug: 'palanquin-dark',
-    weight: 500,
-    local_name: 'Palanquin Dark Medium',
-    system_name: 'Palanquin-Dark-Medium',
-    family_name: 'Palanquin Dark',
-    fallback: "Helvetica, Arial, 'Droid Sans', sans-serif"
+    local_name: 'Roboto Bold',
+    system_name: 'Roboto-Bold',
+    family_name: 'Roboto'
   )
 );
 
-$font_headings: map-get($font_list, 'headings');
-$font_body: map-get($font_list, 'body');
-$font_emphasis: map-get($font_list, 'emphasis');
+$font_headings: map-get($font_list, bold);
+$font_body: map-get($font_list, regular);
+$font_emphasis: map-get($font_list, bold);
 
 @function get-font-url($slug, $weight, $format) {
   @return font_url('#{$slug}/#{$slug}-#{$weight}.#{$format}') format('#{$format}');

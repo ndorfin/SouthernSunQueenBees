@@ -1,5 +1,5 @@
 .heading {
-  font-family: map-get($font_headings, 'family_name'), map-get($font_headings, 'fallback');
+  font-family: map-get($font_headings, 'family_name'), Helvetica, Arial, 'Droid Sans', sans-serif;
   font-style: normal;
   font-weight: map-get($font_headings, 'weight');
   line-height: 1;
