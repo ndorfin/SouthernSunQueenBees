@@ -2,6 +2,10 @@
   max-width: $faux_column_width;
   margin: 0 auto;
   background-color: #fff;
-  padding: 1rem;
+  padding: 1.5rem;
   box-sizing: border-box;
+
+  @media (min-width: $breakpoint_medium_gutters) {
+    padding: 2rem;
+  }
 }
