@@ -39,7 +39,9 @@
           </div>
         </div>
         <% if content_for? :page_intro %>
-        <p><%= yield_content :page_intro %></p>
+          <div class="page_intro">
+            <%= yield_content :page_intro %>
+          </div>
         <% end %>
       </header>
       <%= yield %>

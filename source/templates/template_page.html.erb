@@ -8,7 +8,9 @@
   content_for :page_masthead_image, page.masthead_background_image.first.url if page.masthead_background_image
 %>
 
-<%= Kramdown::Document.new(page.body_of_content).to_html if page.body_of_content %>
+<div class="page_content">
+  <%= Kramdown::Document.new(page.body_of_content).to_html if page.body_of_content %>
+</div>
 
 <% if page.include? 'products' %>
   <%= partial 'partials/product_summary_list', locals: { products: page.products } %>
