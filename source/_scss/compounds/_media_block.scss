@@ -1,39 +1,30 @@
 .media_block {
   display: block;
-  text-align: center;
-  padding: $spacing_gutter;
 
   .mb_image {
 
   }
 
   .mb_content {
-    margin-top: $spacing_gutter;
+    padding: $spacing_gutter;
 
-    > * {
-      margin: 0;
-
-      & + * {
-        margin-top: 1rem;
-      }
+    &::before {
+      content: '';
+      width: 4rem;
+      height: 1px;
+      background-color: $colour_orange_highlight;
+      display: block;
+      margin-top: $spacing_gutter;
+      margin-bottom: $spacing_gutter;
     }
-
   }
 
   @media (min-width: 640px) {
-    text-align: left;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
     .mb_image {
-      flex: 1 1 auto;
-      margin-right: $spacing_gutter;
+      margin-left: $spacing_gutter;
     }
 
     .mb_content {
-      flex: 1 1 auto;
       margin-top: 0;
     }
   }
