@@ -1,19 +1,15 @@
 <nav>
   <h2>Menu</h2>
-  <ul>
-    <li id="nav_home">
+  <input type="checkbox" id="menu_checkbox">
+  <label for="menu_checkbox">Menu</label>
+  <ul id="menu">
+    <li>
       <% if current_page.url == '/' %>
         <strong>
-          <svg viewBox="0 0 512 512">
-            <use xlink:href="#icon_home"/>
-          </svg>
           <span>Home</span>
         </strong>
       <% else %>
         <a href="<%= config[:base_url] %>">
-          <svg viewBox="0 0 512 512">
-            <use xlink:href="#icon_home"/>
-          </svg>
           <span>Home</span>
         </a>
       <% end %>
