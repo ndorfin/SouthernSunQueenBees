@@ -54,7 +54,7 @@ body > nav {
   left: 0;
   background-color: $colour_header_background;
   transform: translateY(-100%);
-  transition: transform .2s ease-in;
+  transition: transform .1s ease-in-out;
 
   :checked ~ & {
     transform: translateY(0);
@@ -65,12 +65,10 @@ body > nav {
   }
 
   li {
+    max-width: 150px;
+    margin: 0 auto;
     text-align: center;
     border-bottom: $colour_orange_highlight solid 1px;
-
-    & + li {
-      margin-top: .5rem;
-    }
 
     &:last-child {
       border-bottom: none;
@@ -80,7 +78,7 @@ body > nav {
   li > * {
     display: block;
     text-decoration: none;
-    padding: .5rem;
+    padding: .75rem;
     font-size: .875rem;
   }
 
@@ -98,6 +96,8 @@ body > nav {
     li {
       flex: 0 0 auto;
       border-bottom: none;
+      margin: 0;
+      max-width: 100%;
 
       & + li {
         margin-top: 0;

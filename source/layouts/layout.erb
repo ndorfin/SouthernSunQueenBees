@@ -34,7 +34,7 @@
               <h1 class="heading heading_page"><%= yield_content :page_heading %></h1>
             <% end %>
             <% if content_for? :page_masthead_text %>
-              <%= yield_content :page_masthead_text %>
+              <div><%= yield_content :page_masthead_text %></div>
             <% end %>
           </div>
         </div>
