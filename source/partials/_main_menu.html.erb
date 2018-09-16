@@ -3,17 +3,6 @@
   <input type="checkbox" id="menu_checkbox">
   <label for="menu_checkbox">Menu</label>
   <ul id="menu">
-    <li>
-      <% if current_page.url == '/' %>
-        <strong>
-          <span>Home</span>
-        </strong>
-      <% else %>
-        <a href="<%= config[:base_url] %>">
-          <span>Home</span>
-        </a>
-      <% end %>
-    </li>
     <% get_top_level_menu_items().each do |page| %>
       <li>
         <% if page.url == current_page.url.parameterize %>

@@ -2,7 +2,6 @@ body > header {
   margin: 0 auto;
   box-sizing: border-box;
   border-radius: .25rem .25rem 0 0;
-  padding: 1rem 4rem 1rem 1.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10,51 +9,36 @@ body > header {
   position: relative;
   z-index: 2;
 
-  &::before {
-    content: '';
-    background-image: image-url('logo_queen_crown.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: inline-block;
-    flex-basis: $logo_width;
-    flex-shrink: 0;
-    width: $logo_width;
-    height: $logo_height;
-    margin-right: 1rem;
-  }
-
   h1 {
     font-size: 1.5rem;
     letter-spacing: .05em;
-    max-width: 11rem;
+    max-width: 14rem;
+    padding: 1rem;
     flex: auto;
   }
 
   a {
     color: #fff;
     text-decoration: none;
-    display: inline-block;
-  }
-
-  @media (min-width: 600px) {
-    position: relative;
     display: block;
-    padding-bottom: .25rem;
-    padding-left: ($logo_width * 1.6) + 32px;
-    z-index: 1;
-
-    h1 {
-      font-size: 1.75rem;
-      max-width: 100%;
-    }
+    padding: 0 0 0 2.5rem;
+    position: relative;
 
     &::before {
-      flex: none;
+      content: '';
+      background-image: image-url('logo_queen_crown.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
       position: absolute;
-      top: 1rem;
-      left: 1rem;
-      width: $logo_width * 1.6;
-      height: $logo_height * 1.6;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: $logo_width;
     }
+  }
+
+  @media (min-width: $breakpoint_full_navigation) {
+    z-index: 1;
   }
 }

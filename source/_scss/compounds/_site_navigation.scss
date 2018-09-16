@@ -2,10 +2,6 @@ body > nav {
   margin: 0 auto;
   background-color: $colour_header_background;
   box-sizing: border-box;
-  padding-top: 0;
-  padding-right: .5rem;
-  padding-bottom: .5rem;
-  padding-left: .5rem;
 
   [type="checkbox"] {
     position: absolute;
@@ -41,7 +37,7 @@ body > nav {
       background-repeat: no-repeat;
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: $breakpoint_full_navigation) {
       @include a11y;
     }
   }
@@ -86,12 +82,13 @@ body > nav {
     color: $colour_orange_highlight;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: $breakpoint_full_navigation) {
     display: flex;
     flex-direction: row;
     transform: none;
-    position: static;
-    padding-left: ($logo_width * 1.6) + 16px;
+    top: 3rem;
+    left: 17rem;
+    transform: translateY(-50%);
 
     li {
       flex: 0 0 auto;
