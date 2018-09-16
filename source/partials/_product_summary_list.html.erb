@@ -1,5 +1,5 @@
 <% if products && products.count > 0 %>
-<ul class="product_summary_list">
+<ul class="media_block_list product_summary_list">
   <% products.each do |p_id, prod| %>
   <li class="product_summary">
     <%= partial 'partials/product_summary', locals: { product: prod.blank? ? p_id : prod } %>

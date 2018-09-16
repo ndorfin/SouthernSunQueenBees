@@ -3,5 +3,9 @@
     <h4 class="heading heading_subheading"><%= service.title %></h4>
     <%= Kramdown::Document.new(service.service_summary).to_html %>
   </div>
-  <%= "<img class=\"mb_image service_image\" src=\"#{service.photo.url}?w=800\" alt=\"#{service.title}\">" if service.photo %>
+  <% if service.photo %>
+  <div class="mb_image">
+    <%= "<img class=\"service_image\" src=\"#{service.photo.url}?w=800\" alt=\"#{service.title}\">" %>
+  </div>
+  <% end %>
 </a>

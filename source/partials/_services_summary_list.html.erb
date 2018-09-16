@@ -1,5 +1,5 @@
 <% if services && services.count > 0 %>
-<ul class="service_summary_list">
+<ul class="media_block_list service_summary_list">
   <% services.each do |s_id, service| %>
   <li class="service_summary">
     <%= partial 'partials/services_summary', locals: { service: service.blank? ? s_id : service } %>
