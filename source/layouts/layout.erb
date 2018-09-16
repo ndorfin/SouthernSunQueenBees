@@ -31,15 +31,15 @@
         <% end %>
           <div class="masthead_content">
             <% if content_for? :page_heading %>
-              <h1 class="heading heading_page"><%= yield_content :page_heading %></h1>
+              <h1 class="heading heading_page faux_column"><%= yield_content :page_heading %></h1>
             <% end %>
             <% if content_for? :page_masthead_text %>
-              <div><%= yield_content :page_masthead_text %></div>
+              <div class="faux_column"><%= yield_content :page_masthead_text %></div>
             <% end %>
           </div>
         </div>
         <% if content_for? :page_intro %>
-          <div class="page_intro">
+          <div class="page_intro faux_column">
             <%= yield_content :page_intro %>
           </div>
         <% end %>

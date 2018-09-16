@@ -1,8 +1,5 @@
 .page_content {
   padding: $spacing_gutter;
-
-  > * {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-  }
+  max-width: $width_faux_column;
+  margin: 0 auto;
 }

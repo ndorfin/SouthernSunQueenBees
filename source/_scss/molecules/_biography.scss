@@ -2,22 +2,49 @@
   header {
     background-color: $colour_header_background;
     color: #fff;
-    padding: $spacing_gutter;
 
-    .heading {
-      font-size: 1.5rem;
+    .faux_column {
+      padding: $spacing_gutter;
+      display: flex;
+      flex-direction: row;
 
-      &::before {
-        @include highline;
+      > * {
+        flex-basis: auto;
+        flex-shrink: 1;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin: 0;
       }
     }
 
-    p {
-      margin-top: .5rem;
+    .heading {
+      & + p {
+        border-left: rgba(#fff, .25) solid 1px;
+        padding-left: 1rem;
+        margin-left: 1rem;
+        color: $colour_orange_highlight;
+      }
     }
   }
 }
 
-.biography_content {
+@media (min-width: 640px) {
+  .biography {
+    padding: 0 1.5rem 3rem;
+    overflow: hidden;
 
+    > header {
+      margin: 0 -1.5rem 3rem;
+    }
+
+    figure {
+      float: left;
+      width: 40%;
+    }
+  }
+
+  .biography_content {
+    margin-left: calc(40% + 3rem);
+    margin-top: 3rem;
+  }
 }

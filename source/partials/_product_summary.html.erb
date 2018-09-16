@@ -1,4 +1,4 @@
-<a href="<%= product.slug %>" class="media_block">
+<div class="media_block">
   <div class="mb_content product_content">
     <h4 class="heading heading_subheading"><%= product.title %></h4>
     <%= Kramdown::Document.new(product.summary).to_html %>
@@ -8,4 +8,4 @@
     <%= "<img class=\"product_image\" src=\"#{product.photo.url}?w=800\" alt=\"#{product.title}\">" %>
   </div>
   <% end %>
-</a>
+</div>

@@ -1,14 +1,18 @@
 <section class="biography">
   <header>
-    <h3 class="heading heading_section"><%= bio.name %></h3>
-    <% if bio.job_title %>
-    <p><%= bio.job_title %></p>
-    <% end %>
+    <div class="faux_column">
+      <h3 class="heading heading_section"><%= bio.name %></h3>
+      <% if bio.job_title %>
+      <p><%= bio.job_title %></p>
+      <% end %>
+    </div>
   </header>
-  <figure>
-    <%= "<img src=\"#{bio.photo.url}?w=400\" alt=\"#{bio.name}\">" %>
-  </figure>
-  <div class="biography_content">
-    <%= Kramdown::Document.new(bio.biography).to_html %>
+  <div class="faux_column">
+    <figure>
+      <%= "<img src=\"#{bio.photo.url}?w=400\" alt=\"#{bio.name}\">" %>
+    </figure>
+    <div class="biography_content">
+      <%= Kramdown::Document.new(bio.biography).to_html %>
+    </div>
   </div>
 </section>
