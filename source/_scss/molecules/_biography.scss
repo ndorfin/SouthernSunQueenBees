@@ -1,0 +1,23 @@
+.biography {
+  header {
+    background-color: $colour_header_background;
+    color: #fff;
+    padding: $spacing_gutter;
+
+    .heading {
+      font-size: 1.5rem;
+
+      &::before {
+        @include highline;
+      }
+    }
+
+    p {
+      margin-top: .5rem;
+    }
+  }
+}
+
+.biography_content {
+
+}

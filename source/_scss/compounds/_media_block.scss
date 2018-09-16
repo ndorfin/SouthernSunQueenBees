@@ -9,13 +9,7 @@
     padding: $spacing_gutter;
 
     &::before {
-      content: '';
-      width: 4rem;
-      height: 1px;
-      background-color: $colour_orange_highlight;
-      display: block;
-      margin-top: $spacing_gutter;
-      margin-bottom: $spacing_gutter;
+      @include highline;
     }
   }
 
@@ -36,9 +30,14 @@
       flex-basis: 55%;
       flex-grow: 1;
       flex-shrink: 0;
+      line-height: 1.5;
 
       &::before {
         margin-top: 0;
+      }
+
+      .heading {
+        margin-bottom: $spacing_gutter;
       }
     }
   }

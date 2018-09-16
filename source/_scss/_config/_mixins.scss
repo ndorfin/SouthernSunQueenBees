@@ -70,3 +70,13 @@
     border-left: $colour solid $width;
   }
 }
+
+@mixin highline() {
+  content: '';
+  width: 4rem;
+  height: 1px;
+  background-color: $colour_orange_highlight;
+  display: block;
+  margin-top: $spacing_gutter;
+  margin-bottom: $spacing_gutter;
+}
