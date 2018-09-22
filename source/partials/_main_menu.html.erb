@@ -1,7 +1,12 @@
 <nav>
   <h2>Menu</h2>
   <input type="checkbox" id="menu_checkbox">
-  <label for="menu_checkbox">Menu</label>
+  <label for="menu_checkbox">
+    <svg focusable="false">
+      <use xlink:href="#icon_menu"/>
+    </svg>
+    Menu
+  </label>
   <ul id="menu">
     <% get_top_level_menu_items().each do |page| %>
       <li>

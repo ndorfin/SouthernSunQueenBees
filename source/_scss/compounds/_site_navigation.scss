@@ -25,16 +25,10 @@ body > nav {
     text-decoration: none;
     text-align: center;
 
-    &::before {
-      content: '';
-      display: block;
+    svg {
       width: 2rem;
       height: 2rem;
       margin: 0 auto .25rem;
-      background-image: image-url('icon_menu.svg');
-      background-position: 50% 50%;
-      background-size: contain;
-      background-repeat: no-repeat;
     }
 
     @media (min-width: $breakpoint_full_navigation) {

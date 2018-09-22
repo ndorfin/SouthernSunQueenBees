@@ -24,17 +24,14 @@ body > header {
     padding: 0 0 0 2.5rem;
     position: relative;
 
-    &::before {
-      content: '';
-      background-image: image-url('logo_queen_crown.svg');
-      background-repeat: no-repeat;
-      background-size: contain;
+    svg {
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
       display: block;
       width: $logo_width;
+      height: $logo_height;
     }
   }
 
