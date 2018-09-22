@@ -3,4 +3,4 @@
 <meta property="og:description" content="<%= fallback_string(:page_description) %>" name="description">
 <meta property="og:type"        content="<%= fallback_string(:page_type) %>">
 <meta property="og:image"       content="<%= fallback_string(:page_image_url) %>">
-<meta property="og:url"         content="<%= "#{config[:host]}#{current_page.url}" %>">
+<meta property="og:url"         content="<%= "#{config[:host]}#{config[:base_url]}#{current_page.url}" %>">
