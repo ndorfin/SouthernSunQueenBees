@@ -2,12 +2,12 @@
   "name": "Southern Sun Queen Bees",
   "description": "Queen Bees, Hives, and bee-related services.",
   "start_url": "/SouthernSunQueenBees/?utm_source=manifest",
-  "theme_color": "#000",
-  "background_color": "#fff",
+  "theme_color": "#fff700",
+  "background_color": "#111111",
   "icons": [
     {
-      "src": "/SouthernSunQueenBees//favicon.ico",
-      "sizes": "16x16 32x32"
+      "src": "/SouthernSunQueenBees/favicon.ico",
+      "sizes": "16x16 24x24 32x32"
     }
   ],
   "short_name": "SSQB"
