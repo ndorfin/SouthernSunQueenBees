@@ -7,14 +7,14 @@
   "image_url": "/opengraph.png",
   "short_name": "SSQB",
   "theme": {
-    "background_color": "#fff",
-    "foreground_color": "#000"
+    "background_color": "#111111",
+    "foreground_color": "#fff700"
   },
   "make_icons": false,
   "icons": [
     {
-      "href": "/favicon.ico",
-      "sizes": "16x16 32x32"
+      "href": "favicon.ico",
+      "sizes": "16x16 24x24 32x32"
     }
   ]
 }

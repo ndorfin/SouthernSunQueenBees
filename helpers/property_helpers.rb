@@ -32,11 +32,21 @@ module PropertyHelpers
   # 2. Else try current_page.data
   # 3. Else fallback to data.site
   def fallback_string(key)
-    yield_if_set(key, get_page_value(key, get_site_value(key)))
+    if content_for?(key)
+      return yield_content(key)
+    elsif current_page.data[key].blank? && current_page.data[property_lookup(key)].blank?
+      return get_site_value(key)
+    else
+      return get_page_value(key)
+    end
   end
 
   # e.g. "About us | Acme Inc."
   def get_title
     "#{fallback_string(:page_title)} | #{data.site.name}"
   end
+
+
+
+
 end
