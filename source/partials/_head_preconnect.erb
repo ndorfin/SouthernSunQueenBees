@@ -1,7 +1,7 @@
 <%
 if data.external_domains.count > 0
   data.external_domains.each do |entry|
-%><link rel="dns-prefetch" href="<%= entry %>"><%
+%><link rel="preconnect" href="<%= entry %>"><%
   end
 end
 %>
