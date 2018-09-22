@@ -25,7 +25,7 @@
     <article>
       <header>
         <% if content_for? :page_masthead_image %>
-        <div class="header_masthead" style="background-image: url(<%= yield_content :page_masthead_image %>);">
+        <div class="header_masthead" style="background-image: url(<%= yield_content :page_masthead_image %>?fm=jpg&fl=progressive&q=70&w=1280);">
         <% else %>
         <div class="header_masthead">
         <% end %>

@@ -26,6 +26,7 @@
     }
 
     .mb_content {
+      color: #555;
       padding: 0;
       flex-basis: 55%;
       flex-grow: 1;
@@ -38,6 +39,7 @@
 
       .heading {
         margin-bottom: $spacing_gutter;
+        color: #111;
       }
     }
   }

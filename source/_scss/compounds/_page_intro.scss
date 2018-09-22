@@ -1,6 +1,14 @@
 .page_intro {
   font-size: 1.25rem;
-  padding: $spacing_gutter;
+  padding: ($spacing_gutter*2) $spacing_gutter $spacing_gutter;
   max-width: $width_faux_column;
   margin: 0 auto;
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:only-child {
+    margin-bottom: 0;
+  }
 }

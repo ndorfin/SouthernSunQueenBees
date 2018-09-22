@@ -6,7 +6,7 @@
     .faux_column {
       padding: $spacing_gutter;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
 
       > * {
         flex-basis: auto;
@@ -19,13 +19,19 @@
 
     .heading {
       & + p {
-        border-left: rgba(#fff, .25) solid 1px;
-        padding-left: 1rem;
-        margin-left: 1rem;
         color: $colour_orange_highlight;
       }
     }
   }
+
+  figure {
+    background-color: $colour_header_background;
+    text-align: center;
+  }
+}
+
+.biography_content {
+  padding: $spacing_gutter;
 }
 
 @media (min-width: 640px) {
@@ -35,7 +41,21 @@
 
     > header {
       margin: 0 -1.5rem 3rem;
+
+      .faux_column {
+        flex-direction: row;
+      }
     }
+
+    .heading {
+      & + p {
+        border-left: rgba(#fff, .25) solid 1px;
+        padding-left: 1rem;
+        margin-left: 1rem;
+        color: $colour_orange_highlight;
+      }
+    }
+
 
     figure {
       float: left;
@@ -46,5 +66,8 @@
   .biography_content {
     margin-left: calc(40% + 3rem);
     margin-top: 3rem;
+    padding-top: 0;
+    line-height: 1.5;
+    color: #555;
   }
 }
