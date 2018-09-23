@@ -1,0 +1,28 @@
+body > footer {
+  background-color: $colour_header_background;
+  color: #fff;
+
+  h2 {
+    border-bottom: #ccc solid 1px;
+    padding-bottom: 1rem;
+    display: inline-block;
+  }
+
+  a {
+    color: $colour_orange_highlight;
+  }
+
+  .faux_column {
+    padding: $spacing_gutter;
+
+    & + .faux_column {
+      margin-top: $spacing_gutter;
+      padding: 0 $spacing_gutter $spacing_gutter;
+    }
+  }
+
+  .fine_print {
+    font-size: .75rem;
+    color: #bbb;
+  }
+}

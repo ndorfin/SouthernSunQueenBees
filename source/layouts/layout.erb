@@ -14,6 +14,8 @@
     <%= partial 'partials/head_preconnect' %>
     <%= partial 'partials/head_pwa' %>
     <%= partial 'partials/head_opengraph', locals: {:page_title => page_title, :page_description => page_description} %>
+    <%= partial 'partials/head_dnt_check' %>
+    <%= partial 'partials/head_google_analytics' %>
     <%= partial 'partials/head_svgs' %>
   </head>
   <body class="<%= get_page_class() %>">
@@ -53,5 +55,16 @@
       </header>
       <%= yield %>
     </article>
+    <footer>
+      <div class="faux_column">
+        <h2>Get in touch</h2>
+        <p>Phone Gary on <a href="tel:+64277333424">027 733 3424</a></p>
+        <p>E-mail <a href="mailto:gary@southernsun.co.nz">gary@southernsun.co.nz</a></p>
+      </div>
+      <div class="faux_column fine_print">
+        <p>Images courtesy of Wikipedia, Casey Upchurch, and Bob</p>
+      </div>
+    </footer>
+    <%= partial 'partials/footer_scripts' %>
   </body>
 </html>

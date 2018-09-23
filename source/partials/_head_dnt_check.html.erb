@@ -1,0 +1,10 @@
+<script>
+(function(n, w, d, m) {
+  w.DNT = function() {
+    if (m in n) return n[m];
+    if (d in w) return w[d];
+    if (d in n) return n[d];
+    return 0;
+  };
+})(navigator, window, 'doNotTrack', 'msDoNotTrack');
+</script>
