@@ -8,7 +8,7 @@
   "short_name": "SSQB",
   "theme": {
     "background_color": "#111111",
-    "foreground_color": "#fff700"
+    "foreground_color": "#ff7f00"
   },
   "make_icons": false,
   "icons": [
