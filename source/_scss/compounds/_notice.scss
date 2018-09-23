@@ -4,7 +4,9 @@ $notice_img_size: 1.5rem;
 .notice {
   padding: 1rem;
   font-size: .875rem;
-  border-radius: .25rem;
+  max-width: $width_faux_column;
+  margin: 0 auto;
+  color: #fff;
 
   h2 {
     font-size: .875rem;
@@ -12,6 +14,8 @@ $notice_img_size: 1.5rem;
   }
 
   .n_content {
+    color: #ddd;
+
     > :first-child {
       margin-top: 0;
     }
@@ -26,6 +30,7 @@ $notice_img_size: 1.5rem;
     padding-left: $notice_padding + $notice_img_size + $notice_padding;
 
     svg {
+      fill: currentColor;
       width: $notice_img_size;
       height: $notice_img_size;
       position: absolute;
@@ -35,10 +40,10 @@ $notice_img_size: 1.5rem;
   }
 
   &[data-type="Info"] {
-    background-color: mix(#c6dbf9, white, 75%);
+    background-color: #2e5286;
   }
 
   &[data-type="Warning"] {
-    background-color: mix(rgb(255, 204, 0), white, 50%);
+    background-color: #a25b00;
   }
 }

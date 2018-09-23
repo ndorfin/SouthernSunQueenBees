@@ -1,12 +1,7 @@
 #notices {
-  max-width: $width_faux_column;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 1.5rem;
-  box-sizing: border-box;
-  display: none;
+  background-color: $colour_header_background;
 
-  @media (min-width: $breakpoint_medium_gutters) {
-    padding: 2rem;
+  @media (min-width:800px) {
+    padding-bottom: 1rem;
   }
 }
