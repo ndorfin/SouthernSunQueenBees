@@ -19,13 +19,12 @@ set :js_dir, 'js'
 activate :directory_indexes
 activate :relative_assets
 set :relative_links, true
+set :base_url, '/'
 
 if config[:env] == 'production'
   set :host, 'https://southernsun.co.nz'
-  set :base_url, '/'
 else
   set :host, 'http://localhost:4567'
-  set :base_url, '/'
 end
 
 # Layout settings
