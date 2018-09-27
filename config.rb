@@ -21,8 +21,8 @@ activate :relative_assets
 set :relative_links, true
 
 if config[:env] == 'production'
-  set :host, 'https://ndorfin.github.io'
-  set :base_url, '/SouthernSunQueenBees/'
+  set :host, 'https://southernsun.co.nz'
+  set :base_url, '/'
 else
   set :host, 'http://localhost:4567'
   set :base_url, '/'
