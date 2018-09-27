@@ -2,28 +2,12 @@
   "name": "Southern Sun Queen Bees",
   "description": "Queen Bees, Hives, and bee-related services.",
   "start_url": "/?utm_source=manifest",
-  "theme_color": "#ff7f00",
-  "background_color": "#111111",
+  "theme_color": "#000",
+  "background_color": "#fff",
   "icons": [
     {
       "src": "/favicon.ico",
-      "sizes": "16x16 24x24 32x32"
-    },
-    {
-      "src": "/touch-icon-64x64.png",
-      "sizes": "64x64"
-    },
-    {
-      "src": "/touch-icon-128x128.png",
-      "sizes": "128x128"
-    },
-    {
-      "src": "/touch-icon-256x256.png",
-      "sizes": "256x256"
-    },
-    {
-      "src": "/touch-icon-512x512.png",
-      "sizes": "512x512"
+      "sizes": "16x16 32x32"
     }
   ],
   "short_name": "SSQB"
