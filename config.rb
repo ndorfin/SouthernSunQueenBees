@@ -22,7 +22,7 @@ set :relative_links, true
 set :base_url, '/'
 
 if config[:env] == 'production'
-  set :host, 'https://www.southernsun.co.nz'
+  set :host, 'https://southernsun.co.nz'
 else
   set :host, 'http://localhost:4567'
 end
