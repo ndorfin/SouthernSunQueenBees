@@ -1,0 +1,25 @@
+.link_phone,
+.link_email {
+  text-decoration: none;
+
+  svg {
+    fill: $colour_orange_highlight;
+    height: 1em;
+    max-width: 1em;
+    vertical-align: middle;
+    margin-right: .5em;
+  }
+
+  span {
+    color: #fff;
+    vertical-align: middle;
+    transition: border-color .2s ease-in;
+    border-bottom: 1px solid rgba($colour_orange_highlight, .001);
+  }
+
+  &:hover {
+    span {
+      border-bottom-color: $colour_orange_highlight;
+    }
+  }
+}

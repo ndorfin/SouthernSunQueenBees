@@ -2,4 +2,10 @@
   max-width: $width_faux_column;
   margin-right: auto;
   margin-left: auto;
+  box-sizing: border-box;
+
+  @media (min-width: $breakpoint_faux_column) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

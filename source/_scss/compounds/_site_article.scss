@@ -20,4 +20,9 @@ body > article {
       margin-top: 1.25em;
     }
   }
+
+  > header {
+    position: relative;
+    z-index: 0;
+  }
 }

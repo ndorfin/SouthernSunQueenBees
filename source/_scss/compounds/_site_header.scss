@@ -1,23 +1,30 @@
 body > header {
   margin: 0 auto;
   box-sizing: border-box;
-  border-radius: .25rem .25rem 0 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   background-color: $colour_header_background;
   position: relative;
+  height: 92px;
   z-index: 2;
 
   h1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     font-size: 1.5rem;
     letter-spacing: .05em;
     max-width: 14rem;
     padding: 1rem;
-    flex: auto;
+    position: absolute;
+    z-index: 1;
+
+    @media (min-width: $breakpoint_faux_column) {
+      left: 50%;
+      margin-left: -($width_faux_column/2);
+    }
   }
 
   a {
+    flex: auto;
     color: #fff;
     text-decoration: none;
     display: block;
@@ -33,9 +40,5 @@ body > header {
       width: $logo_width;
       height: $logo_height;
     }
-  }
-
-  @media (min-width: $breakpoint_full_navigation) {
-    z-index: 1;
   }
 }

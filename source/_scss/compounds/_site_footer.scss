@@ -13,11 +13,19 @@ body > footer {
   }
 
   .faux_column {
-    padding: $spacing_gutter;
+    padding-top: $spacing_gutter;
+    padding-right: $spacing_gutter;
+    padding-bottom: $spacing_gutter;
+    padding-left: $spacing_gutter;
 
     & + .faux_column {
       margin-top: $spacing_gutter;
-      padding: 0 $spacing_gutter $spacing_gutter;
+      padding-top: 0;
+    }
+
+    @media (min-width: $breakpoint_faux_column) {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 

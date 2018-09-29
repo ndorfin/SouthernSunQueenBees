@@ -1,6 +1,9 @@
 .page_intro {
   font-size: 1.25rem;
-  padding: ($spacing_gutter*2) $spacing_gutter $spacing_gutter;
+  padding-top: ($spacing_gutter*2);
+  padding-right: $spacing_gutter;
+  padding-bottom: $spacing_gutter;
+  padding-left: $spacing_gutter;
   max-width: $width_faux_column;
   margin: 0 auto;
 

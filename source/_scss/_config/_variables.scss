@@ -12,10 +12,15 @@ $colour_orange_highlight: #FF7F00;
 $spacing_gutter: 1.5rem;
 $spacing_gutter_wide: 2rem;
 
-$width_faux_column: 50rem;
+$height_header: 92px;
+$width_header_logo: 260px;
+$width_header_contact: 260px;
+$width_faux_column: 900px;
 
 $logo_height: 60px;
 $logo_width: 25px;
 
 $breakpoint_medium_gutters: 640px;
-$breakpoint_full_navigation: 720px;
+$breakpoint_partial_navigation: 720px;
+$breakpoint_full_navigation: 860px;
+$breakpoint_faux_column: 960px;

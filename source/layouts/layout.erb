@@ -16,19 +16,10 @@
     <%= partial 'partials/head_opengraph', locals: {:page_title => page_title, :page_description => page_description} %>
     <%= partial 'partials/head_dnt_check' %>
     <%= partial 'partials/head_google_analytics' %>
-    <%= partial 'partials/head_svgs' %>
   </head>
   <body class="<%= get_page_class() %>">
-    <header>
-      <h1>
-        <a href="<%= config[:base_url] %>">
-          <svg focusable="false" fill="#ff7f00">
-            <use xlink:href="#logo_queen_crown"/>
-          </svg>
-          <%= data.site.name %>
-        </a>
-      </h1>
-    </header>
+    <%= partial 'partials/head_svgs' %>
+    <%= partial 'partials/body_header' %>
     <%= partial 'partials/main_menu' %>
     <%= partial 'partials/body_notices' if data.content.include? 'notices' %>
     <article>
@@ -48,23 +39,14 @@
           </div>
         </div>
         <% if content_for? :page_intro %>
-          <div class="page_intro faux_column">
+          <div class="page_intro">
             <%= yield_content :page_intro %>
           </div>
         <% end %>
       </header>
       <%= yield %>
     </article>
-    <footer>
-      <div class="faux_column">
-        <h2>Get in touch</h2>
-        <p>Phone Gary on <a href="tel:+64277333424">027 733 3424</a></p>
-        <p>E-mail <a href="mailto:gary@southernsun.co.nz">gary@southernsun.co.nz</a></p>
-      </div>
-      <div class="faux_column fine_print">
-        <p>Images courtesy of Wikipedia, Casey Upchurch, and <a href="https://www.momentsoflight.nz/">Bob Zuur</a></p>
-      </div>
-    </footer>
+    <%= partial 'partials/body_footer' %>
     <%= partial 'partials/footer_scripts' %>
   </body>
 </html>
