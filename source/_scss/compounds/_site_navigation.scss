@@ -133,11 +133,11 @@ body > nav {
 #menu_contact {
   display: none;
   position: absolute;
-  width: 210px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
   font-size: .875rem;
+  padding-right: $spacing_gutter;
 
   li {
     margin: .5em 0;
@@ -150,6 +150,6 @@ body > nav {
 
   @media (min-width: $breakpoint_faux_column) {
     left: auto;
-    right: 0;
+    padding-right: 0;
   }
 }

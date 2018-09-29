@@ -22,15 +22,26 @@ body > footer {
       margin-top: $spacing_gutter;
       padding-top: 0;
     }
-
-    @media (min-width: $breakpoint_faux_column) {
-      padding-left: 0;
-      padding-right: 0;
-    }
   }
 
   .fine_print {
     font-size: .75rem;
     color: #bbb;
+  }
+
+  @media (min-width: $breakpoint_faux_column) {
+    position: relative;
+
+    .faux_column {
+      padding-left: 0;
+      padding-right: 0;
+
+      & + .faux_column {
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        margin-right: -($width_faux_column / 2);
+      }
+    }
   }
 }
