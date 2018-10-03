@@ -142,6 +142,10 @@ activate :contentful do |f|
     biographies: 'biography',
     notices: 'notices',
     testimonials: 'testimonial',
-    menus: 'menu'
+    menus: 'menu',
+    icons: 'icon',
+    universal: 'universal',
+    areas: 'contentAreas',
+    term_types: 'termTypes'
   }
 end
