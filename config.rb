@@ -33,6 +33,7 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page "/google*.html", :directory_index => false, layout: false
 
 activate :external_pipeline,
   name: :webpack,
