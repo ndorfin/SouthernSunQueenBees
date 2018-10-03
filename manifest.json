@@ -1,7 +1,7 @@
 {
   "name": "Southern Sun Queen Bees",
   "description": "Queen Bees, Hive, and bee-related services.",
-  "display": "minimal",
+  "display": "minimal-ui",
   "start_url": "/?utm_source=manifest",
   "theme_color": "#ff7f00",
   "background_color": "#111111",
