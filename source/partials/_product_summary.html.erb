@@ -2,6 +2,11 @@
   <div class="mb_content product_content">
     <h4 class="heading heading_subheading"><%= product.title %></h4>
     <%= Kramdown::Document.new(product.summary).to_html %>
+    <% if product.available_for_order == true %>
+    <p class="call_to_action"><a href="mailto:orders@southernsun.co.nz?subject=Web product order: <%= product.title %>" class="button button_primary">Order now</a></p>
+    <% else %>
+    <p class="call_to_action"><a href="mailto:gary@southernsun.co.nz?subject=Web product enquiry: <%= product.title %>" class="button button_secondary">Enquire</a></p>
+    <% end %>
   </div>
   <% if product.photo %>
   <div class="mb_image">
