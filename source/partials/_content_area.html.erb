@@ -1,0 +1,9 @@
+<%
+  content_area_id = locals[:slug]
+  ca = get_content_area_item(content_area_id)
+%>
+<% ca.content.each do |c| %>
+<%= partial 'partials/universals/link', locals: {universal: c} if c.type.slug == 'link' %>
+<%= partial 'partials/universals/plain_text', locals: {universal: c} if c.type.slug == 'plain-text' %>
+<%= partial 'partials/universals/html', locals: {universal: c} if c.type.slug == 'html' %>
+<% end %>

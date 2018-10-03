@@ -1,0 +1,4 @@
+<%
+  u = locals[:universal]
+%>
+<%= Kramdown::Document.new(u.description).to_html %>

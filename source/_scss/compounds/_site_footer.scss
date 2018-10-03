@@ -12,6 +12,16 @@ body > footer {
     color: $colour_orange_highlight;
   }
 
+  ul {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+  }
+
+  li {
+    margin: .25rem 0;
+  }
+
   .faux_column {
     padding-top: $spacing_gutter;
     padding-right: $spacing_gutter;

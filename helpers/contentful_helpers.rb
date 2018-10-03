@@ -36,4 +36,16 @@ module ContentfulHelpers
     end
     homepage.flatten[1]
   end
+
+  def get_content_areas
+    data.content.areas
+  end
+
+  def get_content_area_item(slug)
+    item = get_content_areas().select do |c_id, c|
+      c.slug == slug
+    end
+    item.flatten[1]
+  end
+
 end

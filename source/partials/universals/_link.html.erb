@@ -1,0 +1,21 @@
+<%
+  u = locals[:universal]
+
+  if !u.url.blank?
+    url = u.url
+  else
+    url = u.page.url
+  end
+%>
+<% if !u.icon.blank? %>
+<a class="link_<%= u.icon.slug %>" href="<%= url %>">
+  <svg focusable="false">
+    <use xlink:href="#<%= "icon_#{u.icon.slug}" %>"/>
+  </svg>
+  <span><%= u.label %></span>
+</a>
+<% else %>
+<a href="<%= url %>">
+  <%= u.label %>
+</a>
+<% end %>
