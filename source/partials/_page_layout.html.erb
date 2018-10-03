@@ -5,7 +5,7 @@
   content_for :page_intro, Kramdown::Document.new(page.intro).to_html if page.intro
   content_for :page_description, page.page_summary
   content_for :page_image_url, page.social_image.url if page.social_image
-  content_for :page_masthead_text, page.masthead_text if page.masthead_text
+  content_for :page_masthead_text, Kramdown::Document.new(page.masthead_text).to_html if page.masthead_text
   content_for :page_masthead_image, page.masthead_background_image.first.url if page.masthead_background_image
 %>
 
