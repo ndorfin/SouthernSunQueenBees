@@ -1,0 +1,21 @@
+<header>
+  <% if content_for? :page_masthead_image %>
+  <div class="header_masthead" style="background-image: url(<%= yield_content :page_masthead_image %>?fm=jpg&fl=progressive&q=70&w=1280);">
+  <% else %>
+  <div class="header_masthead">
+  <% end %>
+    <div class="masthead_content">
+      <% if content_for? :page_heading %>
+        <h1 class="heading heading_page faux_column"><%= yield_content :page_heading %></h1>
+      <% end %>
+      <% if content_for? :page_masthead_text %>
+        <div class="faux_column"><%= yield_content :page_masthead_text %></div>
+      <% end %>
+    </div>
+  </div>
+  <% if content_for? :page_intro %>
+    <div class="page_intro">
+      <%= yield_content :page_intro %>
+    </div>
+  <% end %>
+</header>

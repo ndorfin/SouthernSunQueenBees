@@ -1,7 +1,7 @@
 {
   "name": "Southern Sun Queen Bees",
   "title": "Southern Sun Queen Bees",
-  "description": "Queen Bees, Hives, and bee-related services.",
+  "description": "Queen Bees, Hive, and bee-related services.",
   "lang": "en-NZ",
   "type": "website",
   "image_url": "/opengraph.png",
@@ -10,6 +10,7 @@
     "background_color": "#111111",
     "foreground_color": "#ff7f00"
   },
+  "display_type": "minimal",
   "make_icons": false,
   "icons": [
     {
