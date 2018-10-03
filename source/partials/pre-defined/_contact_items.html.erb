@@ -1,0 +1,10 @@
+<%
+  contact = get_content_area_item('contact-items')
+%>
+<% if contact %>
+<ul>
+  <% contact.content.each do |c| %>
+  <li><%= partial 'partials/universals/link', locals: {universal: c} if c.type.slug == 'link' %></a>
+  <% end %>
+</ul>
+<% end %>

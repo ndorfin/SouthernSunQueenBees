@@ -128,28 +128,28 @@ body > nav {
     right: $width_header_contact;
     width: $width_faux_column - $width_header_contact - $width_header_logo;
   }
-}
 
-#menu_contact {
-  display: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  font-size: .875rem;
-  padding-right: $spacing_gutter;
+  & + ul {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    font-size: .875rem;
+    padding-right: $spacing_gutter;
 
-  li {
-    margin: .5em 0;
-  }
+    li {
+      margin: .5em 0;
+    }
 
-  @media (min-width: $breakpoint_full_navigation) {
-    display: block;
-    right: 0;
-  }
+    @media (min-width: $breakpoint_full_navigation) {
+      display: block;
+      right: 0;
+    }
 
-  @media (min-width: $breakpoint_faux_column) {
-    left: auto;
-    padding-right: 0;
+    @media (min-width: $breakpoint_faux_column) {
+      left: auto;
+      padding-right: 0;
+    }
   }
 }

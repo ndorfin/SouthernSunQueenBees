@@ -1,16 +1,7 @@
-<%
-  contact = get_content_area_item('contact-items')
-%>
 <footer>
   <div class="faux_column">
     <h2><%= partial 'partials/content_area', locals: {slug: 'footer-heading'} %></h2>
-    <% if contact %>
-    <ul>
-      <% contact.content.each do |c| %>
-      <li><%= partial 'partials/universals/link', locals: {universal: c} if c.type.slug == 'link' %></a>
-      <% end %>
-    </ul>
-    <% end %>
+    <%= partial 'partials/pre-defined/contact_items' %>
   </div>
   <div class="faux_column fine_print">
     <%= partial 'partials/content_area', locals: {slug: 'footer-footnote'} %>
