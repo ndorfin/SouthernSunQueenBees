@@ -10,7 +10,7 @@
     "background_color": "#111111",
     "foreground_color": "#ff7f00"
   },
-  "display_type": "minimal",
+  "display_type": "minimal-ui",
   "make_icons": false,
   "icons": [
     {
