@@ -16,6 +16,10 @@
     &::before {
       @include highline;
     }
+
+    .call_to_action {
+      margin-top: 1rem;
+    }
   }
 
   @media (min-width: 640px) {

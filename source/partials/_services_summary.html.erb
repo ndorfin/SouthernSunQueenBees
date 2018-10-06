@@ -1,7 +1,7 @@
-<div class="media_block">
+<div itemscope itemtype="http://schema.org/Service" class="media_block">
   <div class="mb_content service_content">
-    <h4 class="heading heading_subheading"><%= service.title %></h4>
-    <%= Kramdown::Document.new(service.service_summary).to_html %>
+    <h4 itemprop="serviceType" class="heading heading_subheading"><%= service.title %></h4>
+    <div itemprop="description"><%= Kramdown::Document.new(service.service_summary).to_html %></div>
     <% if service.available_for_order == true %>
     <p class="call_to_action"><a href="mailto:orders@southernsun.co.nz?subject=Web service order: <%= service.title %>" class="button button_primary">Order now</a></p>
     <% else %>
@@ -10,7 +10,7 @@
   </div>
   <% if service.photo %>
   <div class="mb_image">
-    <%= "<img class=\"service_image\" src=\"#{service.photo.url}?fm=jpg&fl=progressive&q=70&w=800\" alt=\"#{service.title}\">" %>
+    <img itemprop="image" class="service_image" src="<%= "#{service.photo.url}?fm=jpg&fl=progressive&q=70&w=800" %>" alt="<%= service.title %>">
   </div>
   <% end %>
 </div>
