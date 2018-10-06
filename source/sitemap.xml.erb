@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc><%= config[:host] %>/</loc>
+    <lastmod><%= Time.now().iso8601 %></lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+  </url>
+<%
+  entries = get_pages()
+  entries.each do |id, page|
+    if page.url != 'home'
+%>
+  <url>
+    <loc><%= "#{config[:host]}/#{page.url}/" %></loc>
+    <lastmod><%= DateTime.parse(page._meta.updated_at).iso8601 %></lastmod>
+    <priority>0.9</priority>
+  </url>
+<%
+    end
+  end
+%>
+</urlset>
