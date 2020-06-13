@@ -1,8 +1,5 @@
-# Ruby CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-ruby/ for more details
-#
-version: 2
+# Check https://circleci.com/docs/2.1/language-ruby/ for more details
+version: 2.1
 jobs:
   build:
     docker:
@@ -10,9 +7,6 @@ jobs:
        - image: circleci/ruby:2.4.1-node-browsers
 
     working_directory: ~/repo
-
-    branches:
-      only: master
 
     steps:
       - add_ssh_keys:
@@ -23,9 +17,9 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "Gemfile.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
 
       - run:
           name: install dependencies
@@ -43,3 +37,13 @@ jobs:
           name: Run build script
           command: |
             bash ./build.sh
+
+# We use workflows to orchestrate the jobs that we declared above.
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
