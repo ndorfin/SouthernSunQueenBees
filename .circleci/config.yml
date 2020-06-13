@@ -10,7 +10,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "SHA256:SmXDRvysrvJ6MAfuq/PqvZnBfmiuc5NyfffoRLH4ELk ndorfin+build-bot@gmail.com"
+            - "ed:7c:05:94:6c:b0:4e:f3:ff:1f:88:90:4f:7e:b8:b7"
       - checkout
 
       # Download and cache dependencies
