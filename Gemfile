@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Core
-gem 'middleman', '~> 4.2'
+gem 'middleman'
 gem 'contentful_middleman'
 
 # Config
@@ -12,4 +12,4 @@ gem 'middleman-livereload'
 
 # Production
 gem 'middleman-minify-html'
-gem 'middleman-favicon-maker', '~> 4.1'
+# gem 'middleman-favicon-maker', '~> 4.1'
