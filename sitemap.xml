@@ -2,9 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://southernsun.co.nz/</loc>
-    <lastmod>2020-06-17T23:15:59+00:00</lastmod>
+    <lastmod>2020-06-17T23:17:34+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
+  </url>
+  <url>
+    <loc>https://southernsun.co.nz/testimonials/</loc>
+    <lastmod>2020-06-13T06:53:28+00:00</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://southernsun.co.nz/products/</loc>
@@ -12,13 +17,8 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://southernsun.co.nz/contact-us/</loc>
-    <lastmod>2018-11-13T21:40:04+00:00</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://southernsun.co.nz/testimonials/</loc>
-    <lastmod>2020-06-13T06:53:28+00:00</lastmod>
+    <loc>https://southernsun.co.nz/about-us/</loc>
+    <lastmod>2018-09-22T05:21:52+00:00</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
@@ -27,8 +27,8 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://southernsun.co.nz/about-us/</loc>
-    <lastmod>2018-09-22T05:21:52+00:00</lastmod>
+    <loc>https://southernsun.co.nz/contact-us/</loc>
+    <lastmod>2018-11-13T21:40:04+00:00</lastmod>
     <priority>0.9</priority>
   </url>
 </urlset>
