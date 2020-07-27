@@ -21,6 +21,11 @@ jobs:
             - v1-dependencies-
 
       - run:
+          name: Update bundler
+          command: |
+            bundle update --bundler
+
+      - run:
           name: install dependencies
           command: |
             bundle install --jobs=4 --retry=3 --path vendor/bundle
