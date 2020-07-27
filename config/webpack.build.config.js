@@ -1,6 +1,6 @@
 // Dependencies
 const UglifyJSPlugin       = require('uglifyjs-webpack-plugin');
-const ExtractTextPlugin    = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Configuration
 const baseConfig  = require('./webpack.base.config');
@@ -30,50 +30,52 @@ buildConfig.module = {
       }
     },
     {
-      test: /\.css$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [
-          { // translates CSS into CommonJS
-            // See: https://webpack.js.org/loaders/css-loader/
-            loader: 'css-loader'
-          },
-          {
-            loader: 'postcss-loader',
-            options: postCSSConfig
-          },
-          {
-            // Resolves url() paths in SCSS files
-            // See: https://github.com/bholloway/resolve-url-loader
-            loader: 'resolve-url-loader'
+      test: /\.(woff|woff2)$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: '../fonts/'
           }
-        ]
-      })
+        }
+      ]
+    },
+    {
+      test: /\.css$/,
+      use: [
+        MiniCssExtractPlugin.loader,
+        'css-loader', // translates CSS into CommonJS. See: https://webpack.js.org/loaders/css-loader/
+        {
+          loader: 'postcss-loader',
+          options: postCSSConfig
+        },
+        {
+          // Resolves url() paths in SCSS files
+          // See: https://github.com/bholloway/resolve-url-loader
+          loader: 'resolve-url-loader'
+        }
+      ]
     },
     {
       test: /\.scss$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [
-          { // translates CSS into CommonJS
-            // See: https://webpack.js.org/loaders/css-loader/
-            loader: 'css-loader'
-          },
-          {
-            loader: 'postcss-loader',
-            options: postCSSConfig
-          },
-          {
-            // Resolves url() paths in SCSS files
-            // See: https://github.com/bholloway/resolve-url-loader
-            loader: 'resolve-url-loader'
-          },
-          { // compiles Sass to CSS
-            // See: https://webpack.js.org/loaders/sass-loader/
-            loader: 'sass-loader'
-          }
-        ]
-      })
+      use: [
+        MiniCssExtractPlugin.loader,
+        'css-loader', // translates CSS into CommonJS. See: https://webpack.js.org/loaders/css-loader/
+        {
+          loader: 'postcss-loader',
+          options: postCSSConfig
+        },
+        {
+          // Resolves url() paths in SCSS files
+          // See: https://github.com/bholloway/resolve-url-loader
+          loader: 'resolve-url-loader'
+        },
+        { // compiles Sass to CSS
+          // See: https://webpack.js.org/loaders/sass-loader/
+          loader: 'sass-loader'
+        }
+      ]
     }
   ]
 };
@@ -83,12 +85,9 @@ buildConfig.plugins = [
   // Compress output
   new UglifyJSPlugin(),
 
-  // Extracts files from bundles
-  new ExtractTextPlugin({
-    filename: (path) => {
-      return path('js/[name].css').replace('js/', '../css/');
-    },
-    allChunks: true
+  // Extracts CSS files from bundles
+  new MiniCssExtractPlugin({
+    filename: '../css/[name].css',
   }),
 ];
 
