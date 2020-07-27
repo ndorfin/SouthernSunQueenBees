@@ -63,10 +63,7 @@ serverConfig.module = {
           },
           { // compiles Sass to CSS
             // See: https://webpack.js.org/loaders/sass-loader/
-            loader: 'sass-loader',
-            options: { // See: https://github.com/sass/node-sass
-              data: '$env: ' + ENVIRONMENT + ';'
-            }
+            loader: 'sass-loader'
           }
         ]
       })
