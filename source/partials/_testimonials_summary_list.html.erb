@@ -1,5 +1,5 @@
 <% if testimonials && testimonials.count > 0 %>
-<ul>
+<ul class="list_stripped">
   <% testimonials.each do |t_id, testimonial| %>
   <li><%= partial 'partials/testimonials_summary', locals: { testimonial: testimonial ? testimonial : t_id } %></li>
   <% end %>

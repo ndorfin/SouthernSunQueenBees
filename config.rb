@@ -14,7 +14,6 @@ include ContentfulHelpers
 set :css_dir, 'css'
 set :fonts_dir, 'fonts'
 set :images_dir, 'img'
-set :js_dir, 'js'
 
 activate :directory_indexes
 activate :relative_assets
@@ -34,12 +33,6 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 page "/google*.html", :directory_index => false, layout: false
-
-activate :external_pipeline,
-  name: :webpack,
-  command: build? ? 'npm run webpack:build' : 'npm run webpack:server',
-  source: '.tmp/dist',
-  latency: 1
 
 # Server config (Development by default)
 # =================================================================================
@@ -62,8 +55,6 @@ configure :build do
   ignore '**/.keep'
   ignore 'templates/*'
   ignore 'partials/*'
-  ignore '**/style.*.js'
-  ignore '**/style.*.js.*'
 
   create_pages()
 
