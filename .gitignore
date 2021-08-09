@@ -1,6 +1,4 @@
-/node_modules
 /build
-/.tmp
 /data/content/*
 !.keep
 .content-space-hash

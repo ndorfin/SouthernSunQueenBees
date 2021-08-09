@@ -8,25 +8,8 @@ Company website for Southern Sun Queen Bees
 2. Change to your new local directory
 3. `brew install ImageMagick` (Required for the `middleman-favicon-maker` gem)
 4. `bundle install`
-5. `npm i`
 6. `middleman`
-
-## Development
-
-### Defining JS manifests
-
-To create the link between Webpack bundles and Middleman's HTML, you need to define each manifest or entry as follows:
-
-- Define the Webpack entries in `config/entries.js`
-- Create corresonding `<script>` references in in `source/_layouts/layout.erb`
-
-### Defining CSS manifests
-
-- Define the Webpack entries in `config/entries.js`
-- Create corresonding `<link>` references in in `source/_layouts/layout.erb`
-
 ## Build
-
 ### Doing environment-specific builds
 
 All builds default to production mode
