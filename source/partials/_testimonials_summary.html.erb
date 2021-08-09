@@ -1,7 +1,7 @@
 <% if testimonial.background_image %>
-<aside class="testimonial" style="background-image: url(<%= testimonial.background_image.url %>?fm=jpg&fl=progressive&q=70&w=1280);">
+<article class="testimonial" style="background-image: url(<%= testimonial.background_image.url %>?fm=jpg&fl=progressive&q=70&w=1280);">
 <% else %>
-<aside class="testimonial">
+<article class="testimonial">
 <% end %>
   <figure>
     <blockquote>
@@ -9,9 +9,11 @@
     </blockquote>
     <% if testimonial.quotee %>
     <figcaption>
-      <img src="<%= "#{testimonial.photo.url}?w=160&fm=jpg&q=80&fl=progressive" %>" alt="<%= testimonial.quotee %>">
+      <% if testimonial.photo && testimonial.photo.url %>
+        <img src="<%= "#{testimonial.photo.url}?w=160&fm=jpg&q=80&fl=progressive" %>" alt="<%= testimonial.quotee %>">
+      <% end %>
       <cite><%= testimonial.quotee %></cite>
     </figcaption>
     <% end %>
   </figure>
-</aside>
+</article>
