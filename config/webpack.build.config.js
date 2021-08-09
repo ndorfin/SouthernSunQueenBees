@@ -1,5 +1,4 @@
 // Dependencies
-const UglifyJSPlugin       = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Configuration
@@ -37,10 +36,6 @@ buildConfig.module = {
 };
 
 buildConfig.plugins = [
-
-  // Compress output
-  new UglifyJSPlugin(),
-
   // Extracts CSS files from bundles
   new MiniCssExtractPlugin({
     filename: '../css/[name].css',

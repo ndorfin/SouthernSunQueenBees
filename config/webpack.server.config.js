@@ -1,7 +1,6 @@
 // Dependencies
 const webpack              = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const NameAllModulesPlugin = require('name-all-modules-plugin');
 
 // Configuration
 const baseConfig = require('./webpack.base.config');
@@ -35,14 +34,6 @@ serverConfig.output = {
 };
 
 serverConfig.plugins = [
-
-  // Output the name of modules during HMR/Dev
-  // See: https://webpack.js.org/plugins/named-modules-plugin/
-  new webpack.NamedModulesPlugin(),
-
-  // Gives each module a name for good caching
-  new NameAllModulesPlugin(),
-
   // Extracts CSS files from bundles
   new MiniCssExtractPlugin({
     filename: '../css/[name].css',
