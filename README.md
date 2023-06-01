@@ -5,11 +5,12 @@ Company website for Southern Sun Queen Bees
 ## Installation
 
 1. Clone this repo into a local directory
-2. Change to your new local directory
-3. `brew install ImageMagick` (Required for the `middleman-favicon-maker` gem)
-4. `bundle install`
-6. `middleman`
+1. Change to your new local directory
+1. `bundle install`
+1. `middleman`
+
 ## Build
+
 ### Doing environment-specific builds
 
 All builds default to production mode
