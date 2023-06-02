@@ -56,39 +56,7 @@ configure :build do
   ignore 'templates/*'
   ignore 'partials/*'
 
-  create_pages()
-
-  if data.site.make_icons == true
-  # activate :favicon_maker do |f|
-  #   # Requires ImageMagick. `brew install ImageMagick`
-  #   f.template_dir  = 'image_assets'
-  #   f.output_dir  = 'source'
-  #   f.icons = {
-  #     'touch-icon-512x512.png' => [
-  #       { icon: "touch-icon-512x512.png", size: "512x512" },
-  #       { icon: "mstile-310x310.png",     size: "310x310" }
-  #     ],
-  #     'touch-icon-256x256.png' => [
-  #       { icon: "touch-icon-256x256.png",                   size: "256x256" },
-  #       { icon: "touch-icon-192x192.png",                   size: "192x192" },
-  #       { icon: "apple-touch-icon-180x180-precomposed.png", size: "180x180" },
-  #       { icon: "apple-touch-icon-precomposed.png",         size: "180x180" },
-  #       { icon: "apple-touch-icon-152x152-precomposed.png", size: "152x152" },
-  #       { icon: "mstile-150x150.png",                       size: "150x150" },
-  #       { icon: "apple-touch-icon-144x144-precomposed.png", size: "144x144" },
-  #       { icon: "apple-touch-icon-120x120-precomposed.png", size: "120x120" },
-  #       { icon: "apple-touch-icon-114x114-precomposed.png", size: "114x114" }
-  #     ],
-  #     'touch-icon-96x96.png' => [
-  #       { icon: "touch-icon-96x96.png",                   size: "96x96" },
-  #       { icon: "apple-touch-icon-76x76-precomposed.png", size: "76x76" },
-  #       { icon: "apple-touch-icon-72x72-precomposed.png", size: "72x72" },
-  #       { icon: "mstile-70x70.png",                       size: "70x70" },
-  #       { icon: "apple-touch-icon.png",                   size: "57x57" }
-  #     ]
-  #   }
-  # end
-  end
+  create_pages() # First-pass through the content so we can use the sitemap data Middleman provides
 
   activate :asset_hash, ignore: %w[
     opengraph.*
