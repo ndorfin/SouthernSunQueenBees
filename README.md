@@ -39,7 +39,7 @@ If you want a STAGING specific build use the following:
 
 ## Building for PRODUCTION:
 
-    git checkout master
-    git pull origin master
+    git checkout main
+    git pull origin main
     APP_ENV=production middleman build
 
