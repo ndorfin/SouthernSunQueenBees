@@ -22,6 +22,11 @@ jobs:
         run: bundle install --jobs 4 --retry 3
 
       - name: Get latest content
+        env:
+          CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ vars.CONTENTFUL_ACCESS_TOKEN }}
+          CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{ vars.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
+          CONTENTFUL_USE_PREVIEW_API: ${{ vars.CONTENTFUL_USE_PREVIEW_API }}
         run: bundle exec middleman contentful
 
       - name: Do a build
