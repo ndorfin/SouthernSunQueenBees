@@ -8,8 +8,8 @@ This project uses the following:
 
 - [Middleman](https://middlemanapp.com/) on Ruby v3+. A static site generator similar to Jekyll with Rails-like conventions
 - [Contentful](https://www.contentful.com/). A headless CMS with the content broken up into several types of blocks across a number of pages.
-- [CircleCI](https://circleci.com/). Build environment that listens to Webhook requests from Contentful
-- [GitHub Pages](https://pages.github.com/). CircleCI will push built content to the `gh-pages` branch on this repo, which GitHub Pages then serves at [`southernsun.co.nz`](https://southernsun.co.nz).
+- [GitHub Actions](https://github.com/features/actions). This will monitor any pushes to the `main` branch, as well as listen to Publish Events sent by Contentful.
+- [GitHub Pages](https://pages.github.com/). GitHub Actions will push built content to the `gh-pages` branch on this repo, which GitHub Pages then serves at [`southernsun.co.nz`](https://southernsun.co.nz).
 
 ## Installation
 

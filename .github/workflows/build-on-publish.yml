@@ -1,0 +1,34 @@
+name: Middleman Build on Contentful Publish Event or Main push
+on:
+  push:
+    branches:
+      - main
+  repository_dispatch:
+    types: [publish-event]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check-out source files
+        uses: actions/checkout@v2
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@ec02537da5712d66d4d50a0f33b7eb52773b5ed1
+        with:
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install --jobs 4 --retry 3
+
+      - name: Get latest content
+        run: bundle exec middleman contentful
+
+      - name: Do a build
+        run: APP_ENV=production bundle exec middleman build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
