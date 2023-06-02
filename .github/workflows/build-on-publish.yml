@@ -30,7 +30,7 @@ jobs:
         run: bundle exec middleman contentful
 
       - name: Do a build
-        run: APP_ENV=production bundle exec middleman build
+        run: APP_ENV=production bundle exec middleman build --verbose
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
