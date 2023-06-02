@@ -12,4 +12,3 @@ gem 'middleman-livereload'
 
 # Production
 gem 'middleman-minify-html'
-# gem 'middleman-favicon-maker', '~> 4.1'
