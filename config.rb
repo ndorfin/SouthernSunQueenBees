@@ -56,6 +56,9 @@ else
   print "If you're seeing this message while running the `middleman contentful` command, it's safe to ignore this message.\n"
 end
 
+require 'helpers/contentful_helpers.rb'
+include ContentfulHelpers
+
 # Server config (Development by default)
 # =================================================================================
 
