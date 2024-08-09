@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<%
+  page_title = yield_if_set(:page_title, current_page.data.page_title)
+  page_description = :page_description
+%>
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="<%= data.site.lang || 'en' %>">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= partial 'partials/head_title' %>
+    <%= partial 'partials/head_stylesheets' %>
+    <%= partial 'partials/head_preload' %>
+    <%= partial 'partials/head_preconnect' %>
+    <%= partial 'partials/head_pwa' %>
+    <%= partial 'partials/head_opengraph', locals: {:page_title => page_title, :page_description => page_description} %>
+    <%= partial 'partials/head_dnt_check' %>
+    <%= partial 'partials/head_google_analytics' %>
+  </head>
+  <body class="<%= get_page_class() %>" data-type="product">
+    <%= partial 'partials/head_svgs' %>
+    <%= partial 'partials/body_header' %>
+    <%= partial 'partials/main_menu' %>
+    <article <% if content_for? :page_heading %>aria-labelledby="product-page-heading"<% end %>>
+      <%= partial 'partials/product_page_header' %>
+      <div class="page_content product_page_content">
+        <%= yield %>
+      </div>
+    </article>
+    <%= partial 'partials/body_footer' %>
+    <%= partial 'partials/footer_scripts' %>
+  </body>
+</html>

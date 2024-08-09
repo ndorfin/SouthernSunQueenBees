@@ -52,7 +52,7 @@ if @app.data.try('content').try('pages')
   end
   @app.data.content.product_pages.each do |_id, product_page|
     # Generate static URLs for each of the 'product_page' entries
-    proxy product_page.file_path, '/templates/template_product_page.html', locals: { product_page: product_page }
+    proxy product_page.file_path, '/templates/template_product_page.html', locals: { product_page: product_page }, layout: 'product_page'
   end
 else
   # We can assume that no content has been fetched from Contentful yet. Let the user know.

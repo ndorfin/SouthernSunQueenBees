@@ -1,1 +1,46 @@
-<%= partial 'partials/product_page_layout', locals: {product_page: product_page} %>
+<%
+  product_page = locals[:product_page]
+  content_for :page_title, product_page.title
+  content_for :page_heading, product_page.title
+  content_for :page_description, product_page.summary
+  # content_for :page_image_url, page.social_image.url if page.social_image
+%>
+
+<div class="product_sidebar">
+  <div class="product_photos">
+    <figure>
+      <img src="<%= product_page.photo.url %>" alt="<%= product_page.photo.title || "" %>">
+      <% if product_page.photo.description %>
+        <figcaption>
+          <%= product_page.photo.description %>
+        </figcaption>
+      <% end %>
+    </figure>
+    <% if product_page.secondary_photos.count > 0 %>
+      <ul>
+        <li>
+          <a href="<%= product_page.photo.url %>">
+            <img loading="lazy" width="64" height="64" src="<%= product_page.photo.url %>" alt="<%= product_page.photo.title || "" %>">
+          </a>
+        </li>
+        <% product_page.secondary_photos.each do |photo| %>
+          <li>
+            <a href="<%= photo.url %>">
+              <img loading="lazy" width="64" height="64" src="<%= photo.url %>" alt="<%= photo.title || "" %>">
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+  <% if product_page.available_for_order == true %>
+    <form>
+      <p class="heading heading_subheading">
+        Make an order enquiry
+      </p>
+    </form>
+  <% end %>
+
+
+
+</div>
