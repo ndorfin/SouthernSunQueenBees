@@ -10,6 +10,7 @@ ignore 'home/*'
 # Add a custom mapper for the `middleman contentful` command
 # This will append keys to the `pages` entries, which will then be used while generating pages per 'page' entry.
 require 'lib/page_mapper'
+require 'lib/product_page_mapper'
 
 # Configuration
 # =================================================================================
@@ -46,8 +47,12 @@ page "/google*.html", :directory_index => false, layout: false
 # Ensure `pages` data exists before trying to access it
 if @app.data.try('content').try('pages')
   @app.data.content.pages.each do |_id, page|
-    # Now generate static URLs for each of the 'page' entries
+    # Generate static URLs for each of the 'page' entries
     proxy page.file_path, '/templates/template_page.html', locals: { page: page }
+  end
+  @app.data.content.product_pages.each do |_id, product_page|
+    # Generate static URLs for each of the 'product_page' entries
+    proxy product_page.file_path, '/templates/template_product_page.html', locals: { product_page: product_page }
   end
 else
   # We can assume that no content has been fetched from Contentful yet. Let the user know.
@@ -118,6 +123,10 @@ activate :contentful do |f|
     },
     services: 'service',
     products: 'product',
+    product_pages: {
+      mapper: ProductPageMapper, # See lib/product_page_mapper.rb
+      id: 'productPage'
+    },
     biographies: 'biography',
     notices: 'notices',
     testimonials: 'testimonial',
