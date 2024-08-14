@@ -7,7 +7,7 @@
 %>
 
 <div class="product_sidebar">
-  <div class="product_photos">
+  <photo-switcher>
     <figure>
       <img src="<%= product_page.photo.url %>" alt="<%= product_page.photo.title || "" %>">
       <% if product_page.photo.description %>
@@ -32,7 +32,7 @@
         <% end %>
       </ul>
     <% end %>
-  </div>
+  </photo-switcher>
   <% if product_page.available_for_order == true %>
     <form>
       <p class="heading heading_subheading">
@@ -40,7 +40,68 @@
       </p>
     </form>
   <% end %>
+</div>
+<div class="product_info">
 
+  <dl>
+    <div>
+      <dt>Price</dt>
+      <dd>
+        <%= product_page.price %> to <%= product_page.price_maximum %> NZD
+      </dd>
+    </div>
+    <div>
+      <dt>Order size</dt>
+      <dd>
+        <%= product_page.order_quantity_minimum %> to <%= product_page.order_quantity_maximum %>
+      </dd>
+    </div>
+    <div>
+      <dt>Available types</dt>
+      <dd>
+        <ul>
+          <% product_page.product_types.each do |type| %>
+            <li>
+              <%= type %>
+            </li>
+          <% end %>
+        </ul>
+      </dd>
+    </div>
+    <div>
+      <dt>Availability</dt>
+      <dd>
+        <% if product_page.availability_window %>
+          <time datetime="<%= product_page.availability_window %>">
+            <%= Date.parse(product_page.availability_window).strftime('%B %d, %Y') %>
+          </time>
+        <% end %>
+        <% if product_page.availability_end_date %>
+          <% if product_page.availability_window %>
+            to
+          <% else %>
+            Until
+          <% end %>
+          <time datetime="<%= product_page.availability_window %>">
+            <%= Date.parse(product_page.availability_end_date).strftime('%B %d, %Y') %>
+          </time>
+        <% end %>
+      </dd>
+    </div>
+  </dl>
 
+  <details>
+    <summary>About our <%= product_page.title %></summary>
+    <%= rich_text(product_page.about_this_product) %>
+  </details>
 
+  <details>
+    <summary>Ordering <%= product_page.title %></summary>
+    <%= rich_text(product_page.order_information) %>
+  </details>
+
+  <details>
+    <summary>Payment and delivery information</summary>
+    <%= rich_text(product_page.payment_and_delivery_details) %>
+  </details>
 </div>
