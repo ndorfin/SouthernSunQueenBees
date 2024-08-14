@@ -11,6 +11,8 @@ ignore 'home/*'
 # This will append keys to the `pages` entries, which will then be used while generating pages per 'page' entry.
 require 'lib/page_mapper'
 require 'lib/product_page_mapper'
+require 'lib/silent_null_renderer'
+require 'lib/asset_renderer'
 
 require 'helpers/contentful_helpers.rb'
 include ContentfulHelpers
@@ -52,6 +54,10 @@ activate :contentful do |f|
   f.space           = { content: ENV['CONTENTFUL_SPACE_ID'] }
   f.access_token    = ENV['CONTENTFUL_ACCESS_TOKEN']
   f.cda_query       = { limit: 1000 }
+  f.rich_text_mappings = {
+    'embedded-asset-block' => AssetRenderer,
+    nil => SilentNullRenderer
+  }
   f.content_types   = {
     pages: {
       mapper: PageMapper, # See lib/page_mapper.rb
