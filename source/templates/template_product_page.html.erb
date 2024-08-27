@@ -90,18 +90,22 @@
     </div>
   </dl>
 
-  <details open>
-    <summary>About our <%= product_page.title %></summary>
+  <div class="product_description">
+    <%= Kramdown::Document.new(product_page.description).to_html %>
+  </div>
+
+  <details open class="product_info_section">
+    <summary class="heading heading_subheading">About our <%= product_page.title %></summary>
     <%= rich_text(product_page.about_this_product) %>
   </details>
 
-  <details open>
-    <summary>Ordering <%= product_page.title %></summary>
+  <details open class="product_info_section">
+    <summary class="heading heading_subheading">Ordering <%= product_page.title %></summary>
     <%= rich_text(product_page.order_information) %>
   </details>
 
-  <details open>
-    <summary>Payment and delivery information</summary>
+  <details open class="product_info_section">
+    <summary class="heading heading_subheading">Payment and delivery information</summary>
     <%= rich_text(product_page.payment_and_delivery_details) %>
   </details>
 </div>

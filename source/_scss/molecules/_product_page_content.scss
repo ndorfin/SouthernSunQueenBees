@@ -1,0 +1,16 @@
+.product_page_content {
+
+}
+
+@media (min-width: 800px) {
+  .product_page_content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .product_sidebar {
+    max-inline-size: 300px;
+  }
+}
