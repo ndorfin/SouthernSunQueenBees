@@ -16,7 +16,7 @@
         </figcaption>
       <% end %>
     </figure>
-    <% if product_page.secondary_photos.count > 0 %>
+    <% if product_page.secondary_photos && product_page.secondary_photos.count > 0 %>
       <ul>
         <li>
           <a href="<%= product_page.photo.url %>">
