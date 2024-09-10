@@ -47,13 +47,22 @@
     <div>
       <dt>Price</dt>
       <dd>
-        <%= product_page.price %> to <%= product_page.price_maximum %> NZD
+        <% if product_page.price_maximum %>
+          $<%= product_page.price_minimum.to_i %> to <%= product_page.price_maximum.to_i %>
+        <% else %>
+          $<%= product_page.price_minimum.to_i %>
+        <% end %>
+        <small>(Price is per item, excluding <abbr title="General Sales Tax">GST</abbr>, and in <abbr title="New Zealand Dollars">NZD</abbr>)</small>
       </dd>
     </div>
     <div>
       <dt>Order size</dt>
       <dd>
-        <%= product_page.order_quantity_minimum %> to <%= product_page.order_quantity_maximum %>
+        <% if product_page.order_quantity_maximum %>
+          <%= product_page.order_quantity_minimum %> to <%= product_page.order_quantity_maximum %>
+        <% else %>
+          <%= product_page.order_quantity_minimum %>
+        <% end %>
       </dd>
     </div>
     <div>
@@ -71,18 +80,18 @@
     <div>
       <dt>Availability</dt>
       <dd>
-        <% if product_page.availability_window %>
-          <time datetime="<%= product_page.availability_window %>">
-            <%= Date.parse(product_page.availability_window).strftime('%B %d, %Y') %>
+        <% if product_page.availability_start_date %>
+          <time datetime="<%= product_page.availability_start_date %>">
+            <%= Date.parse(product_page.availability_start_date).strftime('%B %d, %Y') %>
           </time>
         <% end %>
         <% if product_page.availability_end_date %>
-          <% if product_page.availability_window %>
+          <% if product_page.availability_start_date %>
             to
           <% else %>
             Until
           <% end %>
-          <time datetime="<%= product_page.availability_window %>">
+          <time datetime="<%= product_page.availability_start_date %>">
             <%= Date.parse(product_page.availability_end_date).strftime('%B %d, %Y') %>
           </time>
         <% end %>
