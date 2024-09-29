@@ -10,12 +10,15 @@ This project uses the following:
 - [Contentful](https://www.contentful.com/). A headless CMS with the content broken up into several types of blocks across a number of pages.
 - [GitHub Actions](https://github.com/features/actions). This will monitor any pushes to the `main` branch, as well as listen to Publish Events sent by Contentful.
 - [GitHub Pages](https://pages.github.com/). GitHub Actions will push built content to the `gh-pages` branch on this repo, which GitHub Pages then serves at [`southernsun.co.nz`](https://southernsun.co.nz).
+- [FormSpree.io](https://formspree.io). For all server-side form processing and spam prevention.
 
 ## Installation
 
 1. Clone this repo into a local directory
 1. Change to your new local directory
 1. `bundle install`
+1. Copy `.env.development.sample` and rename as `.env.development`
+1. Add the required Environment Variables in `.env.development`
 1. Get the latest content from Contentful: `middleman contentful`
 1. `middleman`
 
