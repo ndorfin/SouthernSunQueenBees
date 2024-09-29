@@ -1,7 +1,17 @@
 photo-switcher {
-  > figure {
-
+  picture,
+  > ul a {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
   }
+
+  figcaption {
+    display: none;
+  }
+
   > ul {
     list-style-type: '';
     margin: 0;
@@ -11,7 +21,8 @@ photo-switcher {
     gap: 0.5rem;
 
     a {
-      display: block;
+      max-block-size: 64px;
+      max-inline-size: 64px;
       cursor: pointer;
     }
   }
