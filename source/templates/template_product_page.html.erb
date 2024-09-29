@@ -8,32 +8,53 @@
 
 <div class="product_sidebar">
   <photo-switcher>
-    <figure>
-      <a href="<%= product_page.photo.url %>">
+    <a href="<%= product_page.photo.url %>">
+      <figure>
         <picture>
           <source srcset="<%= product_page.photo.url + '?w=500&h=500&fm=avif&q=70' %>" type="image/avif">
           <source srcset="<%= product_page.photo.url + '?w=500&h=500&fm=webp&q=70' %>" type="image/webp">
           <img src="<%= product_page.photo.url + '?w=500&h=500&fm=jpg&fl=progressive&q=70' %>" alt="<%= product_page.photo.title || "" %>">
         </picture>
-      </a>
-      <% if product_page.photo.description %>
-        <figcaption>
-          <%= product_page.photo.description %>
-        </figcaption>
-      <% end %>
-    </figure>
+        <% if product_page.photo.description %>
+          <figcaption>
+            <%= product_page.photo.description %>
+          </figcaption>
+        <% end %>
+      </figure>
+    </a>
     <% if product_page.secondary_photos && product_page.secondary_photos.count > 0 %>
       <ul>
         <% product_page.secondary_photos.each do |photo| %>
           <li>
             <a href="<%= photo.url %>">
-              <img loading="lazy" src="<%= photo.url + '?w=128&h=128' %>" alt="<%= photo.title || "" %>">
+              <figure>
+                <img loading="lazy" src="<%= photo.url + '?w=128&h=128' %>" alt="<%= photo.title || "" %>">
+                <figcaption>
+                  <%= photo.description %>
+                </figcaption>
+              </figure>
             </a>
           </li>
         <% end %>
       </ul>
     <% end %>
   </photo-switcher>
+  <template id="tmpl_dialog_photo_fullscreen">
+    <dialog id="dialog_photo_fullscreen">
+      <picture>
+        <img src alt>
+      </picture>
+      <p>
+      </p>
+      <footer>
+        <form method="dialog"><button type="submit">Close</button></form>
+        <button data-move="1" class="button button_primary">Next</button>
+        <button data-move="-1" class="button button_primary">Previous</button>
+      </footer>
+    </dialog>
+  </template>
+  <script type="module" src="/mjs/photo-switcher.js"></script>
+
   <% if product_page.available_for_order == true %>
     <%= partial 'partials/product-page/order_form' %>
   <% end %>
