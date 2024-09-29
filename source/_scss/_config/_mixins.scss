@@ -9,7 +9,7 @@
 @mixin list_stripped() {
   // We often strip down an <ol> or <ul> because
   // we're using it in cases like a list of links in a nav.
-  list-style: none;
+  list-style: "";
   margin: 0;
   padding: 0;
 }
