@@ -34,11 +34,7 @@
     <% end %>
   </photo-switcher>
   <% if product_page.available_for_order == true %>
-    <form>
-      <p class="heading heading_subheading">
-        Make an order enquiry
-      </p>
-    </form>
+    <%= partial 'partials/product-page/order_form' %>
   <% end %>
 </div>
 <div class="product_info">

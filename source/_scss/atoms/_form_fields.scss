@@ -9,7 +9,13 @@
     }
   }
 
-  input,
+  input:is(
+    [type="text"],
+    [type="email"],
+    [type="number"],
+    [type="tel"],
+    [type="date"]
+  ),
   textarea {
     display: block;
     width: 100%;

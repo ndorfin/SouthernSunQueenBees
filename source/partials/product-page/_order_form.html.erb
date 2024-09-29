@@ -1,0 +1,106 @@
+<form method="POST" action="https://formspree.io/f/ndorfin+formspree@gmail.com">
+  <p class="heading heading_subheading">
+    Make an order enquiry
+  </p>
+
+  <fieldset>
+    <legend>Order details</legend>
+    <% if product_page.product_types.count > 1 %>
+    <div class="form_row">
+      <label>Types:</label>
+      <div class="form_field">
+        <ul>
+          <% product_page.product_types.each do |type| %>
+            <li>
+              <label>
+                <input type="radio" name="product_type" value="<%= type.parameterize %>" required>
+                <span><%= type %></span>
+              </label>
+            </li>
+          <% end %>
+          <li>
+            <label>
+              <input type="radio" name="product_type" value="mix" required>
+              <span>A mix of types</span>
+            </label>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <% end %>
+    <div class="form_row">
+      <label for="num_quantity">Quantity:</label>
+      <div class="form_field">
+        <input type="number"
+          name="quantity"
+          id="num_quantity"
+          min="<%= product_page.order_quantity_minimum || 1 %>"
+          max="<%= product_page.order_quantity_maximum || 1000 %>"
+          required
+        >
+      </div>
+    </div>
+    <div class="form_row">
+      <label for="date_delivery">Preferred delivery date:</label>
+      <div class="form_field">
+        <input type="date"
+          name="preferred_delivery_date"
+          id="date_delivery"
+          min="<%= product_page.availability_start_date ? Date.parse(product_page.availability_start_date).strftime('%Y-%m-%d') : '' %>"
+          max="<%= product_page.availability_end_date ? Date.parse(product_page.availability_end_date).strftime('%Y-%m-%d') : '' %>"
+          required
+        >
+      </div>
+    </div>
+    <div class="form_row">
+      <label for="text_other_requests">Additional requests/instructions:</label>
+      <div class="form_field">
+        <textarea
+          name="other_requests"
+          id="text_other_requests"
+          rows="5"
+          cols="40"
+          ></textarea>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Contact details</legend>
+
+    <div class="form_row">
+      <label for="text_your_name">Your name:</label>
+      <div class="form_field">
+        <input type="text"
+          name="name"
+          id="text_your_name"
+          required
+        >
+      </div>
+    </div>
+    <div class="form_row">
+      <label for="tel_phone_number">Phone number:</label>
+      <div class="form_field">
+        <input type="tel"
+          name="phone"
+          id="tel_phone_number"
+          required
+        >
+      </div>
+    </div>
+    <div class="form_row">
+      <label for="email_address">E-mail address:</label>
+      <div class="form_field">
+        <input type="email"
+          name="email"
+          id="email_address"
+          required
+        >
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="form_row form_actions">
+    <button type="submit" class="button button_primary">Send order enquiry</button>
+  </div>
+</form>

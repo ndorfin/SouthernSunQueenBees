@@ -22,7 +22,7 @@
     <%= partial 'partials/body_header' %>
     <%= partial 'partials/main_menu' %>
     <article <% if content_for? :page_heading %>aria-labelledby="product-page-heading"<% end %>>
-      <%= partial 'partials/product_page_header' %>
+      <%= partial 'partials/product-page/product_page_header' %>
       <div class="page_content product_page_content">
         <%= yield %>
       </div>
