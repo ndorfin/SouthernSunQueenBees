@@ -1,13 +1,16 @@
-<form method="POST" action="https://formspree.io/f/ndorfin+formspree@gmail.com">
-  <p class="heading heading_subheading">
+<form aria-labelledby="heading_order_enquiry" method="POST" action="https://formspree.io/f/ndorfin+formspree@gmail.com">
+  <h2 id="heading_order_enquiry" class="heading heading_subheading">
     Make an order enquiry
+  </h2>
+  <p>
+    Our <%= product_page.title %> are available for order.
+    If you’d like to enquire or start the order process, please fill out the form below.
   </p>
-
   <fieldset>
     <legend>Order details</legend>
     <% if product_page.product_types.count > 1 %>
     <div class="form_row">
-      <label>Types:</label>
+      <label>Preferred types:</label>
       <div class="form_field">
         <ul>
           <% product_page.product_types.each do |type| %>

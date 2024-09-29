@@ -37,63 +37,69 @@
     <%= partial 'partials/product-page/order_form' %>
   <% end %>
 </div>
-<div class="product_info">
 
-  <dl>
-    <div>
-      <dt>Price</dt>
-      <dd>
-        <% if product_page.price_maximum %>
-          $<%= product_page.price_minimum.to_i %> to <%= product_page.price_maximum.to_i %>
-        <% else %>
-          $<%= product_page.price_minimum.to_i %>
-        <% end %>
-        <small>(Price is per item, excluding <abbr title="General Sales Tax">GST</abbr>, and in <abbr title="New Zealand Dollars">NZD</abbr>)</small>
-      </dd>
-    </div>
-    <div>
-      <dt>Order size</dt>
-      <dd>
-        <% if product_page.order_quantity_maximum %>
-          <%= product_page.order_quantity_minimum %> to <%= product_page.order_quantity_maximum %>
-        <% else %>
-          <%= product_page.order_quantity_minimum %>
-        <% end %>
-      </dd>
-    </div>
-    <div>
-      <dt>Available types</dt>
-      <dd>
-        <ul>
-          <% product_page.product_types.each do |type| %>
-            <li>
-              <%= type %>
-            </li>
-          <% end %>
-        </ul>
-      </dd>
-    </div>
-    <div>
-      <dt>Availability</dt>
-      <dd>
-        <% if product_page.availability_start_date %>
-          <time datetime="<%= product_page.availability_start_date %>">
-            <%= Date.parse(product_page.availability_start_date).strftime('%B %d, %Y') %>
-          </time>
-        <% end %>
-        <% if product_page.availability_end_date %>
-          <% if product_page.availability_start_date %>
-            to
+
+<section class="product_info" aria-labelledby="heading_product_info">
+  <header>
+    <h2 id="heading_product_info" class="heading heading_subheading">Product information</h2>
+  </header>
+  <div class="product_criticals">
+    <dl>
+      <div>
+        <dt>Price</dt>
+        <dd>
+          <% if product_page.price_maximum %>
+            $<%= product_page.price_minimum.to_i %> to <%= product_page.price_maximum.to_i %>
           <% else %>
-            Until
+            $<%= product_page.price_minimum.to_i %>
           <% end %>
-          <time datetime="<%= product_page.availability_start_date %>">
-            <%= Date.parse(product_page.availability_end_date).strftime('%B %d, %Y') %>
-          </time>
-        <% end %>
-      </dd>
-    </div>
-  </dl>
+          <small>(Price is per item, excluding <abbr title="General Sales Tax">GST</abbr>, and in <abbr title="New Zealand Dollars">NZD</abbr>)</small>
+        </dd>
+      </div>
+      <div>
+        <dt>Order size</dt>
+        <dd>
+          <% if product_page.order_quantity_maximum %>
+            <%= product_page.order_quantity_minimum %> to <%= product_page.order_quantity_maximum %>
+          <% else %>
+            <%= product_page.order_quantity_minimum %>
+          <% end %>
+        </dd>
+      </div>
+      <div>
+        <dt>Available types</dt>
+        <dd>
+          <ul>
+            <% product_page.product_types.each do |type| %>
+              <li>
+                <%= type %>
+              </li>
+            <% end %>
+          </ul>
+        </dd>
+      </div>
+      <div>
+        <dt>Availability</dt>
+        <dd>
+          <% if product_page.availability_start_date %>
+            <time datetime="<%= product_page.availability_start_date %>">
+              <%= Date.parse(product_page.availability_start_date).strftime('%B %d, %Y') %>
+            </time>
+          <% end %>
+          <% if product_page.availability_end_date %>
+            <% if product_page.availability_start_date %>
+              to
+            <% else %>
+              Until
+            <% end %>
+            <time datetime="<%= product_page.availability_start_date %>">
+              <%= Date.parse(product_page.availability_end_date).strftime('%B %d, %Y') %>
+            </time>
+          <% end %>
+        </dd>
+      </div>
+    </dl>
+  </div>
 
   <div class="product_description">
     <%= Kramdown::Document.new(product_page.description).to_html %>
@@ -113,4 +119,4 @@
     <summary class="heading heading_subheading">Payment and delivery information</summary>
     <%= rich_text(product_page.payment_and_delivery_details) %>
   </details>
-</div>
+</section>

@@ -1,12 +1,15 @@
 .product_info {
+  margin-block-start: 2rem;
   flex-grow: 1;
 
-  > dl {
+  > div > dl {
     display: table;
+    margin-block-end: 1rem;
 
     dt {
       font-weight: 700;
       padding-inline-end: 1rem;
+
     }
 
     dd {
