@@ -4,7 +4,7 @@
 
   > div > dl {
     display: table;
-    margin-block-end: 1rem;
+    margin-block-end: 3rem;
 
     dt {
       font-weight: 700;
@@ -22,6 +22,14 @@
       > * {
         display: table-cell;
       }
+    }
+  }
+
+  @media (min-width: 800px) {
+    margin-block-start: 0;
+
+    > header {
+      @include a11y;
     }
   }
 }
