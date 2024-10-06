@@ -2,13 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://southernsun.co.nz/</loc>
-    <lastmod>2024-09-30T19:44:24+00:00</lastmod>
+    <lastmod>2024-10-06T17:51:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://southernsun.co.nz/services/</loc>
     <lastmod>2019-03-04T06:04:57+00:00</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://southernsun.co.nz/queen-introduction-and-care/</loc>
+    <lastmod>2024-10-06T17:50:56+00:00</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
