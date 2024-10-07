@@ -6,3 +6,15 @@ const paramsObj = {
   token: params.get('token')
 };
 const API_ENDPOINT = `https://preview.contentful.com/spaces/${paramsObj.space}/environments/${paramsObj.environment}/entries/${paramsObj.entryId}?access_token=${paramsObj.token}`;
+
+async function getEntry() {
+  return await fetch(API_ENDPOINT)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    });
+}
+
+export default getEntry;
