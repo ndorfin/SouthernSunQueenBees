@@ -15,6 +15,10 @@
 </div>
 <% end %>
 
+<% if page.include? 'product_pages' %>
+  <%= partial 'partials/product_page_summary_list', locals: { products: page.product_pages } %>
+<% end %>
+
 <% if page.include? 'products' %>
   <%= partial 'partials/product_summary_list', locals: { products: page.products } %>
 <% end %>
