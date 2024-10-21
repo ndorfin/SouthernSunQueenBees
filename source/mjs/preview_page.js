@@ -1,4 +1,7 @@
+import ContentfulCredentials from './contentful-credentials.js';
 import getEntry from './lib/get-entry.js';
+
+window.customElements.define('contentful-credentials', ContentfulCredentials);
 
 function buildMasthead(pageHeading, mastheadText, backgroundImage) {
   const mastheadContent = document.querySelector('.masthead_content');
@@ -40,4 +43,3 @@ await getEntry().then(({fields}) => {
   buildPageContent(fields.bodyOfContent);
   document.body.classList.add(`page_${parameterize(fields.url)}`);
 });
-
