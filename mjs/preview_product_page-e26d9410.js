@@ -1,4 +1,5 @@
 import PreviewForm from '/mjs/wc/preview-form-86c1e135.js';
+import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 
 function parameterize(string) {
   return string.replace(/[^a-zA-Z\d]/g, '-');

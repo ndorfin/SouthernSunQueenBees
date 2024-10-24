@@ -1,5 +1,7 @@
 import PreviewForm from '/mjs/wc/preview-form-86c1e135.js';
 
+const mdConverter = new window.showdown.Converter();
+
 function buildMasthead(pageHeading, mastheadText, backgroundImage) {
   const mastheadContent = document.querySelector('.masthead_content');
 
@@ -8,7 +10,7 @@ function buildMasthead(pageHeading, mastheadText, backgroundImage) {
       ${ pageHeading }
     </h1>
     <div class="faux_column">
-      ${ mastheadText }
+      ${ mdConverter.makeHtml(mastheadText) }
     </div>
   `;
 
@@ -20,14 +22,14 @@ function buildMasthead(pageHeading, mastheadText, backgroundImage) {
 function buildIntro(introText) {
   document.querySelector('.header_masthead').insertAdjacentHTML('afterend', `
     <div class="page_intro">
-      ${ introText }
+      ${ mdConverter.makeHtml(introText) }
     </div>
   `);
 }
 
 function buildPageContent(content) {
   let container = document.querySelector('.page_content');
-  container.textContent = content;
+  container.innerHTML = mdConverter.makeHtml(content);
 }
 
 function parameterize(string) {
