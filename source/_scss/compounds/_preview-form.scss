@@ -1,0 +1,10 @@
+preview-form {
+  dialog {
+    min-inline-size: 320px;
+    border: none;
+
+    &::backdrop {
+      background-color: rgba(0,0,0,.5);
+    }
+  }
+}

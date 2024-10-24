@@ -37,6 +37,7 @@ legend {
     background-color: #fefefe;
     border: #ddd solid 1px;
     border-radius: .25rem;
+    box-sizing: border-box;
   }
 
   & + .form_row {

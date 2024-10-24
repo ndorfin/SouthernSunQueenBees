@@ -7,9 +7,9 @@ class PreviewForm extends HTMLElement {
   #getEntry(formData) {
     let CF_ENTRY_URL = 'https://preview.contentful.com';
     /* Build up the Contentful API Entry URL */
-    CF_ENTRY_URL += `/entries/${ formData.get('entry_id') }`;
-    CF_ENTRY_URL += `/environments/master`;
     CF_ENTRY_URL += `/spaces/${ formData.get('space') }`;
+    CF_ENTRY_URL += `/environments/master`;
+    CF_ENTRY_URL += `/entries/${ formData.get('entry_id') }`;
     CF_ENTRY_URL += `?access_token=${ formData.get('token') }`;
 
     return fetch(CF_ENTRY_URL)
