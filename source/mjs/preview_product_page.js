@@ -1,4 +1,4 @@
-import PreviewForm from './wc/preview-form.js';
+import PreviewForm from '/mjs/wc/preview-form.js';
 
 function parameterize(string) {
   return string.replace(/[^a-zA-Z\d]/g, '-');
