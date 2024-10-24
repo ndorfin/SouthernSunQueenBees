@@ -2,7 +2,7 @@ import PreviewForm from '/mjs/wc/preview-form.js';
 
 const mdConverter = new window.showdown.Converter();
 
-function buildMasthead(pageHeading, mastheadText, backgroundImage) {
+function buildMasthead(pageHeading, mastheadText) {
   const mastheadContent = document.querySelector('.masthead_content');
 
   mastheadContent.innerHTML = `
@@ -13,10 +13,6 @@ function buildMasthead(pageHeading, mastheadText, backgroundImage) {
       ${ mdConverter.makeHtml(mastheadText) }
     </div>
   `;
-
-  if (backgroundImage) {
-    document.querySelector('.header_masthead').style.backgroundImage = `url(${backgroundImage.url}?fm=jpg&fl=progressive&q=70&w=1280)`;
-  }
 }
 
 function buildIntro(introText) {
@@ -37,7 +33,7 @@ function parameterize(string) {
 }
 
 function buildPage(fields) {
-  buildMasthead(fields.pageHeaading, fields.mastheadText, fields.mastheadBackgroundImage);
+  buildMasthead(fields.pageHeaading, fields.mastheadText);
   buildIntro(fields.intro);
   buildPageContent(fields.bodyOfContent);
   document.body.classList.add(`page_${parameterize(fields.url)}`);

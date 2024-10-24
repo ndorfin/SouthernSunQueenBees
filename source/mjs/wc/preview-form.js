@@ -4,13 +4,15 @@ const LS_CREDENTIAL_KEYS = ['space', 'token'],
 
 class PreviewForm extends HTMLElement {
 
-  #getEntry(formData) {
+  #params = {}
+
+  #getEntry() {
     let CF_ENTRY_URL = 'https://preview.contentful.com';
     /* Build up the Contentful API Entry URL */
-    CF_ENTRY_URL += `/spaces/${ formData.get('space') }`;
-    CF_ENTRY_URL += `/environments/master`;
-    CF_ENTRY_URL += `/entries/${ formData.get('entry_id') }`;
-    CF_ENTRY_URL += `?access_token=${ formData.get('token') }`;
+    CF_ENTRY_URL += `/spaces/${ this.#params['space'] }`;
+    CF_ENTRY_URL += `/environments/${ this.#params['environment'] }`;
+    CF_ENTRY_URL += `/entries/${ this.#params['entry_id'] }`;
+    CF_ENTRY_URL += `?access_token=${ this.#params['token'] }`;
 
     return fetch(CF_ENTRY_URL)
       .then(response => {
@@ -19,6 +21,15 @@ class PreviewForm extends HTMLElement {
         }
         return response.json();
       });
+  }
+
+  #buildParams(formData) {
+    this.#params = {
+      entry_id: formData.get('entry_id'),
+      environment: 'master',
+      space: formData.get('space'),
+      token: formData.get('token'),
+    }
   }
 
   #saveToLS(formData) {
@@ -36,8 +47,10 @@ class PreviewForm extends HTMLElement {
       let formData = new FormData(event.target.closest('form'));
       /* Overwrite any previously saved contentful credentials in localStorage */
       this.#saveToLS(formData);
+      /* Cache the credentials */
+      this.#buildParams(formData);
       /* Get the entry's JSON from Contentful */
-      this.#getEntry(formData).then(({fields}) => {
+      this.#getEntry().then(({fields}) => {
         /* Get the calling page's `buildPage` function to render the preview */
         window.buildPage(fields);
         /* We're done with the preview-form's dialog */
