@@ -1,7 +1,4 @@
-import ContentfulCredentials from './contentful-credentials.js';
-import getEntry from './lib/get-entry.js';
-
-window.customElements.define('contentful-credentials', ContentfulCredentials);
+import PreviewForm from './wc/preview-form.js';
 
 function buildMasthead(pageHeading, mastheadText, backgroundImage) {
   const mastheadContent = document.querySelector('.masthead_content');
@@ -37,9 +34,12 @@ function parameterize(string) {
   return string.replace(/[^a-zA-Z\d]/g, '-');
 }
 
-await getEntry().then(({fields}) => {
+function buildPage(fields) {
   buildMasthead(fields.pageHeaading, fields.mastheadText, fields.mastheadBackgroundImage);
   buildIntro(fields.intro);
   buildPageContent(fields.bodyOfContent);
   document.body.classList.add(`page_${parameterize(fields.url)}`);
-});
+}
+
+window.buildPage = buildPage;
+window.customElements.define('preview-form', PreviewForm);

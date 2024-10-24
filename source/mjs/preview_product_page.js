@@ -1,6 +1,12 @@
-import getEntry from './lib/get-entry.js';
+import PreviewForm from './wc/preview-form.js';
 
-await getEntry().then(({fields}) => {
+function parameterize(string) {
+  return string.replace(/[^a-zA-Z\d]/g, '-');
+}
 
-  document.body.classList.add(`page_${parameterize(fields.url)}`);
-});
+function buildPage(fields) {
+  document.body.classList.add(`page_product_${parameterize(fields.url)}`);
+}
+
+window.buildPage = buildPage;
+window.customElements.define('preview-form', PreviewForm);

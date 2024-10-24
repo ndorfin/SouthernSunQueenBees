@@ -1,17 +1,23 @@
-<contentful-credentials>
+<preview-form>
   <dialog id="dialog_credentials">
-    <h3>Save your Contentful credentials</h3>
+    <h3>Preview entry</h3>
     <form action="." method="dialog">
       <div class="form_row">
-        <label for="text_space">Space:</label>
+        <label for="text_space">Contentful Space:</label>
         <div class="form_field">
           <input type="text" id="text_space" name="space" required>
         </div>
       </div>
       <div class="form_row">
-        <label for="text_token">Token:</label>
+        <label for="text_token">Contentful Token:</label>
         <div class="form_field">
           <input type="text" id="text_token" name="token" required>
+        </div>
+      </div>
+      <div class="form_row">
+        <label for="text_entry_id">Entry ID:</label>
+        <div class="form_field">
+          <input type="text" id="text_entry_id" name="entry_id" required>
         </div>
       </div>
       <div class="form_row form_actions">
@@ -19,4 +25,4 @@
       </div>
     </form>
   </dialog>
-</contentful-credentials>
+</preview-form>
