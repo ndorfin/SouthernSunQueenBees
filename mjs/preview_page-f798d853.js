@@ -1,4 +1,4 @@
-import PreviewForm from 'wc/preview-form-86c1e135.js';
+import PreviewForm from '/mjs/wc/preview-form-86c1e135.js';
 
 function buildMasthead(pageHeading, mastheadText, backgroundImage) {
   const mastheadContent = document.querySelector('.masthead_content');
