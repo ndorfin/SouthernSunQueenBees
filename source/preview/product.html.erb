@@ -1,6 +1,28 @@
 ---
 layout: 'product_page'
 ---
+
+<div class="product_sidebar">
+  <p>Product images</p>
+  <p>Order form</p>
+</div>
+
+<section class="product_info" aria-labelledby="heading_product_info">
+  <header>
+    <h2 id="heading_product_info" class="heading heading_subheading">Product information</h2>
+  </header>
+
+  <div class="product_criticals">
+    <p>Product critical information</p>
+  </div>
+
+  <div class="product_description"></div>
+
+  <%# Extra Content goes here %>
+</section>
+
+<script>let exports = {};</script>
+<script src="/mjs/lib/contentful-rich-text-renderer-v12.0.0.js" charset="utf-8"></script>
 <%= partial "partials/preview_form" %>
 <script src="/mjs/lib/showdown-v2.1.0.js"></script>
 <script type="module" src="/mjs/preview_product_page.js"></script>
