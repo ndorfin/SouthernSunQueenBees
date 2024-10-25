@@ -37,4 +37,21 @@
     color: #111;
     margin: 2em 0 1em;
   }
+
+  blockquote {
+    font-style: italic;
+    margin-inline: 2rem;
+
+    > :first-child {
+      &::before {
+        content: '“';
+      }
+    }
+
+    > :last-child {
+      &::after {
+        content: '”';
+      }
+    }
+  }
 }
