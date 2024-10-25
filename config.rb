@@ -10,6 +10,7 @@ ignore 'home/*'
 # Add a custom mapper for the `middleman contentful` command
 # This will append keys to the `pages` entries, which will then be used while generating pages per 'page' entry.
 require 'lib/page_mapper'
+require 'lib/menu_mapper'
 require 'lib/product_page_mapper'
 require 'lib/silent_null_renderer'
 require 'lib/asset_renderer'
@@ -72,7 +73,11 @@ activate :contentful do |f|
     biographies: 'biography',
     notices: 'notices',
     testimonials: 'testimonial',
-    menus: 'menu',
+    # menus: 'menu',
+    menus: {
+      mapper: MenuMapper, # See lib/menu_mapper.rb
+      id: 'menu'
+    },
     icons: 'icon',
     universal: 'universal',
     areas: 'contentAreas',
