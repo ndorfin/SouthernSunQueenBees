@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Core
 gem 'middleman'
 gem 'contentful_middleman'
-# gem 'contentful'
+gem 'contentful'
 # gem 'redcarpet'
 # gem 'rich_text_renderer'
 
