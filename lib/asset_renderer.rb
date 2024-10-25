@@ -6,7 +6,7 @@ class AssetRenderer < RichTextRenderer::BaseNodeRenderer
       <picture>
         <source srcset=\"#{ entry.url }?fm=avif&q=70\" type=\"image/avif\">
         <source srcset=\"#{ entry.url }?fm=webp&q=70\" type=\"image/webp\">
-        <img src=\"#{ entry.url }?fm=jpg&fl=progressive&q=70\" alt=\"#{ entry.title }}\">
+        <img src=\"#{ entry.url }?fm=jpg&fl=progressive&q=70\" alt=\"#{ entry.title }\">
       </picture>
       "
     elsif entry.url.end_with?('.pdf', '.doc', '.docx', '.xls', '.xlsx', '.zip', '.csv')
