@@ -3,6 +3,17 @@
     <h4 itemprop="name" class="heading heading_subheading"><%= product.title %></h4>
     <div itemprop="description"><%= Kramdown::Document.new(product.summary).to_html %></div>
     <p class="call_to_action"><a href="/products/<%= product.slug %>"><%= product.title %></a></p>
+    <div hidden itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+      <span itemprop="priceCurrency" content="NZD">$</span>
+      <span itemprop="price">
+        <% if product.price_maximum %>
+          <%= product.price_minimum.to_i %> to <%= product.price_maximum.to_i %>
+        <% else %>
+          <%= product.price_minimum.to_i %>
+        <% end %>
+      </span>
+      <link itemprop="availability" href="https://schema.org/InStock" />In stock
+    </div>
   </div>
   <% if product.photo %>
   <div class="mb_image">
