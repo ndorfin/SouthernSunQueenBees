@@ -2,7 +2,7 @@
 <ul class="media_block_list product_page_summary_list">
   <% products.each do |p_id, prod| %>
   <li class="product_page_summary">
-    <%= partial 'partials/product_summary', locals: { product: prod.blank? ? p_id : prod } %>
+    <%= partial 'partials/product_page_summary', locals: { product: prod.blank? ? p_id : prod } %>
   </li>
   <% end %>
 </ul>
