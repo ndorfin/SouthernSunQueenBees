@@ -46,7 +46,7 @@ html:has(dialog[open]) {
   padding: 0;
   box-sizing: border-box;
   border: none;
-  background-color: black;
+  background-color: rgba(0, 0, 0, .9);
   overflow: hidden;
   place-content: center;
 
