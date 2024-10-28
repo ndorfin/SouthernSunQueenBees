@@ -1,22 +1,23 @@
 html {
   font-size: 16px;
-  font-family: map-get($font_body, 'family_name'), Helvetica, Arial, 'Droid Sans', sans-serif;
+  font-family: Quicksand;
   font-style: normal;
-  font-weight: map-get($font_body, 'weight');
+  font-weight: 400;
   line-height: 1.25;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: greyscale;
-  background-color: $colour_header_background;
+
 }
 
 body {
   margin: 0;
+  background-color: $colour_body-background;
 }
 
 b,
 strong {
-  font-family: map-get($font_emphasis, 'family_name'), Helvetica, Arial, 'Droid Sans', sans-serif;
-  font-weight: map-get($font_emphasis, 'weight');
+  font-family: Quicksand;
+  font-weight: 700;
 }
 
 abbr {
