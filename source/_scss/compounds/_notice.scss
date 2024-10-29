@@ -11,7 +11,7 @@ $notice_img_size: 1.5rem;
   padding: 1rem;
   font-size: .875rem;
   margin: 0 auto;
-  color: #000;
+  color: #582900;
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -29,6 +29,10 @@ $notice_img_size: 1.5rem;
   h2 {
     font-size: .875rem;
     margin-bottom: .25rem;
+  }
+
+  p {
+    max-width: 100%; //Overide global paragraph width
   }
 
   .n_content {
