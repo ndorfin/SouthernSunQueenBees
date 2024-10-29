@@ -18,10 +18,9 @@
     <%= partial 'partials/head_google_analytics' %>
   </head>
   <body class="<%= get_page_class() %>">
+    <%= partial 'partials/body_notices' if data.content.include? 'notices' %>
     <%= partial 'partials/head_svgs' %>
     <%= partial 'partials/body_header' %>
-    <%= partial 'partials/main_menu' %>
-    <%= partial 'partials/body_notices' if data.content.include? 'notices' %>
     <article>
       <%= partial 'partials/body_article_header' %>
       <%= yield %>
