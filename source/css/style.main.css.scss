@@ -3,6 +3,7 @@
 @import "../_scss/_config/variables";
 @import "../_scss/_config/mixins";
 @import "../_scss/_config/functions";
+@import "../_scss/_config/base";
 
 @import "../_scss/utilities/font_face";
 @import "../_scss/utilities/faux_column";
@@ -17,7 +18,6 @@
 @import "../_scss/compounds/site_header";
 @import "../_scss/compounds/site_navigation";
 @import "../_scss/compounds/notice";
-@import "../_scss/molecules/notices";
 @import "../_scss/compounds/site_article";
 @import "../_scss/compounds/header_masthead";
 @import "../_scss/compounds/page_intro";
@@ -34,3 +34,5 @@
 @import "../_scss/compounds/site_footer";
 @import "../_scss/compounds/photo-switcher";
 @import "../_scss/compounds/preview-form";
+
+@import "../_scss/pages/page_home";
