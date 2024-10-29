@@ -16,12 +16,9 @@
 <% end %>
 
 <% if page.url == "home" %>
-  <div>
     <%= partial 'partials/body_product_cards' %>
-  </div>
-  <div>
     <%= partial 'partials/body_training' %>
-  </div>
+    <%= partial 'partials/body_social_proof' %>
 <% end %>
 
 <% if page.include? 'product_pages' %>
