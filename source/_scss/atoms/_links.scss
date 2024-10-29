@@ -1,3 +1,9 @@
+a {
+  &:visited {
+    color: inherit;
+  }
+}
+
 .link_phone,
 .link_email {
   text-decoration: none;
