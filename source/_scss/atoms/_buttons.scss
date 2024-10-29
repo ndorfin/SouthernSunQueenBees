@@ -15,20 +15,20 @@
 .button_primary {
   color: #000;
   background-color: #fff;
-  border: $colour_orange_highlight solid 1px;
+  border: $colour_primary solid 1px;
 
   &:hover {
-    background-color: mix(#fff, $colour_orange_highlight, 85%);
+    background-color: mix(#fff, $colour_primary, 85%);
   }
 }
 
 .button_secondary {
-  color: $colour_orange_highlight;
+  color: $colour_primary;
   background-color: #fff;
   border: #eee solid 1px;
 
   &:hover {
-    border-color: $colour_orange_highlight;
+    border-color: $colour_primary;
   }
 }
 

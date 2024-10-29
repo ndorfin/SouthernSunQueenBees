@@ -73,7 +73,7 @@ body > nav {
     max-width: 150px;
     margin: 0 auto;
     text-align: center;
-    border-bottom: $colour_orange_highlight solid 1px;
+    border-bottom: $colour_primary solid 1px;
 
     &:last-child {
       border-bottom: none;
@@ -88,7 +88,7 @@ body > nav {
   }
 
   strong {
-    color: $colour_orange_highlight;
+    color: $colour_primary;
   }
 
 

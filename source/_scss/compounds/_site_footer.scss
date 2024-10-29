@@ -1,5 +1,5 @@
 body > footer {
-  background-color: $colour_header_background;
+  background-color: $colour_primary;
   color: #fff;
 
   h2 {
@@ -9,7 +9,11 @@ body > footer {
   }
 
   a {
-    color: $colour_orange_highlight;
+    color: white;
+  }
+
+  svg {
+    fill: white;
   }
 
   ul {

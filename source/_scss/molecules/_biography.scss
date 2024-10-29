@@ -19,7 +19,7 @@
 
     .heading {
       & + p {
-        color: $colour_orange_highlight;
+        color: $colour_primary;
       }
     }
   }
@@ -52,7 +52,7 @@
         border-left: rgba(#fff, .25) solid 1px;
         padding-left: 1rem;
         margin-left: 1rem;
-        color: $colour_orange_highlight;
+        color: $colour_primary;
       }
     }
 
