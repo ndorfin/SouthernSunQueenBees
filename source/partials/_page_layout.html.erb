@@ -15,6 +15,15 @@
 </div>
 <% end %>
 
+<% if page.url == "home" %>
+  <div>
+    <%= partial 'partials/body_product_cards' %>
+  </div>
+  <div>
+    <%= partial 'partials/body_training' %>
+  </div>
+<% end %>
+
 <% if page.include? 'product_pages' %>
   <%= partial 'partials/product_page_summary_list', locals: { products: page.product_pages } %>
 <% end %>
