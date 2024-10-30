@@ -1,39 +1,23 @@
-.header_masthead {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: $colour_header_background;
-  margin: 0 auto;
-  color: #fff;
-  position: relative;
-
-  .heading_page {
-    color: #fff;
-    text-align: center;
-    line-height: 1.25;
-    font-size: 2rem;
-
-    @media (min-width: $breakpoint_full_navigation) {
-      font-size: 2.5rem;
-    }
-  }
+.masthead {
+  padding: 20px;
 }
 
 .masthead_content {
-  min-height: 22vw;
-  padding: 4vw 0;
-  background-color: rgba(0,0,0,.5);
-  text-align: center;
-  box-shadow: inset 0 0 50px rgba(0,0,0,.25);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 1.25rem;
+  color: $colour_primary;
+  padding-bottom: 40px;
+    h1 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+}
 
-  > * {
-    flex-basis: auto;
-    margin: 1.5rem auto;
-    padding: 0 1.5rem;
-    max-width: 42rem;
-  }
+.header_masthead {
+  display: block;
+  border-radius: 20px;
+  width: 100%;
+  max-width: $breakpoint_faux_column;
+  margin: 0 auto;
 }
