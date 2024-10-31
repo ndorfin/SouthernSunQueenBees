@@ -1,6 +1,6 @@
 body > footer {
   background-color: $colour_primary;
-  color: #fff;
+  color: #f6f3e8;
   padding: 60px 0 100px 0;
 
   h2 {
@@ -41,7 +41,7 @@ body > footer {
 
   .fine_print {
     font-size: .75rem;
-    color: rgba($color: #ffffff, $alpha: 0.8)
+    color: rgba($color: #f6f3e8, $alpha: 0.8)
   }
 
   @media (min-width: $breakpoint_faux_column) {
