@@ -20,4 +20,6 @@
   width: 100%;
   max-width: $breakpoint_faux_column;
   margin: 0 auto;
+  max-height: 450px;
+  object-fit: cover;
 }
