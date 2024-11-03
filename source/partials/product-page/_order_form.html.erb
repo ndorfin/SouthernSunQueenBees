@@ -8,6 +8,7 @@
   </p>
   <fieldset>
     <legend>Order details</legend>
+    <input type="hidden" name="product_name" value="<%= product_page.title %>">
     <% if product_page.product_types.count > 1 %>
     <div class="form_row">
       <label>Preferred types:</label>
@@ -16,14 +17,14 @@
           <% product_page.product_types.each do |type| %>
             <li>
               <label>
-                <input type="radio" name="product_type" value="<%= type.parameterize %>" required>
+                <input type="radio" name="preferred_product_type" value="<%= type.parameterize %>" required>
                 <span><%= type %></span>
               </label>
             </li>
           <% end %>
           <li>
             <label>
-              <input type="radio" name="product_type" value="mix" required>
+              <input type="radio" name="preferred_product_type" value="mix_of_types_please" required>
               <span>A mix of types</span>
             </label>
           </li>
@@ -59,7 +60,7 @@
       <label for="text_other_requests">Additional requests/instructions:</label>
       <div class="form_field">
         <textarea
-          name="other_requests"
+          name="other_requests_or_instructions"
           id="text_other_requests"
           rows="5"
           cols="40"
