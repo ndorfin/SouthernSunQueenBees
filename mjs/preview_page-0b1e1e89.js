@@ -4,15 +4,21 @@ const mdConverter = new window.showdown.Converter();
 
 function buildMasthead(pageHeading, mastheadText) {
   const mastheadContent = document.querySelector('.masthead_content');
-
-  mastheadContent.innerHTML = `
+  let mastheadString = `
     <h1 class="heading heading_page faux_column">
       ${ pageHeading }
     </h1>
-    <div class="faux_column">
-      ${ mdConverter.makeHtml(mastheadText) }
-    </div>
   `;
+
+  if (mastheadText) {
+    mastheadString += `
+      <div class="faux_column">
+        ${ mdConverter.makeHtml(mastheadText) }
+      </div>
+    `;
+  }
+
+  mastheadContent.innerHTML = mastheadString;
 }
 
 function buildIntro(introText) {
