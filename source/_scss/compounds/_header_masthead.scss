@@ -1,25 +1,36 @@
 .masthead {
-  padding: 20px;
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 .masthead_content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
   color: $colour_primary;
-  padding-bottom: 40px;
+  background-blend-mode: multiply;
+  background-color: rgba($color: #686868, $alpha: 0.3);
+  aspect-ratio: 2 / 1;
+  max-width: 1080px; //Maybe create a variable for max width breakpoint + 40px
+  margin: 0 auto;
+
     h1 {
       font-size: 32px;
+      color: $colour_body-background;
     }
     p {
       font-size: 18px;
       line-height: 1.4;
+      color: $colour_body-background;
     }
-}
-
-.header_masthead {
-  display: block;
-  border-radius: 20px;
-  width: 100%;
-  max-width: $breakpoint_faux_column;
-  margin: 0 auto;
-  max-height: 450px;
-  object-fit: cover;
+    @media (min-width: 1020px) {
+      border-radius: 20px;
+      padding: 60px;
+    }
+    @media (min-width: 1080px) {
+      padding: 60px;
+    }
 }
