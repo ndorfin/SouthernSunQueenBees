@@ -6,8 +6,6 @@ section {
 .product-cards {
   max-width: $width_faux_column;
   margin: 60px auto;
-  h2 {
-  }
   &__grid {
     display: grid;
     gap: 20px;
@@ -44,6 +42,7 @@ section {
     font-weight: 500;
     margin-bottom: 20px;
     font-size: 14px;
+    max-width: 20em;
   }
   &__footer {
     display: inline-block;
