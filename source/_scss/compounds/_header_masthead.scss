@@ -8,29 +8,35 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   padding: 20px;
   color: $colour_primary;
+  background-position: center;
+  background-size: cover;
   background-blend-mode: multiply;
-  background-color: rgba($color: #686868, $alpha: 0.3);
-  aspect-ratio: 2 / 1;
+  background-color: rgba($color: #686868, $alpha: 0.5);
   max-width: 1080px; //Maybe create a variable for max width breakpoint + 40px
+  min-height: 300px;
   margin: 0 auto;
 
     h1 {
       font-size: 32px;
       color: $colour_body-background;
+      text-wrap: balance;
     }
     p {
       font-size: 18px;
       line-height: 1.4;
       color: $colour_body-background;
     }
+    @media (min-width: 600px) {
+      aspect-ratio: 2 / 1;
+    }
     @media (min-width: 1020px) {
-      border-radius: 20px;
       padding: 60px;
     }
     @media (min-width: 1080px) {
-      padding: 60px;
+      border-radius: 20px;
     }
 }
+
