@@ -20,7 +20,6 @@
   <body class="<%= get_page_class() %>" data-type="product">
     <%= partial 'partials/head_svgs' %>
     <%= partial 'partials/body_header' %>
-    <%= partial 'partials/main_menu' %>
     <article <% if content_for? :page_heading %>aria-labelledby="product-page-heading"<% end %>>
       <%= partial 'partials/product-page/product_page_header' %>
       <div class="page_content product_page_content">
