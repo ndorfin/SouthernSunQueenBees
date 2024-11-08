@@ -1,13 +1,10 @@
 <nav>
-  <h2>Menu</h2>
-  <input type="checkbox" id="menu_checkbox">
-  <label for="menu_checkbox">
-    <svg class="icon_menu" focusable="false">
-      <use xlink:href="#icon_menu"/>
-    </svg>
-    Menu
+  <label for="mobile-menu-state" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <svg class="icon_menu" focusable="false">
+        <use href="#icon_menu"/>
+      </svg>
   </label>
-  <ul id="menu">
+  <ul class="menu" id="menu">
     <% get_top_level_menu_items().each do |page| %>
       <li>
         <% if current_page.url.parameterize.include? page.url %>

@@ -1,13 +1,14 @@
 <header class="site-nav">
   <div>
-    <a href="<%= config[:base_url] %>">
+    <a class="logo" href="<%= config[:base_url] %>">
       <svg class="logo_queen_crown" focusable="false">
-        <use xlink:href="#logo_queen_crown"/>
+        <use href="#logo_queen_crown"/>
       </svg>
       <svg class="logotype" focusable="false">
-       <use xlink:href="#logotype"/>
+       <use href="#logotype"/>
     </svg>
     </a>
+    <input type="checkbox" id="mobile-menu-state">
     <%= partial 'partials/main_menu' %>
-  </div>
+  
 </header>
