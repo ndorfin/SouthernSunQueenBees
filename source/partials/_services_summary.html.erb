@@ -3,7 +3,7 @@
     <h4 itemprop="serviceType" class="heading heading_subheading"><%= service.title %></h4>
     <div itemprop="description"><%= Kramdown::Document.new(service.service_summary).to_html %></div>
     <% if service.available_for_order == true %>
-    <p class="call_to_action"><a href="mailto:orders@southernsun.co.nz?subject=Web service order: <%= service.title %>" class="button button_primary">Order now</a></p>
+    <p class="call_to_action"><a href="mailto:orders@southernsun.co.nz?subject=Web service order: <%= service.title %>" class="button button_primary">Contact us</a></p>
     <% else %>
     <p class="call_to_action"><a href="mailto:gary@southernsun.co.nz?subject=Web service enquiry: <%= service.title %>" class="button button_secondary">Enquire</a></p>
     <% end %>

@@ -14,8 +14,8 @@
 
 .button_primary {
   color: #000;
-  background-color: #fff;
-  border: $colour_primary solid 1px;
+  background-color: $colour_secondary;
+  border-radius: 5px;
 
   &:hover {
     background-color: mix(#fff, $colour_primary, 85%);
