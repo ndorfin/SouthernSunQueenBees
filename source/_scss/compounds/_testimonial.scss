@@ -1,20 +1,25 @@
 .testimonial {
   padding: $spacing_gutter;
-  background-color: #555;
-  color: #fff;
+  color: $colour_primary;
   text-align: center;
 
   figure {
     max-width: $width_faux_column;
     padding: $spacing_gutter $spacing_gutter ($spacing_gutter*2);
     margin: 0 auto;
-    background-color: rgba(0,0,0,.5);
-    box-shadow: inset 0 0 50px rgba(0,0,0,.25);
+    //border: $colour_primary 1px solid;
+    //border-radius: 20px;
   }
 
   blockquote {
     font-style: italic;
     font-size: 1.25rem;
+    text-align: center;
+
+    p {
+      margin: 0 auto;
+      text-wrap: pretty;
+    }
 
     > :first-child {
       &::before {
