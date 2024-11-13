@@ -1,37 +1,74 @@
 .media_block {
-  display: block;
+  display: flex;
+  flex-direction: column;
 
   .mb_image {
+    order: 1;
+  }
+
+  .mb_image img {
+    border-radius: 20px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin: 20px;
+    max-width: 250px;
+    @media (min-width: 640px) {
+      margin: 0;
+      padding-left: 0;
+    }
 
   }
 
   .mb_content {
     color: #555;
-    padding: $spacing_gutter;
+    padding: 0 $spacing_gutter;
+    order: 2;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    text-wrap: pretty;
 
     .heading {
       color: #111;
     }
 
-    &::before {
-      @include highline;
-    }
-
     .call_to_action {
       margin-top: 1rem;
+      max-width: 100%;
+      margin-top: auto;
+    }
+    .button {
+      border: $colour_primary 1px solid;
+      border-radius: 5px;
+      font-weight: 500;
+      color: $colour_primary;
+      text-align: left;
+      @media (max-width: 400px) {
+        display: block;
+        width: auto;
+        text-align: center;
+      }
+      &:hover {
+        background-color: rgba( $colour_primary, 0.1);
+      }
+    }
+    .button_primary {
+      border: none;
+      color: $colour_secondary-dark;
+      background-color: $colour_secondary;
+      &:hover {
+        background-color: $colour_secondary-hover;
+      }
     }
   }
 
   @media (min-width: 640px) {
     display: flex;
     flex-direction: row;
+    gap: 40px;
 
-    .mb_image {
-      flex-basis: 30%;
-      flex-shrink: 1;
-      flex-grow: 0;
-      padding-left: 15%;
-      padding-top: $spacing_gutter;
+    .mb_image img {
+      
     }
 
     .mb_content {
@@ -40,13 +77,14 @@
       flex-grow: 1;
       flex-shrink: 0;
       line-height: 1.5;
+      order: 1;
 
       &::before {
         margin-top: 0;
       }
 
       .heading {
-        margin-bottom: $spacing_gutter;
+       // margin-bottom: $spacing_gutter;
       }
 
       .call_to_action {

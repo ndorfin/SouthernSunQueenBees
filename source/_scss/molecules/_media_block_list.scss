@@ -1,18 +1,15 @@
 .media_block_list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   list-style: none;
   margin: 0 auto;
   padding: 0;
   max-width: $width_faux_column;
 
-  > li + li {
-    margin-top: $spacing_gutter * 2;
-  }
-
   @media (min-width: 640px) {
-    padding: $spacing_gutter;
+    padding: $spacing_gutter * 3 $spacing_gutter;
+    gap: 60px;
   }
 
-  @media (min-width: $breakpoint_faux_column) {
-    padding: $spacing_gutter 0;
-  }
 }
