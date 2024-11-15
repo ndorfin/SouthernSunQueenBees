@@ -10,12 +10,16 @@ legend {
 
 .form_row {
 
+  .form_field {
+    margin-top: 6px;
+  }
+
   label {
-    color: $colour_primary;
+    color: $colour_black;
 
     span {
-      color: #999;
-      font-size: .875rem;
+      color: $colour_black;
+      font-size: 14px;
     }
   }
 
@@ -32,16 +36,24 @@ legend {
     max-width: 20rem;
     padding: .5rem;
     font-size: 1rem;
-    font-family: map-get($font_headings, 'family_name'), Helvetica, Arial, 'Droid Sans', sans-serif;
     -webkit-appearance: none;
     background-color: #fefefe;
-    border: #ddd solid 1px;
-    border-radius: .25rem;
+    border: none;
+    border-radius: 8px;
     box-sizing: border-box;
+    &:focus {
+      outline: $colour_secondary 2px solid;
+    }
+    &#contact_message {
+      max-width: 40em;
+    }
+  }
+  textarea {
+    max-width: 30rem;
   }
 
   & + .form_row {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .button {
@@ -71,4 +83,10 @@ legend {
   ) {
     margin-block-start: 0.25em;
   }
+}
+
+input[type="date" i] {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #a8a8a8;
+  font-weight: 100;
 }
