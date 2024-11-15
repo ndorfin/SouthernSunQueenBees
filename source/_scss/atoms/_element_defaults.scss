@@ -1,3 +1,4 @@
+
 html {
   font-size: 16px;
   font-family: Quicksand;
@@ -12,11 +13,18 @@ html {
 body {
   margin: 0;
   background-color: $colour_body-background;
+
+  &:not(:has(.notices)){ // Yellow band top of page if notices isn't present
+    border-top: $colour_secondary 6px solid;
+  }
 }
 
 p {
   max-width: 35em;
   text-wrap: pretty;
+  margin-bottom: 1em;
+  line-height: 1.5em;
+  color: $colour_black;
 }
 
 b,
@@ -53,6 +61,8 @@ h4,
 h5,
 h6 {
   margin: 0;
+  text-wrap: balance;
+  color: $colour_primary;
 }
 
 figure {
@@ -67,4 +77,20 @@ blockquote {
 
 svg {
   max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding : 0;
+}
+
+label span {
+  text-wrap: pretty;
+}
+
+input[type="date"]{ // Prevent from collapsing on iOS
+    display:block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-height: 2.5rem;
 }
