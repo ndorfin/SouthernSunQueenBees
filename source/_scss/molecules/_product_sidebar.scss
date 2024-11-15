@@ -11,6 +11,8 @@
   }
   li img {
     border-radius: 5px;
+    aspect-ratio: 1;
+    object-fit: cover;
     
   }
 }
