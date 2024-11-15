@@ -4,9 +4,21 @@
   margin: 0 auto;
 
   p {
-    margin-block-end: 0;
+    margin-bottom: 10px;
   }
   h1 {
     margin-block-start: 0.25rem;
+  }
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 5px;
+    border: $colour_secondary 1px solid;
+    color: $colour_black;
+    padding: 4px 6px;
+    &:hover {
+      background-color: $colour_secondary-hover;
+    }
   }
 }

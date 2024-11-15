@@ -1,6 +1,6 @@
 <div itemscope itemtype="http://schema.org/Product" class="media_block">
   <div class="mb_content product_content">
-    <h4 itemprop="name" class="heading heading_subheading"><%= product.title %></h4>
+    <h2 itemprop="name" class="heading heading_subheading"><%= product.title %></h2>
     <div itemprop="description"><%= Kramdown::Document.new(product.summary).to_html %></div>
     <% if product.available_for_order == true %>
     <p class="call_to_action"><a href="mailto:orders@southernsun.co.nz?subject=Web product order: <%= product.title %>" class="button button_primary">Order now</a></p>

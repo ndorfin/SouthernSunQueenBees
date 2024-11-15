@@ -1,7 +1,7 @@
 <div itemscope itemtype="http://schema.org/Product" class="media_block">
   <div class="mb_content product_content">
     <h4 itemprop="name" class="heading heading_subheading"><%= product.title %></h4>
-    <div itemprop="description"><%= Kramdown::Document.new(product.summary).to_html %></div>
+    <%= Kramdown::Document.new(product.summary).to_html %>
     <p class="call_to_action"><a class="button" href="/products/<%= product.slug %>">More info</a></p>
     <div hidden itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       <span itemprop="priceCurrency" content="NZD">$</span>
