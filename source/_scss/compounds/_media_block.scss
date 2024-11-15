@@ -6,10 +6,6 @@
     margin: 0;
   }
 
-  .mb_image {
-    order: 2;
-  }
-
   .mb_image img {
     border-radius: 20px;
     aspect-ratio: 1;
@@ -49,8 +45,8 @@
     flex-direction: row;
     gap: 40px;
 
-    .mb_image img {
-      
+    .mb_image {
+      order: 2;
     }
 
     .mb_content {
