@@ -1,9 +1,10 @@
 body > footer {
   background-color: $colour_primary;
   color: #f6f3e8;
-  padding: 60px 0 100px 0;
+  padding: 60px 20px 100px 20px;
 
   h2 {
+    color: $colour_body-background;
     border-bottom: #ccc solid 1px;
     padding-bottom: 1rem;
     display: inline-block;
@@ -39,9 +40,9 @@ body > footer {
     }
   }
 
-  .fine_print {
-    font-size: .75rem;
-    color: rgba($color: #f6f3e8, $alpha: 0.8)
+  .faux_column.fine_print p{
+    font-size: 12px;
+    color: #f6f3e8;
   }
 
   @media (min-width: $breakpoint_faux_column) {
@@ -51,11 +52,8 @@ body > footer {
       padding-left: 0;
       padding-right: 0;
 
-      & + .faux_column {
-        position: absolute;
-        bottom: 0;
-        right: 50%;
-        margin-right: -($width_faux_column / 2);
+      & + .faux_column p {
+        float: right;
       }
     }
   }
