@@ -1,19 +1,20 @@
 .biography {
+  margin: 0 20px 40px 20px;
   header {
-    background-color: $colour_header_background;
-    color: #fff;
+    color: $colour_primary;
 
     .faux_column {
-      padding: $spacing_gutter;
+      padding: $spacing_gutter 0;
       display: flex;
       flex-direction: column;
 
       > * {
-        flex-basis: auto;
-        flex-shrink: 1;
+        // flex-basis: auto;
+        // flex-shrink: 1;
         font-size: 1.5rem;
-        line-height: 1.5;
+        line-height: 1.1;
         margin: 0;
+        display: inline-block;
       }
     }
 
@@ -25,23 +26,29 @@
   }
 
   figure {
-    background-color: $colour_header_background;
-    text-align: center;
+    margin-bottom: 20px;
+    max-width: 300px;
+    overflow: hidden;
+    img {
+      border-radius: 20px;
+    }
   }
 }
 
 .biography_content {
-  padding: $spacing_gutter;
 }
 
 @media (min-width: 640px) {
   .biography {
-    padding: 0 1.5rem 3rem;
     overflow: hidden;
+    &>.faux_column {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
 
     > header {
-      margin: 0 -1.5rem 3rem;
-
+      margin: 0;
       .faux_column {
         flex-direction: row;
       }
@@ -49,7 +56,7 @@
 
     .heading {
       & + p {
-        border-left: rgba(#fff, .25) solid 1px;
+        border-left: $colour_primary solid 1px;
         padding-left: 1rem;
         margin-left: 1rem;
         color: $colour_primary;
@@ -59,15 +66,21 @@
 
     figure {
       float: left;
+      max-width: 300px;
       width: 40%;
+      order: 0;
     }
   }
-
   .biography_content {
-    margin-left: calc(40% + 3rem);
-    margin-top: 3rem;
-    padding-top: 0;
-    line-height: 1.5;
-    color: #555;
+    margin-top: -0.3em; // Align with image
+  }
+}
+
+@media (min-width: 900px) {
+  .biography > .faux_column {
+    gap: 40px;
+  }
+  .biography > header .faux_column {
+    margin-bottom: 10px;
   }
 }
