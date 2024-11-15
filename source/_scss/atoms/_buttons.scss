@@ -6,20 +6,10 @@
   line-height: 1.5;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: greyscale;
-  font-weight: map-get($font_emphasis, 'weight');
+  // font-weight: map-get($font_emphasis, 'weight');
   transition-property: background-color, border;
   transition-duration: .2s;
   transition-timing-function: ease-in-out;
-}
-
-.button_primary {
-  color: #000;
-  background-color: $colour_secondary;
-  border-radius: 5px;
-
-  &:hover {
-    background-color: mix(#fff, $colour_primary, 85%);
-  }
 }
 
 .button_secondary {
@@ -34,4 +24,32 @@
 
 a.button {
   text-decoration: none;
+}
+
+
+.button {
+  display: inline-block;
+  padding: .5rem 1.5rem;
+  appearance: none;
+  border: $colour_primary 1px solid;
+  border-radius: 5px;
+  font-weight: 500;
+  color: $colour_primary;
+  text-align: left;
+  @media (max-width: 400px) {
+    display: block;
+    width: auto;
+    text-align: center;
+  }
+  &:hover {
+    background-color: rgba( $colour_primary, 0.1);
+  }
+}
+.button_primary {
+  border: none;
+  color: $colour_secondary-dark;
+  background-color: $colour_secondary;
+  &:hover {
+    background-color: $colour_secondary-hover;
+  }
 }
