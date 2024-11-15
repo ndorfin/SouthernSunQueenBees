@@ -4,8 +4,8 @@
   text-align: center;
 
   figure {
-    max-width: $width_faux_column;
-    padding: $spacing_gutter $spacing_gutter ($spacing_gutter*2);
+    //max-width: $width_faux_column;
+    //padding: $spacing_gutter $spacing_gutter ($spacing_gutter*2);
     margin: 0 auto;
     //border: $colour_primary 1px solid;
     //border-radius: 20px;
@@ -36,13 +36,18 @@
 
   figcaption {
     img {
-      max-width: 80px;
-      border-radius: 2rem;
-      margin: $spacing_gutter 0;
+      max-width: 80px; 
+      aspect-ratio: 1;
+      border-radius: 100%;
+      object-fit: cover;
     }
 
     cite {
+      margin-top: 10px;
       display: block;
+      color: $colour_black;
+      font-style: normal;
+      
     }
   }
 }
