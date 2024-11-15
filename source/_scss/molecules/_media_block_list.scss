@@ -4,12 +4,13 @@
   gap: 40px;
   list-style: none;
   margin: 0 auto;
-  padding: 0;
+  padding: $spacing_gutter 0 $spacing_gutter * 3 0;
   max-width: $width_faux_column;
 
   @media (min-width: 640px) {
     padding: $spacing_gutter * 3 $spacing_gutter;
     gap: 60px;
+
   }
 
 }

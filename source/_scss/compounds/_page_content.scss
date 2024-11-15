@@ -2,8 +2,7 @@
   padding: $spacing_gutter $spacing_gutter ($spacing_gutter*2);
   max-width: $width_faux_column;
   margin: 0 auto;
-  line-height: 1.5;
-  color: #555;
+ 
 
   > *:first-child {
     margin-top: 0;
@@ -34,7 +33,7 @@
   h2,
   h3,
   h4 {
-    color: #111;
+    color: $colour_primary;
     margin: 2em 0 1em;
   }
 
@@ -53,5 +52,14 @@
         content: '”';
       }
     }
+  }
+
+  img {
+    border-radius: 20px;
+  }
+
+  .product_info_section img {
+    border-radius: 20px;
+    max-height: 400px;
   }
 }

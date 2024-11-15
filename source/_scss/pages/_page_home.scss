@@ -1,11 +1,16 @@
-section {
-  padding: 0 20px;
-
+.page_home {
+  section {
+    padding: 0 20px;
+  }
 }
 
 .product-cards {
   max-width: $width_faux_column;
   margin: 60px auto;
+  padding: 0 20px;
+  h2 {
+    margin-bottom: 20px;
+  }
   &__grid {
     display: grid;
     gap: 20px;
@@ -34,10 +39,12 @@ section {
     max-width: 100px;
     margin: 20px auto 30px auto;
   }
-  h2 {
+  h3 {
     font-weight: 700;
+    color: $colour_secondary-dark;
   }
   p {
+    color: $colour_secondary-dark;
     text-wrap: balance;
     font-weight: 500;
     margin-bottom: 20px;

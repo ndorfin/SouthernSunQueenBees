@@ -128,17 +128,29 @@
   </div>
 
   <details open class="product_info_section">
-    <summary class="heading heading_subheading">About our <%= product_page.title %></summary>
+    <summary class="heading heading_subheading">About our <%= product_page.title %>
+      <svg focusable="false">
+        <use href="#icon_drawer_state"></use>
+      </svg>
+    </summary>
     <%= rich_text(product_page.about_this_product) %>
   </details>
 
   <details open class="product_info_section">
-    <summary class="heading heading_subheading">Ordering <%= product_page.title %></summary>
+    <summary class="heading heading_subheading">Ordering <%= product_page.title %>
+      <svg focusable="false">
+        <use href="#icon_drawer_state"></use>
+      </svg>
+      </summary>
     <%= rich_text(product_page.order_information) %>
   </details>
 
   <details open class="product_info_section">
-    <summary class="heading heading_subheading">Payment and delivery information</summary>
+    <summary class="heading heading_subheading">Payment and delivery information
+      <svg focusable="false">
+        <use href="#icon_drawer_state"></use>
+      </svg>
+      </summary>
     <%= rich_text(product_page.payment_and_delivery_details) %>
   </details>
 </section>

@@ -2,8 +2,12 @@
   display: flex;
   flex-direction: column;
 
+  p {
+    margin: 0;
+  }
+
   .mb_image {
-    order: 1;
+    order: 2;
   }
 
   .mb_image img {
@@ -20,7 +24,7 @@
   }
 
   .mb_content {
-    color: #555;
+    color: $colour_black;
     padding: 0 $spacing_gutter;
     order: 2;
     display: flex;
@@ -28,37 +32,15 @@
     flex-direction: column;
     text-wrap: pretty;
 
-    .heading {
-      color: #111;
-    }
-
     .call_to_action {
       margin-top: 1rem;
       max-width: 100%;
       margin-top: auto;
+      text-align: right;
     }
-    .button {
-      border: $colour_primary 1px solid;
-      border-radius: 5px;
-      font-weight: 500;
-      color: $colour_primary;
-      text-align: left;
-      @media (max-width: 400px) {
-        display: block;
-        width: auto;
-        text-align: center;
-      }
-      &:hover {
-        background-color: rgba( $colour_primary, 0.1);
-      }
-    }
-    .button_primary {
-      border: none;
-      color: $colour_secondary-dark;
-      background-color: $colour_secondary;
-      &:hover {
-        background-color: $colour_secondary-hover;
-      }
+
+    div {
+      margin: 0;
     }
   }
 

@@ -1,6 +1,7 @@
 .heading {
-  font-weight: map-get($font_headings, 'weight');
+  // font-weight: map-get($font_headings, 'weight');
   line-height: 1;
+  text-wrap: balance;
 }
 
 .heading_page {
