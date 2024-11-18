@@ -69,14 +69,43 @@
   }
 }
 
-.training {
-  max-width: $width_faux_column;
-  margin: 0 auto;
-  padding-bottom: 100px;
-}
-
-.social {
-  max-width: $width_faux_column;
-  margin: 0 auto;
-  padding-bottom: 100px;
+.page_beta {
+  .service_summary_list {
+    margin-bottom: 60px;
+    padding: 0;
+    max-width: 1080px;  // Wider than standard margin (Margin + 40px)
+  }
+  .service_summary { //Change this to page_home before merging
+    background-color: $color_white;
+    border-radius: 0;
+    overflow: hidden;
+    padding: 20px 0;
+    .service_content {
+      padding: 20px 20px;
+    }
+    .mb_image {
+      top: 0;
+      bottom: 0;
+      display: flex; // Fix height issue in Safari (Can't use height 100% on a element without a defined height)
+    }
+    img {
+      border-radius: 20px;
+      object-fit: cover;
+    }
+    @media (min-width: 640px) {
+      padding: 0;
+      img {
+        border-radius: 0;
+      }
+      .service_content {
+        padding: 60px 0 60px 20px;
+      }
+    }
+    @media (min-width: 1000px) {
+      border-radius: 20px;
+      .service_content {
+        padding: 60px 0 60px 60px;
+      }
+    }
+  }
 }

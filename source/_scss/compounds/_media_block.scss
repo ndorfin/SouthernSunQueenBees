@@ -51,9 +51,7 @@
 
     .mb_content {
       padding: 0;
-      flex-basis: 55%;
       flex-grow: 1;
-      flex-shrink: 0;
       line-height: 1.5;
       order: 1;
 
@@ -75,4 +73,16 @@
 a.media_block {
   color: inherit;
   text-decoration: none;
+}
+
+.page_products .media_block{
+  background-color: $color_white;
+  padding: 20px;
+   border-radius: 0;
+  img {
+    border-radius: 5px;
+  }
+  @media (min-width: 640px) {
+    border-radius: 20px;
+  }
 }
