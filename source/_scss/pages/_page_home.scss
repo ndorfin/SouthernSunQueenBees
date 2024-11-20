@@ -27,6 +27,7 @@
 }
 
 .product-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,6 +36,9 @@
   padding: 30px;
   text-align: center;
   color: #582900;
+  &:hover {
+    background-color: #fddb8a;
+  }
   img {
     max-width: 100px;
     margin: 20px auto 30px auto;
@@ -51,20 +55,26 @@
     font-size: 14px;
     max-width: 20em;
   }
-  &__footer {
-    display: inline-block;
+  &__link {
+    display: block;
     margin-top: auto;
     width: 100%;
-    a {
-      text-transform: lowercase;
-      font-weight: 900;
-      font-size: 14px;
-      color: inherit;
-      text-decoration: none;
-      float: right;
-      &:hover {
-        text-decoration: underline;
-      }
+    text-transform: lowercase;
+    font-weight: 900;
+    font-size: 14px;
+    color: inherit;
+    text-decoration: none;
+    text-align: end;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+    }
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
