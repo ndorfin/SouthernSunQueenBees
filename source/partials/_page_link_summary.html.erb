@@ -1,0 +1,4 @@
+
+<h4 class="heading heading_subheading"><%= page_link.title %></h4>
+<%= Kramdown::Document.new(page_link.summary).to_html %></div>
+<a href="/<%= page_link.slug %>"><%= page_link.title %></a></p>
