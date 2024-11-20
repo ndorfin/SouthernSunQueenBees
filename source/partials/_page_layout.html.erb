@@ -39,8 +39,8 @@
   <% end %>
 <% end %>
 
-<% if page.include? 'pages' %>
-  <%= partial 'partials/pages_link_summary_list', locals: { pages: page.pages } %>
+<% if page.include? 'page_links' %>
+  <%= partial 'partials/page_link_summary_list', locals: { page_links: page.page_links } %>
 <% end %>
 
 

@@ -1,9 +1,0 @@
-<% if pages && pages.count > 0 %>
-<ul class="media_block_list page_link_summary_list">
-  <% pages.each do |p_id, page_data| %>
-  <li class="page_link_summary">
-    <%= partial 'partials/page_link_summary', locals: { page_link: page_data.blank? ? p_id : page_data } %>
-  </li>
-  <% end %>
-</ul>
-<% end %>

@@ -1,0 +1,9 @@
+<% if page_links && page_links.count > 0 %>
+<ul class="media_block_list page_link_summary_list">
+  <% page_links.each do |page_link| %>
+  <li class="page_link_summary">
+    <%= partial 'partials/page_link_summary', locals: { page_link: page_link } %>
+  </li>
+  <% end %>
+</ul>
+<% end %>
