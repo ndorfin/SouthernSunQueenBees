@@ -31,6 +31,10 @@
   <%= partial 'partials/services_summary_list', locals: { services: page.services } %>
 <% end %>
 
+<% if page.include? 'page_links' %>
+  <%= partial 'partials/page_link_summary_list', locals: { page_links: page.page_links } %>
+<% end %>
+
 <% if page.include? 'biographies' %>
   <%= partial 'partials/biographies_summary_list', locals: { bios: page.biographies } %>
 <% end %>
@@ -42,9 +46,4 @@
     <%= partial 'partials/testimonials_summary_list', locals: { testimonials: page.testimonials } %>
   <% end %>
 <% end %>
-
-<% if page.include? 'page_links' %>
-  <%= partial 'partials/page_link_summary_list', locals: { page_links: page.page_links } %>
-<% end %>
-
 

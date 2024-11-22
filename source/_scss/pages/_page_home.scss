@@ -82,13 +82,13 @@
   }
 }
 
-.page_beta {
-  .service_summary_list {
+.page_beta { //Change this to page_home before merging
+  .page_link_summary_list{
     margin-bottom: 60px;
     padding: 0;
     max-width: 1080px;  // Wider than standard margin (Margin + 40px)
   }
-  .service_summary { //Change this to page_home before merging
+  .page_link_summary {
     background-color: $color_white;
     border-radius: 0;
     overflow: hidden;

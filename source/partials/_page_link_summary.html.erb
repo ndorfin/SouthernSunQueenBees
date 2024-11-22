@@ -1,3 +1,12 @@
-<h4 class="heading heading_subheading"><%= page_link.page_heaading %></h4>
-<%= Kramdown::Document.new(page_link.page_summary).to_html %></div>
-<a href="/<%= page_link.url %>">More info about our <%= page_link.page_heaading %></a></p>
+<div class="media_block">
+  <div class="mb_content service_content">
+    <h2 class="heading heading_subheading"><%= page_link.page_heaading %></h2>
+    <%= Kramdown::Document.new(page_link.page_summary).to_html %>
+    <p class="call_to_action">
+      <a class="button button_primary" href="/<%= page_link.url %>">More info</a>
+    </p>
+  </div>
+  <div class="mb_image">
+    <img src="<%= page_link.image_for_summary.url %>" alt="<%= page_link.image_for_summary.description %>">
+  </div>
+</div>
