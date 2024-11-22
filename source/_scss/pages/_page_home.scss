@@ -38,7 +38,6 @@
   color: #582900;
   &:hover {
     background-color: #fddb8a;
-    transform: scale(1.01);
     transition: all 200ms ease-in-out;
 
   }
@@ -82,7 +81,7 @@
   }
 }
 
-.page_beta { //Change this to page_home before merging
+.page_home { //Change this to page_home before merging
   .page_link_summary_list{
     margin-bottom: 60px;
     padding: 0;
