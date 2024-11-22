@@ -1,24 +1,11 @@
+
+<% if products && products.count > 0 %>
 <section class="product-cards">
-  <h2>Our Products</h2>
+  <h2 itemprop="name">Our Products</h2>
   <div class="product-cards__grid">
-      <div class="product-card">
-        <img src="/img/icon_cell.svg">
-        <h3>Queen cells</h3>
-        <p>Additional text that is no longer than three lines in length, extra words.</p>
-        <a class="product-card__link" href="/products/queen-cells">More Info</a>
-      </div>
-    <div class="product-card">
-      <img src="/img/icon_mated.svg">
-      <h3>Mated queen bees</h3>
-      <p>Additional text that is no longer than three lines in length, extra words. </p>
-      <a class="product-card__link" href="/products/queen-cells">More Info</a>
-    </div>
-    <div class="product-card">
-      <img src="/img/icon_instrument.svg">
-      <h3>Instrumentally inseminated</h3>
-      <p>Additional text that is no longer than three lines in length, extra words. </p>
-      <a class="product-card__link" href="/products/queen-cells">More Info</a>
-    </div>
+  <% products.each do |p_id, prod| %>
+    <%= partial 'partials/product_card', locals: { product: prod.blank? ? p_id : prod } %>
+  <% end %>
   </div>
-  
 </section>
+<% end %>
