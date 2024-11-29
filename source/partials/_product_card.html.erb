@@ -1,6 +1,6 @@
-<div itemscope itemtype="http://schema.org/Product" class="product-card">
-  <img src="<%= product.card_icon.url %>">
+<li itemscope itemtype="http://schema.org/Product" class="product-card">
+  <img src="<%= product.card_icon.url %>" alt="<%= product.card_icon.description %>">
   <h3 id="<%= product.slug %>"><%= product.card_title %></h3>
   <p><%= product.card_description %></p>
   <a class="product-card__link" aria-labelledby="<%= product.slug %>" href="/products/<%= product.slug %>">More Info</a>
-</div>
+</li>
