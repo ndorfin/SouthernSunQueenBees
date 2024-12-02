@@ -7,8 +7,8 @@
     <priority>1</priority>
   </url>
 <%
-  entries = get_pages()
-  entries.each do |id, page|
+  pages = get_pages()
+  pages.each do |id, page|
     if page.url != 'home'
 %>
   <url>
@@ -18,6 +18,18 @@
   </url>
 <%
     end
+  end
+%>
+<%
+  product_pages = get_product_pages()
+  product_pages.each do |id, product_page|
+%>
+  <url>
+    <loc><%= "#{config[:host]}/products/#{product_page.slug}/" %></loc>
+    <lastmod><%= DateTime.parse(product_page._meta.updated_at).iso8601 %></lastmod>
+    <priority>0.9</priority>
+  </url>
+<%
   end
 %>
 </urlset>

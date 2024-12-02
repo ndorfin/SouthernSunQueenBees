@@ -4,6 +4,10 @@ module ContentfulHelpers
     @app.data.content.pages
   end
 
+  def get_product_pages
+    @app.data.content.product_pages
+  end
+
   def create_pages
     get_pages().each do |page_id, page|
       if page.url != 'home'
