@@ -11,10 +11,10 @@
           <% if page.url == current_page.url.parameterize %>
             <strong><%= page.page_name %></strong>
           <% else %>
-            <a href="<%= config[:base_url] + page.url %>"><strong><%= page.page_name %></strong></a>
+            <a href="<%= config[:base_url] + page.url %><%= "/" unless page.url.end_with? "/" %>"><strong><%= page.page_name %></strong></a>
           <% end %>
         <% else %>
-        <a href="<%= config[:base_url] + page.url %>"><%= page.page_name %></a>
+        <a href="<%= config[:base_url] + page.url %><%= "/" unless page.url.end_with? "/" %>"><%= page.page_name %></a>
         <% end %>
       </li>
     <% end %>
