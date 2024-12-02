@@ -10,6 +10,7 @@
   pages = get_pages()
   pages.each do |id, page|
     if page.url != 'home'
+      if page.hide_from_sitemap == false
 %>
   <url>
     <loc><%= "#{config[:host]}/#{page.url}/" %></loc>
@@ -17,12 +18,14 @@
     <priority>0.9</priority>
   </url>
 <%
+      end
     end
   end
 %>
 <%
   product_pages = get_product_pages()
   product_pages.each do |id, product_page|
+    if product_page.hide_from_sitemap == false
 %>
   <url>
     <loc><%= "#{config[:host]}/products/#{product_page.slug}/" %></loc>
@@ -30,6 +33,7 @@
     <priority>0.9</priority>
   </url>
 <%
+    end
   end
 %>
 </urlset>
