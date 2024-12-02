@@ -23,14 +23,6 @@
   <%= partial 'partials/product_page_summary_list', locals: { products: page.product_pages } %> <%# Not sure how this is being passed to here %>
 <% end %>
 
-<% if page.include? 'products' %>
-  <%= partial 'partials/product_summary_list', locals: { products: page.products } %>
-<% end %>
-
-<% if page.include? 'services' %>
-  <%= partial 'partials/services_summary_list', locals: { services: page.services } %>
-<% end %>
-
 <% if page.include? 'page_links' %>
   <%= partial 'partials/page_link_summary_list', locals: { page_links: page.page_links } %>
 <% end %>
