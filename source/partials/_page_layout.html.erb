@@ -17,9 +17,9 @@
 
 <% if page.include? 'product_pages' %>
   <% if page.url == "home" %>
-    <%= partial 'partials/body_product_cards', locals: { products: @app.data.content.product_pages } %> <%# Perhaps not best practice %>
+    <%= partial 'partials/body_product_cards', locals: { products: page.product_pages } %>
   <% else %>
-    <%= partial 'partials/product_page_summary_list', locals: { products: page.product_pages } %> <%# Not sure how this is being passed to here %>
+    <%= partial 'partials/product_page_summary_list', locals: { products: page.product_pages } %>
   <% end %>
 <% end %>
 
