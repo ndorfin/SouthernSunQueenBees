@@ -15,12 +15,12 @@
 </div>
 <% end %>
 
-<% if page.url == "home" %>
-  <%= partial 'partials/body_product_cards', locals: { products: @app.data.content.product_pages } %> <%# Perhaps not best practice %>
-<% end %>
-
 <% if page.include? 'product_pages' %>
-  <%= partial 'partials/product_page_summary_list', locals: { products: page.product_pages } %> <%# Not sure how this is being passed to here %>
+  <% if page.url == "home" %>
+    <%= partial 'partials/body_product_cards', locals: { products: @app.data.content.product_pages } %> <%# Perhaps not best practice %>
+  <% else %>
+    <%= partial 'partials/product_page_summary_list', locals: { products: page.product_pages } %> <%# Not sure how this is being passed to here %>
+  <% end %>
 <% end %>
 
 <% if page.include? 'page_links' %>
