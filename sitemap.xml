@@ -2,14 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://southernsun.co.nz/</loc>
-    <lastmod>2024-11-29T03:34:16+00:00</lastmod>
+    <lastmod>2024-12-02T10:28:18+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
-  </url>
-  <url>
-    <loc>https://southernsun.co.nz/product-pages/</loc>
-    <lastmod>2024-10-16T13:30:45+00:00</lastmod>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://southernsun.co.nz/contact-us/</loc>
