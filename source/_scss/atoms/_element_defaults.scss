@@ -80,6 +80,9 @@ svg {
 
 ul {
   padding-left: 2em;
+  li {
+    color: $colour_black;
+  }
 }
 
 label span {
@@ -90,5 +93,6 @@ input[type="date"]{ // Prevent from collapsing on iOS
     display:block;
     -webkit-appearance: none;
     -moz-appearance: none;
+    appearance: none;
     min-height: 2.5rem;
 }
