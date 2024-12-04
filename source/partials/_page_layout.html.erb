@@ -27,9 +27,19 @@
   <%= partial 'partials/page_link_summary_list', locals: { page_links: page.page_links } %>
 <% end %>
 
+<% if page.url == "training" %>
+  <section class="call_to_action">
+    <div>
+      <p>If you have any questions or would like to express interest, call Penny on <a href="tel:+64277333424">027 733 3424</a> or email at <a href="mailto:pennysouthernsun@gmail.com">pennysouthernsun@gmail.com</a>.</p>
+      <a class="button button_primary" href="/contact-us/">Get in touch</a>
+    </div>
+  </section>
+<% end %>
+
 <% if page.include? 'biographies' %>
   <%= partial 'partials/biographies_summary_list', locals: { bios: page.biographies } %>
 <% end %>
+
 
 <% if page.include? 'testimonials' %>
   <% if page.testimonials.count == 1 %>

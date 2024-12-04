@@ -69,6 +69,41 @@
         padding-bottom: 0;
       }
     }
-    
   }
+}
+
+.call_to_action {
+  width: auto;
+  margin: 20px 0 40px 0;
+  padding: 0 20px;
+  div {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 880px;
+    border-radius: 20px;
+    background-color: white;
+    @media (min-width: 800px) {
+      padding: 40px;
+    }
+  }
+  p {
+    font-size: 1em;
+    span {
+      color: $colour_primary;
+    }
+    @media (min-width: 400px) {
+      font-size: 1.2em;
+    }
+  }
+  .button {
+    width: auto;
+    text-align: center;
+    @media (min-width: 400px) {
+      width: fit-content;
+      align-self: flex-end;
+    }
+  }
+  
 }
