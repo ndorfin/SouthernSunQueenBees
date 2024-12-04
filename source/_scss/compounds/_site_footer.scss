@@ -22,6 +22,9 @@ body > footer {
 
   li {
     margin: .4rem 0;
+    &:nth-child(even) {
+      padding-bottom: 1em;
+    }
   }
 
   .faux_column {
@@ -36,8 +39,8 @@ body > footer {
     }
   }
 
-  .faux_column.fine_print p {
-    font-size: 1.75rem;
+  .faux_column.fine_print p{
+    font-size: .875rem;
     color: #f6f3e8;
   }
 
