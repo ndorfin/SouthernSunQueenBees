@@ -48,7 +48,6 @@ nav {
     @include a11y();
   }
   ul {
-    list-style: none;
     margin: 0;
     padding: 0;
   }
@@ -80,8 +79,7 @@ svg {
 }
 
 ul {
-  list-style: none;
-  padding : 0;
+  padding-left: 2em;
 }
 
 label span {
