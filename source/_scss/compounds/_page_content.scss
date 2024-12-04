@@ -62,4 +62,13 @@
     border-radius: 20px;
     max-height: 400px;
   }
+  ul {
+    li {
+      padding-bottom: 0.8em;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+    
+  }
 }
