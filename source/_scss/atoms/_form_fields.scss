@@ -19,7 +19,7 @@ legend {
 
     span {
       color: $colour_black;
-      font-size: 14px;
+      font-size: .875rem;
     }
   }
 
@@ -57,7 +57,7 @@ legend {
   }
 
   .button {
-    font-size: 16px;
+    font-size: 1rem;
     border-radius: 8px;
     background-color: $colour_secondary;
     border: none;
@@ -66,9 +66,11 @@ legend {
 
 .form_field > ul {
   @include list_stripped;
+  margin-top: 0.8rem;
 
   & li {
-    margin-block: 0.25rem;
+    padding: 0;
+    margin: 0;
   }
 
   & label {

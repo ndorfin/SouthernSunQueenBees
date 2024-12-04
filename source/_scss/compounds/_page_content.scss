@@ -62,4 +62,53 @@
     border-radius: 20px;
     max-height: 400px;
   }
+  ul {
+    li {
+      padding-bottom: 0.8em;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.training_contact_card {
+  width: auto;
+  margin: 20px 0 40px 0;
+  padding: 0 20px;
+  div {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 880px;
+    border-radius: 20px;
+    background-color: white;
+    @media (min-width: 800px) {
+      padding: 40px;
+    }
+  }
+  p {
+    font-size: 1em;
+    text-wrap: stable;
+    span {
+      color: $colour_primary;
+    }
+    @media (min-width: 400px) {
+      font-size: 1.2em;
+    }
+  }
+  .button {
+    width: auto;
+    text-align: center;
+    @media (min-width: 400px) {
+      width: fit-content;
+      align-self: flex-end;
+    }
+  }
+  
+}
+
+.page_about-us .page_content { 
+  padding-bottom: 0;  // Remove padding from .page_content on the about-us page so that it flows into the biographies.
 }
