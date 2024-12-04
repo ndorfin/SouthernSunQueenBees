@@ -72,7 +72,7 @@
   }
 }
 
-.call_to_action {
+.training_contact_card {
   width: auto;
   margin: 20px 0 40px 0;
   padding: 0 20px;
@@ -107,4 +107,8 @@
     }
   }
   
+}
+
+.page_about-us .page_content { 
+  padding-bottom: 0;  // Remove padding from .page_content on the about-us page so that it flows into the biographies.
 }
