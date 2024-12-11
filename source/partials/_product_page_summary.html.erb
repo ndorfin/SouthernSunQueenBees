@@ -21,7 +21,7 @@
   </div>
   <% if product.photo %>
   <div class="mb_image">
-    <img itemprop="image" class="product_image" src="<%= "#{product.photo.url}?fm=jpg&fl=progressive&q=70&w=800" %>" alt="<%= product.title %>">
+    <img itemprop="image" loading="lazy" class="product_image" src="<%= "#{product.photo.url}?fm=jpg&fl=progressive&q=70&w=800" %>" alt="<%= product.title %>">
   </div>
   <% end %>
 </div>
