@@ -10,10 +10,6 @@ body > footer {
     display: inline-block;
   }
 
-  a {
-    // color: rgba($color: #ffffff, $alpha: 0.6)
-  }
-
   svg {
     fill: white;
   }
@@ -25,7 +21,10 @@ body > footer {
   }
 
   li {
-    margin: .25rem 0;
+    margin: .4rem 0;
+    &:nth-child(even) {
+      padding-bottom: 1em;
+    }
   }
 
   .faux_column {
@@ -41,7 +40,7 @@ body > footer {
   }
 
   .faux_column.fine_print p{
-    font-size: 12px;
+    font-size: .875rem;
     color: #f6f3e8;
   }
 

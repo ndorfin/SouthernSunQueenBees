@@ -3,7 +3,9 @@
     <h2 class="heading heading_subheading"><%= page_link.page_heaading %></h2>
     <%= Kramdown::Document.new(page_link.page_summary).to_html %>
     <p class="call_to_action">
-      <a class="button button_primary" href="/<%= page_link.url %>">More info</a>
+      <a class="button button_primary" href="/<%= page_link.url %>">
+        More info<span class="screenreader_only"> on <%= page_link.page_heaading %>
+      </a>
     </p>
   </div>
   <div class="mb_image">

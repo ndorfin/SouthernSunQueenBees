@@ -1,6 +1,6 @@
 
 html {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Quicksand;
   font-style: normal;
   font-weight: 400;
@@ -48,7 +48,6 @@ nav {
     @include a11y();
   }
   ul {
-    list-style: none;
     margin: 0;
     padding: 0;
   }
@@ -80,8 +79,10 @@ svg {
 }
 
 ul {
-  list-style: none;
-  padding : 0;
+  padding-left: 2em;
+  li {
+    color: $colour_black;
+  }
 }
 
 label span {
@@ -92,5 +93,6 @@ input[type="date"]{ // Prevent from collapsing on iOS
     display:block;
     -webkit-appearance: none;
     -moz-appearance: none;
+    appearance: none;
     min-height: 2.5rem;
 }
