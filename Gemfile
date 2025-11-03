@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
 # Core
-gem 'middleman'
+gem 'sassc'
+gem 'eventmachine'
+gem 'middleman', '~> 4.5.0'
 gem 'contentful_middleman'
 # gem 'contentful'
 # gem 'redcarpet'
